@@ -1,28 +1,87 @@
-const puppeteer = require("puppeteer");
-const cheerio = require("cheerio");
+const fs = require("fs");
+const JLPTurl = "https://ja.dict.naver.com/api/jako/getJLPTList?";
+const HSKurl = "https://zh.dict.naver.com/api/zhko/getHskInfoList?pageSize=100";
 
-async function run() {
-  // 브라우저를 열기
-  const browser = await puppeteer.launch({ headless: "new" });
+const getTotalPage = async (url, language = "japanese") => {
+  const response = await fetch(url);
+  const jsonData = await response.json();
+  if (language === "japanese") {
+    return jsonData.m_totalPage;
+  }
+  return jsonData.searchResult.m_totalPage;
+};
 
-  // 새 페이지를 열기
-  const page = await browser.newPage();
+const sleep = (milliseconds) => {
+  const start = new Date().getTime();
+  let elapsed = 0;
+  while (elapsed < milliseconds) {
+    elapsed = new Date().getTime() - start;
+  }
+};
 
-  // 페이지로 이동
-  await page.goto("https://ja.dict.naver.com/#/jlpt/list?level=5&part=allClass&page=1");
-  const content = await page.content();
-  const $ = cheerio.load(content);
-  const wordLists = $("li.row");
-  //   console.log(wordLists);
-  console.log(wordLists.length);
-  wordLists.each((index, word) => {
-    console.log("test");
-    console.log(index, $(word).find(".origin > a"));
-  });
+const getPageWords = async (url, language = "japanese") => {
+  sleep(500);
+  const response = await fetch(url);
+  const jsonData = await response.json();
+  if (language === "japanese") {
+    return jsonData.m_items.map((item) => ({
+      koreans: item.means?.map((mean) => mean.replace(/;/g, ", ")),
+      original: item.show_entry,
+      pronunciation: item.pron,
+    }));
+  }
 
-  // 브라우저 닫기
-  await browser.close();
-}
+  return jsonData.searchResult.m_items.map((item) => ({
+    koreans: item.means?.map((mean) => mean.replace(/;/g, ", ")),
+    original: item.show_entry,
+    pronunciation: item.pron,
+  }));
+};
 
-// 함수 실행
-run();
+const getWords = async (url, level, language = "japanese") => {
+  const urls = [];
+  let words = [];
+  const totalPage = await getTotalPage(url + `&level=${level}&page=1`, language);
+  for (let i = 1; i <= totalPage; i += 1) {
+    urls.push(url + `&level=${level}` + `&page=${i}`);
+  }
+  for (const url of urls) {
+    console.log(url);
+    words = words.concat(await getPageWords(url, language));
+  }
+  return words;
+};
+
+const saveJSON = (fileName, jsonName) => {
+  const jsonString = JSON.stringify(jsonName);
+  fs.writeFileSync(fileName, jsonString, "utf-8");
+};
+
+const getAllJLPTwords = async () => {
+  const words = {};
+  words.N5 = await getWords(JLPTurl, 5);
+  words.N4 = await getWords(JLPTurl, 4);
+  words.N3 = await getWords(JLPTurl, 3);
+  words.N2 = await getWords(JLPTurl, 2);
+  words.N1 = await getWords(JLPTurl, 1);
+
+  saveJSON("JLPTwords.json", words);
+};
+
+const getAllHSKwords = async () => {
+  const words = {};
+  words.HSK1 = await getWords(HSKurl, 1, "chinese");
+  words.HSK2 = await getWords(HSKurl, 2, "chinese");
+  words.HSK3 = await getWords(HSKurl, 3, "chinese");
+  words.HSK4 = await getWords(HSKurl, 4, "chinese");
+  words.HSK5 = await getWords(HSKurl, 5, "chinese");
+  words.HSK6 = await getWords(HSKurl, 6, "chinese");
+  saveJSON("HSKwords.json", words);
+};
+
+const init = async () => {
+  await getAllHSKwords();
+  await getAllJLPTwords();
+};
+
+init();
