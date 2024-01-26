@@ -1,20 +1,25 @@
-import { useState } from "react";
-import "./App.css";
+import * as React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import MainPage from "./pages/Main";
+import WordSetPage from "./pages/WordSet";
+// import { Box, Button, Container, CssBaseline } from "@mui/material";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainPage />,
+  },
+  {
+    path: "/:rate",
+    element: <WordSetPage />,
+  },
+]);
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is rest 5{count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-    </>
+    <React.Fragment>
+      <RouterProvider router={router} />
+    </React.Fragment>
   );
 }
 
