@@ -2,7 +2,9 @@ import * as React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainPage from "./pages/Main";
 import WordSetPage from "./pages/WordSet";
-// import { Box, Button, Container, CssBaseline } from "@mui/material";
+import theme from "./theme.ts";
+import { ThemeProvider } from "@mui/material/styles";
+import { CssBaseline } from "@mui/material";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +20,10 @@ const router = createBrowserRouter([
 function App() {
   return (
     <React.Fragment>
-      <RouterProvider router={router} />
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <RouterProvider router={router} />
+      </ThemeProvider>
     </React.Fragment>
   );
 }
