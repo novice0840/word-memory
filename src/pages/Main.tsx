@@ -5,8 +5,8 @@ import TagFacesIcon from "@mui/icons-material/TagFaces";
 
 const MainPage = () => {
   return (
-    <Container fixed maxWidth="md">
-      <Stack spacing={5} alignItems="center">
+    <Container sx={{ marginTop: "150px" }}>
+      <Stack spacing={5} alignItems="center" justifyContent="center">
         <Link to="/N1">
           <Button variant="contained" startIcon={<TagFacesIcon />}>
             N1
