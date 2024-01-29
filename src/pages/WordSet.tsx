@@ -2,6 +2,7 @@ import { useEffect, useState, MouseEvent } from "react";
 import JLPTword from "../words/JLPTwords.json";
 import { useParams, useNavigate } from "react-router-dom";
 import { Container, Button, Typography, Stack } from "@mui/material";
+import CompleteDialog from "../components/CompleteDialog";
 
 type TotalWords = {
   [rate: string]: Word[];
@@ -23,6 +24,7 @@ const WordSetPage = () => {
   const [hiraganaHidden, setHiraganaHidden] = useState<boolean>(true);
   const navigate = useNavigate();
   const memoryList = JSON.parse(localStorage.getItem(rate) as string);
+  const [dialogOpen, setDialogOpen] = useState<boolean>(false);
 
   useEffect(() => {
     let nextIndex = curIndex;
@@ -40,7 +42,7 @@ const WordSetPage = () => {
       setHiraganaHidden(!hiraganaHidden);
     } else if (buttonId === "memorization") {
       if (memoryList.length == totalIndex - 1) {
-        navigate("/");
+        handleDialogOpen();
         localStorage.setItem(rate, JSON.stringify([]));
         return 0;
       }
@@ -64,8 +66,18 @@ const WordSetPage = () => {
     }
   };
 
+  const handleDialogOpen = () => {
+    setDialogOpen(true);
+  };
+
+  const handleDialogClose = () => {
+    navigate("/");
+    setDialogOpen(false);
+  };
+
   return (
     <Container sx={{ height: "100vh" }}>
+      <CompleteDialog handleDialogClose={handleDialogClose} dialogOpen={dialogOpen} />
       <Stack
         sx={{ height: "100vh" }}
         direction="column"
