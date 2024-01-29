@@ -1,4 +1,4 @@
-import React, { useEffect, useState, MouseEvent } from "react";
+import { useEffect, useState, MouseEvent } from "react";
 import JLPTword from "../words/JLPTwords.json";
 import { useParams, useNavigate } from "react-router-dom";
 import { Container, Button, Typography, Stack } from "@mui/material";

@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Button, Stack, Container } from "@mui/material";
 import TagFacesIcon from "@mui/icons-material/TagFaces";
