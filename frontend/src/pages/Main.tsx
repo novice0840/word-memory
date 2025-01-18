@@ -4,6 +4,36 @@ import TagFacesIcon from "@mui/icons-material/TagFaces";
 import { useEffect, useState } from "react";
 import { Button as ShadButton } from "@/components/ui/button";
 
+const dbName = "persistentDatabase";
+const storeName = "persistentStore";
+
+// @ts-ignore
+async function saveData(key, value) {
+  return new Promise((resolve, reject) => {
+    const request = indexedDB.open(dbName, 1);
+
+    request.onupgradeneeded = (event) => {
+      // @ts-ignore
+      const db = event.target?.result;
+      if (!db.objectStoreNames.contains(storeName)) {
+        db.createObjectStore(storeName, { keyPath: "key" });
+      }
+    };
+
+    request.onsuccess = (event) => {
+      // @ts-ignore
+      const db = event.target?.result;
+      const transaction = db.transaction(storeName, "readwrite");
+      const store = transaction.objectStore(storeName);
+      store.put({ key, value });
+      // @ts-ignore
+      transaction.oncomplete = () => resolve();
+    };
+    // @ts-ignore
+    request.onerror = (event) => reject(event.target?.error);
+  });
+}
+
 const MainPage = () => {
   const [showRt, setShowRt] = useState(true);
 
@@ -34,7 +64,11 @@ const MainPage = () => {
   return (
     <Container sx={{ marginTop: "150px" }}>
       <Stack spacing={5} alignItems="center" justifyContent="center">
-        <ShadButton>Shadow Button</ShadButton>
+        <ShadButton
+          onClick={() => saveData("/exampleKey", { data: "Persistent Value" })}
+        >
+          Shadow Button
+        </ShadButton>
         <h1 className="text-3xl font-bold bg-red-500 underline">
           Hello world!
         </h1>
