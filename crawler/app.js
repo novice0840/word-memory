@@ -17,6 +17,7 @@ const sleep = (milliseconds) => {
 };
 
 const getPageWords = async (url) => {
+  sleep(500);
   const response = await fetch(url);
   const jsonData = await response.json();
   const parsedUrl = new URL(url);
@@ -30,11 +31,11 @@ const getPageWords = async (url) => {
       level: `N${level}`,
     };
     const exampleSentences = await getExampleSentences(
-      word.kanji && word.pronunciation
+      word.kanji ?? word.pronunciation
     );
     word.exampleSentences = exampleSentences;
     words.push(word);
-    console.log("Crawling word:", word.kanji && word.pronunciation, word.level);
+    console.log("Crawling word:", word.kanji ?? word.pronunciation, word.level);
   }
   return words;
 };
