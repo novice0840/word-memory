@@ -1,13 +1,11 @@
-const fs = require("fs");
-const JLPTurl = "https://ja.dict.naver.com/api/jako/getJLPTList?";
+const { getExampleSentences } = require("./queryWord");
 
-const getTotalPage = async (url, language = "japanese") => {
+const fs = require("fs");
+const JLPT_BASE_URL = "https://ja.dict.naver.com/api/jako/getJLPTList";
+const getTotalPage = async (url) => {
   const response = await fetch(url);
   const jsonData = await response.json();
-  if (language === "japanese") {
-    return jsonData.m_totalPage;
-  }
-  return jsonData.searchResult.m_totalPage;
+  return jsonData.m_totalPage;
 };
 
 const sleep = (milliseconds) => {
@@ -18,38 +16,38 @@ const sleep = (milliseconds) => {
   }
 };
 
-const getPageWords = async (url, language = "japanese") => {
-  sleep(500);
+const getPageWords = async (url) => {
   const response = await fetch(url);
   const jsonData = await response.json();
-  if (language === "japanese") {
-    return jsonData.m_items.map((item) => ({
+  const parsedUrl = new URL(url);
+  const level = parsedUrl.searchParams.get("level");
+  let words = [];
+  for (const item of jsonData.m_items) {
+    let word = {
       koreans: item.means?.map((mean) => mean.replace(/;/g, ", ")),
-      original: item.show_entry,
-      pronunciation: item.pron,
-    }));
+      pronunciation: item.show_entry,
+      kanji: item.pron,
+      level: `N${level}`,
+    };
+    const exampleSentences = await getExampleSentences(
+      word.kanji && word.pronunciation
+    );
+    word.exampleSentences = exampleSentences;
+    words.push(word);
+    console.log("Crawling word:", word.kanji && word.pronunciation, word.level);
   }
-
-  return jsonData.searchResult.m_items.map((item) => ({
-    koreans: item.means?.map((mean) => mean.replace(/;/g, ", ")),
-    original: item.show_entry,
-    pronunciation: item.pron,
-  }));
+  return words;
 };
 
-const getWords = async (url, level, language = "japanese") => {
+const getWords = async (url, level) => {
   const urls = [];
   let words = [];
-  const totalPage = await getTotalPage(
-    url + `&level=${level}&page=1`,
-    language
-  );
+  const totalPage = await getTotalPage(url + "?" + `&level=${level}`);
   for (let i = 1; i <= totalPage; i += 1) {
-    urls.push(url + `&level=${level}` + `&page=${i}`);
+    urls.push(url + "?" + `&level=${level}` + `&page=${i}`);
   }
   for (const url of urls) {
-    console.log(url);
-    words = words.concat(await getPageWords(url, language));
+    words.push(...(await getPageWords(url)));
   }
   return words;
 };
@@ -59,19 +57,12 @@ const saveJSON = (fileName, jsonName) => {
   fs.writeFileSync(fileName, jsonString, "utf-8");
 };
 
-const getAllJLPTwords = async () => {
-  const words = {};
-  words.N5 = await getWords(JLPTurl, 5);
-  words.N4 = await getWords(JLPTurl, 4);
-  words.N3 = await getWords(JLPTurl, 3);
-  words.N2 = await getWords(JLPTurl, 2);
-  words.N1 = await getWords(JLPTurl, 1);
-
-  saveJSON("JLPTwords.json", words);
+const getAllJLPTWords = async () => {
+  saveJSON("JLPT_N5_WORDS.json", await getWords(JLPT_BASE_URL, 5));
+  saveJSON("JLPT_N4_WORDS.json", await getWords(JLPT_BASE_URL, 4));
+  saveJSON("JLPT_N3_WORDS.json", await getWords(JLPT_BASE_URL, 3));
+  saveJSON("JLPT_N2_WORDS.json", await getWords(JLPT_BASE_URL, 2));
+  saveJSON("JLPT_N1_WORDS.json", await getWords(JLPT_BASE_URL, 1));
 };
 
-const init = async () => {
-  await getAllJLPTwords();
-};
-
-init();
+getAllJLPTWords();

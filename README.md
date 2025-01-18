@@ -12,7 +12,7 @@
     "hiragana": "-ずつ",
     "kanji": "宛",
     "level": "N1",
-    "exampleSentence": [
+    "exampleSentences": [
       {
         "korean": "에너지 자원을 수입에 의존하다",
         "japaneses": "エネルギー<ruby><rb>資源</rb><rt>しげん</rt></ruby>を<ruby><rb>輸入</rb><rt>ゆにゅう</rt></ruby>に<ruby><rb>頼</rb><rt><strong>たよ</strong></rt></ruby><strong>る</strong>"

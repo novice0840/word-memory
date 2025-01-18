@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button, Stack, Container } from "@mui/material";
 import TagFacesIcon from "@mui/icons-material/TagFaces";
 import { useEffect, useState } from "react";
+import { Button as ShadButton } from "@/components/ui/button";
 
 const MainPage = () => {
   const [showRt, setShowRt] = useState(true);
@@ -33,6 +34,10 @@ const MainPage = () => {
   return (
     <Container sx={{ marginTop: "150px" }}>
       <Stack spacing={5} alignItems="center" justifyContent="center">
+        <ShadButton>Shadow Button</ShadButton>
+        <h1 className="text-3xl font-bold bg-red-500 underline">
+          Hello world!
+        </h1>
         <button onClick={() => setShowRt((prev) => !prev)}>
           {showRt ? "Hide Pronunciation" : "Show Pronunciation"}
         </button>
