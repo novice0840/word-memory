@@ -1,6 +1,5 @@
 const fs = require("fs");
 const JLPTurl = "https://ja.dict.naver.com/api/jako/getJLPTList?";
-const HSKurl = "https://zh.dict.naver.com/api/zhko/getHskInfoList?pageSize=100";
 
 const getTotalPage = async (url, language = "japanese") => {
   const response = await fetch(url);
@@ -41,7 +40,10 @@ const getPageWords = async (url, language = "japanese") => {
 const getWords = async (url, level, language = "japanese") => {
   const urls = [];
   let words = [];
-  const totalPage = await getTotalPage(url + `&level=${level}&page=1`, language);
+  const totalPage = await getTotalPage(
+    url + `&level=${level}&page=1`,
+    language
+  );
   for (let i = 1; i <= totalPage; i += 1) {
     urls.push(url + `&level=${level}` + `&page=${i}`);
   }
@@ -68,19 +70,7 @@ const getAllJLPTwords = async () => {
   saveJSON("JLPTwords.json", words);
 };
 
-const getAllHSKwords = async () => {
-  const words = {};
-  words.HSK1 = await getWords(HSKurl, 1, "chinese");
-  words.HSK2 = await getWords(HSKurl, 2, "chinese");
-  words.HSK3 = await getWords(HSKurl, 3, "chinese");
-  words.HSK4 = await getWords(HSKurl, 4, "chinese");
-  words.HSK5 = await getWords(HSKurl, 5, "chinese");
-  words.HSK6 = await getWords(HSKurl, 6, "chinese");
-  saveJSON("HSKwords.json", words);
-};
-
 const init = async () => {
-  await getAllHSKwords();
   await getAllJLPTwords();
 };
 
