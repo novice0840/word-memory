@@ -24,7 +24,7 @@ const WordsPage = () => {
   const words = JLPT_N1_WORDS as Word[];
   const totalIndex = words.length;
   const { rate = "N1" } = useParams();
-  const memoryList = JSON.parse(localStorage.getItem(rate) as string);
+  const memoryList = JSON.parse((localStorage.getItem(rate) as string) || "[]");
 
   const [curIndex, setCurIndex] = useState<number>(0);
   const [koreanHidden, setKoreanHidden] = useState<boolean>(true);
