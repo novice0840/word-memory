@@ -1,17 +1,12 @@
 import { useEffect, useState, MouseEvent } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Button } from "../components/ui/button";
 
-import JLPTword from "../words/JLPTwords.json";
 import JLPT_N1_WORDS from "../words/JLPT_N1_WORDS.json";
 import JLPT_N2_WORDS from "../words/JLPT_N2_WORDS.json";
 import JLPT_N3_WORDS from "../words/JLPT_N3_WORDS.json";
 import JLPT_N4_WORDS from "../words/JLPT_N4_WORDS.json";
 import JLPT_N5_WORDS from "../words/JLPT_N5_WORDS.json";
-
-type TotalWords = {
-  [rate: string]: Word[];
-};
 
 type Word = {
   koreans: string[];
@@ -20,22 +15,20 @@ type Word = {
   kanji: string | null;
   level: string;
   exampleSentences: {
-    koreans: string;
+    korean: string;
     japanese: string;
   }[];
 };
 
 const WordsPage = () => {
-  // const totalWords: TotalWords = JLPTword;
-  // const { rate = "N1" } = useParams();
-  // const { [rate]: words } = totalWords;
-  const rate = "N1";
   const words = JLPT_N1_WORDS as Word[];
   const totalIndex = words.length;
+  const { rate = "N1" } = useParams();
+  const memoryList = JSON.parse(localStorage.getItem(rate) as string);
+
   const [curIndex, setCurIndex] = useState<number>(0);
   const [koreanHidden, setKoreanHidden] = useState<boolean>(true);
   const [hiraganaHidden, setHiraganaHidden] = useState<boolean>(true);
-  const memoryList = JSON.parse(localStorage.getItem(rate) as string);
 
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     const buttonId = event.currentTarget.id;
@@ -77,7 +70,7 @@ const WordsPage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-between items-center gap-9 text-xl ">
+    <div className="flex flex-col justify-between items-center gap-4 text-xl ">
       <div>
         전체 단어 {curIndex}/{totalIndex}
       </div>
@@ -85,11 +78,17 @@ const WordsPage = () => {
         외운 단어 {memoryList.length}/{totalIndex}
       </div>
       <div className="text-5xl">
-        {words[curIndex].pronunciation?.split("·").map((item) => (
+        {words[curIndex].kanji?.split("·").map((item) => (
           <div>{item}</div>
         ))}
       </div>
-      <div>{hiraganaHidden ? "히라가나 숨김" : words[curIndex].original}</div>
+      <div>
+        {hiraganaHidden
+          ? "히라가나 숨김"
+          : words[curIndex].pronunciation
+              ?.split("·")
+              .map((item) => <div>{item}</div>)}
+      </div>
       <div>{koreanHidden ? "한국어 숨김" : words[curIndex].koreans}</div>
       <div className="flex gap-4">
         <Button id="korean" onClick={handleClick}>
