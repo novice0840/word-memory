@@ -6,8 +6,11 @@ async function modifyJson(filename) {
     const jsonData = JSON.parse(data);
 
     for (const word of jsonData) {
-      if (word.kanji !== null) continue;
-      word.exampleSentences = await getExampleSentences(word.pronunciation);
+      word.exampleSentences.forEach(async (sentence) => {
+        sentence.korean = sentence.koreans;
+        delete sentence.koreans;
+      });
+
       console.log("Modifying word:", word.pronunciation);
     }
 
@@ -19,4 +22,8 @@ async function modifyJson(filename) {
   }
 }
 
+modifyJson("JLPT_N5_WORDS.json");
+modifyJson("JLPT_N4_WORDS.json");
+modifyJson("JLPT_N3_WORDS.json");
 modifyJson("JLPT_N2_WORDS.json");
+modifyJson("JLPT_N1_WORDS.json");

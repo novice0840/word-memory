@@ -15,7 +15,7 @@ const getExampleSentences = async (word) => {
   const response = await fetch(url, { headers });
   const data = await response.json();
   return data.searchResultMap.searchResultListMap.EXAMPLE.items.map((item) => ({
-    koreans: item.expExample2,
+    korean: item.expExample2,
     japanese: item.expExample1,
   }));
 };

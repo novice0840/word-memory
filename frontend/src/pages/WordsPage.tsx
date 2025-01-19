@@ -1,7 +1,13 @@
 import { useEffect, useState, MouseEvent } from "react";
-import JLPTword from "../words/JLPTwords.json";
 import { useParams, useNavigate } from "react-router-dom";
 import { Button } from "../components/ui/button";
+
+import JLPTword from "../words/JLPTwords.json";
+import JLPT_N1_WORDS from "../words/JLPT_N1_WORDS.json";
+import JLPT_N2_WORDS from "../words/JLPT_N2_WORDS.json";
+import JLPT_N3_WORDS from "../words/JLPT_N3_WORDS.json";
+import JLPT_N4_WORDS from "../words/JLPT_N4_WORDS.json";
+import JLPT_N5_WORDS from "../words/JLPT_N5_WORDS.json";
 
 type TotalWords = {
   [rate: string]: Word[];
@@ -10,26 +16,26 @@ type TotalWords = {
 type Word = {
   koreans: string[];
   original: string;
-  pronunciation: string | null;
+  pronunciation: string;
+  kanji: string | null;
+  level: string;
+  exampleSentences: {
+    koreans: string;
+    japanese: string;
+  }[];
 };
 
 const WordsPage = () => {
-  const totalWords: TotalWords = JLPTword;
-  const { rate = "N1" } = useParams();
-  const { [rate]: words } = totalWords;
+  // const totalWords: TotalWords = JLPTword;
+  // const { rate = "N1" } = useParams();
+  // const { [rate]: words } = totalWords;
+  const rate = "N1";
+  const words = JLPT_N1_WORDS as Word[];
   const totalIndex = words.length;
   const [curIndex, setCurIndex] = useState<number>(0);
   const [koreanHidden, setKoreanHidden] = useState<boolean>(true);
   const [hiraganaHidden, setHiraganaHidden] = useState<boolean>(true);
   const memoryList = JSON.parse(localStorage.getItem(rate) as string);
-
-  useEffect(() => {
-    let nextIndex = curIndex;
-    while (memoryList.includes(nextIndex)) {
-      nextIndex += 1;
-    }
-    setCurIndex(nextIndex);
-  }, []);
 
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     const buttonId = event.currentTarget.id;
@@ -62,6 +68,14 @@ const WordsPage = () => {
     }
   };
 
+  useEffect(() => {
+    let nextIndex = curIndex;
+    while (memoryList.includes(nextIndex)) {
+      nextIndex += 1;
+    }
+    setCurIndex(nextIndex);
+  }, []);
+
   return (
     <div className="flex flex-col justify-between items-center gap-9 text-xl ">
       <div>
@@ -70,7 +84,7 @@ const WordsPage = () => {
       <div>
         외운 단어 {memoryList.length}/{totalIndex}
       </div>
-      <div className="text-6xl">
+      <div className="text-5xl">
         {words[curIndex].pronunciation?.split("·").map((item) => (
           <div>{item}</div>
         ))}
