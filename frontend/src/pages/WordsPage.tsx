@@ -1,6 +1,5 @@
 import { useEffect, useState, MouseEvent } from "react";
-import { useParams } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import { Navigate, useParams } from "react-router-dom";
 
 import JLPT_N1_WORDS from "@/words/JLPT_N1_WORDS.json";
 import JLPT_N2_WORDS from "@/words/JLPT_N2_WORDS.json";
@@ -10,23 +9,43 @@ import JLPT_N5_WORDS from "@/words/JLPT_N5_WORDS.json";
 import StudyProgress from "@/components/StudyProgress";
 import StudyAction from "@/components/StudyAction";
 
+type Level = "N1" | "N2" | "N3" | "N4" | "N5";
+
 type Word = {
   koreans: string[];
   original: string;
   pronunciation: string;
   kanji: string | null;
-  level: string;
+  level: Level;
   exampleSentences: {
     korean: string;
     japanese: string;
   }[];
 };
 
+const getWords = (level: Level) => {
+  const levelWords = {
+    N1: JLPT_N1_WORDS,
+    N2: JLPT_N2_WORDS,
+    N3: JLPT_N3_WORDS,
+    N4: JLPT_N4_WORDS,
+    N5: JLPT_N5_WORDS,
+  };
+  return levelWords[level];
+};
+
 const WordsPage = () => {
-  const words = JLPT_N1_WORDS as Word[];
+  const { level = "N1" } = useParams();
+
+  if (!["N1", "N2", "N3", "N4", "N5"].includes(level || "")) {
+    return <Navigate to="/" />;
+  }
+
+  const words = getWords(level as Level) as Word[];
   const totalLength = words.length;
-  const { rate = "N1" } = useParams();
-  const memoryList = JSON.parse((localStorage.getItem(rate) as string) || "[]");
+  const memoryList = JSON.parse(
+    (localStorage.getItem(level) as string) || "[]"
+  );
 
   const [curIndex, setCurIndex] = useState<number>(0);
   const [koreanHidden, setKoreanHidden] = useState<boolean>(true);
@@ -39,7 +58,7 @@ const WordsPage = () => {
       setHiraganaHidden(!hiraganaHidden);
     } else if (buttonId === "memorization") {
       if (memoryList.length == totalLength - 1) {
-        localStorage.setItem(rate, JSON.stringify([]));
+        localStorage.setItem(level, JSON.stringify([]));
         return 0;
       }
       let nextIndex = curIndex + 1;
@@ -47,7 +66,7 @@ const WordsPage = () => {
         nextIndex += 1;
       }
       memoryList?.push(curIndex);
-      localStorage.setItem(rate, JSON.stringify(memoryList));
+      localStorage.setItem(level, JSON.stringify(memoryList));
       setCurIndex(nextIndex);
       setKoreanHidden(true);
       setHiraganaHidden(true);

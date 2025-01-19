@@ -4,11 +4,13 @@ import MainPage from "./pages/MainPage.tsx";
 import WordsPage from "./pages/WordsPage.tsx";
 import Sample from "./pages/Sample.tsx";
 import AppLayout from "./layout/AppLayout.tsx";
+import ErrorPage from "./pages/ErrorPage.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
+    errorElement: <ErrorPage />,
     children: [
       { path: "/", element: <MainPage /> },
       { path: "/words/:level", element: <WordsPage /> },
