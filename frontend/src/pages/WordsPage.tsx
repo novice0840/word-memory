@@ -1,13 +1,14 @@
 import { useEffect, useState, MouseEvent } from "react";
 import { useParams } from "react-router-dom";
-import { Button } from "../components/ui/button";
+import { Button } from "@/components/ui/button";
 
-import JLPT_N1_WORDS from "../words/JLPT_N1_WORDS.json";
-import JLPT_N2_WORDS from "../words/JLPT_N2_WORDS.json";
-import JLPT_N3_WORDS from "../words/JLPT_N3_WORDS.json";
-import JLPT_N4_WORDS from "../words/JLPT_N4_WORDS.json";
-import JLPT_N5_WORDS from "../words/JLPT_N5_WORDS.json";
-import StudyProgress from "../components/StudyProgress";
+import JLPT_N1_WORDS from "@/words/JLPT_N1_WORDS.json";
+import JLPT_N2_WORDS from "@/words/JLPT_N2_WORDS.json";
+import JLPT_N3_WORDS from "@/words/JLPT_N3_WORDS.json";
+import JLPT_N4_WORDS from "@/words/JLPT_N4_WORDS.json";
+import JLPT_N5_WORDS from "@/words/JLPT_N5_WORDS.json";
+import StudyProgress from "@/components/StudyProgress";
+import StudyAction from "@/components/StudyAction";
 
 type Word = {
   koreans: string[];
@@ -94,18 +95,20 @@ const WordsPage = () => {
                 </div>
               ))}
         </div>
+        <div className="h-64 overflow-auto">
+          {words[curIndex].exampleSentences.map((item, index) => (
+            <div key={index}>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: item.japanese,
+                }}
+              />
+              <div>{item.korean}</div>
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="fixed bottom-0 left-0 w-full p-4 grid grid-cols-2 grid-rows-2 gap-4 ">
-        <Button id="showMeaning" onClick={handleClick}>
-          뜻 보기
-        </Button>
-        <Button id="memorization" onClick={handleClick}>
-          암기 완료
-        </Button>
-        <Button id="again" onClick={handleClick}>
-          다시 외우기
-        </Button>
-      </div>
+      <StudyAction onClick={handleClick} />
     </div>
   );
 };

@@ -19,6 +19,7 @@ const MainPage = () => {
         {showRt ? "Hide Pronunciation" : "Show Pronunciation"}
       </Button>
       <div
+        className="h-32 overflow-auto"
         dangerouslySetInnerHTML={{
           __html: showSentence,
         }}
