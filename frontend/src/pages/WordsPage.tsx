@@ -7,6 +7,7 @@ import JLPT_N2_WORDS from "../words/JLPT_N2_WORDS.json";
 import JLPT_N3_WORDS from "../words/JLPT_N3_WORDS.json";
 import JLPT_N4_WORDS from "../words/JLPT_N4_WORDS.json";
 import JLPT_N5_WORDS from "../words/JLPT_N5_WORDS.json";
+import StudyProgress from "../components/StudyProgress";
 
 type Word = {
   koreans: string[];
@@ -22,7 +23,7 @@ type Word = {
 
 const WordsPage = () => {
   const words = JLPT_N1_WORDS as Word[];
-  const totalIndex = words.length;
+  const totalLength = words.length;
   const { rate = "N1" } = useParams();
   const memoryList = JSON.parse((localStorage.getItem(rate) as string) || "[]");
 
@@ -32,12 +33,11 @@ const WordsPage = () => {
 
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     const buttonId = event.currentTarget.id;
-    if (buttonId === "korean") {
+    if (buttonId === "showMeaning") {
       setKoreanHidden(!koreanHidden);
-    } else if (buttonId === "hiragana") {
       setHiraganaHidden(!hiraganaHidden);
     } else if (buttonId === "memorization") {
-      if (memoryList.length == totalIndex - 1) {
+      if (memoryList.length == totalLength - 1) {
         localStorage.setItem(rate, JSON.stringify([]));
         return 0;
       }
@@ -70,40 +70,40 @@ const WordsPage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-between items-center gap-4 text-xl ">
-      <div>
-        전체 단어 {curIndex}/{totalIndex}
+    <div className="flex flex-col justify-between items-center gap-4 text-xl">
+      <StudyProgress
+        curIndex={curIndex}
+        memoryListLength={memoryList.length}
+        totalLength={totalLength}
+      />
+      <div className="flex flex-col items-center gap-4">
+        <div className="text-5xl">
+          {words[curIndex].kanji?.split("·").map((item) => (
+            <div key={item}>{item}</div>
+          ))}
+        </div>
+        <div>
+          {hiraganaHidden ? "히라가나 숨김" : words[curIndex].pronunciation}
+        </div>
+        <div>
+          {koreanHidden
+            ? "한국어 숨김"
+            : words[curIndex].koreans?.map((item) => (
+                <div className="text-center" key={item}>
+                  {item}
+                </div>
+              ))}
+        </div>
       </div>
-      <div>
-        외운 단어 {memoryList.length}/{totalIndex}
-      </div>
-      <div className="text-5xl">
-        {words[curIndex].kanji?.split("·").map((item) => (
-          <div>{item}</div>
-        ))}
-      </div>
-      <div>
-        {hiraganaHidden
-          ? "히라가나 숨김"
-          : words[curIndex].pronunciation
-              ?.split("·")
-              .map((item) => <div>{item}</div>)}
-      </div>
-      <div>{koreanHidden ? "한국어 숨김" : words[curIndex].koreans}</div>
-      <div className="flex gap-4">
-        <Button id="korean" onClick={handleClick}>
-          한국어
+      <div className="fixed bottom-0 left-0 w-full p-4 grid grid-cols-2 grid-rows-2 gap-4 ">
+        <Button id="showMeaning" onClick={handleClick}>
+          뜻 보기
         </Button>
-        <Button id="hiragana" onClick={handleClick}>
-          히라가나
-        </Button>
-      </div>
-      <div className="flex gap-4">
         <Button id="memorization" onClick={handleClick}>
-          암기완료
+          암기 완료
         </Button>
         <Button id="again" onClick={handleClick}>
-          다시외우기
+          다시 외우기
         </Button>
       </div>
     </div>
