@@ -3,8 +3,8 @@ import { Menu, Cog, Home } from "@mynaui/icons-react";
 
 const AppLayout = () => {
   return (
-    <div className="container mx-auto">
-      <header className="flex justify-between p-4 mb-4 ">
+    <div className="container mx-auto h-screen flex flex-col">
+      <header className="flex justify-between p-4">
         <Menu />
         <Link to={`/`}>
           <Home />

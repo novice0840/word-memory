@@ -50,6 +50,7 @@ const WordsPage = () => {
   const [curIndex, setCurIndex] = useState(0);
   const [koreanHidden, setKoreanHidden] = useState(true);
   const [hiraganaHidden, setHiraganaHidden] = useState(true);
+  const [showExampleSentences, setShowExampleSentences] = useState(false);
 
   const gotoNextWord = (nextIndex: number) => {
     while (memoryList.includes(nextIndex)) {
@@ -57,6 +58,7 @@ const WordsPage = () => {
     }
     setKoreanHidden(true);
     setHiraganaHidden(true);
+    setShowExampleSentences(false);
     setCurIndex(nextIndex);
   };
 
@@ -64,19 +66,28 @@ const WordsPage = () => {
     const buttonId = event.currentTarget.id;
     let nextIndex = curIndex + 1;
 
-    if (buttonId === "showMeaning") {
-      setKoreanHidden(!koreanHidden);
-      setHiraganaHidden(!hiraganaHidden);
-      return;
-    } else if (buttonId === "memorization") {
-      if (memoryList.length == totalLength - 1) {
-        localStorage.setItem(level, JSON.stringify([]));
-        return 0;
-      }
-      localStorage.setItem(level, JSON.stringify(memoryList));
-      gotoNextWord(nextIndex);
-    } else if (buttonId === "again") {
-      gotoNextWord(nextIndex);
+    switch (buttonId) {
+      case "showMeaning":
+        setKoreanHidden(!koreanHidden);
+        setHiraganaHidden(!hiraganaHidden);
+        break;
+      case "showExampleSentences":
+        setShowExampleSentences(!showExampleSentences);
+        break;
+      case "memorization":
+        if (memoryList.length == totalLength - 1) {
+          localStorage.setItem(level, JSON.stringify([]));
+          return 0;
+        }
+
+        localStorage.setItem(level, JSON.stringify(memoryList));
+        gotoNextWord(nextIndex);
+        break;
+      case "again":
+        gotoNextWord(nextIndex);
+        break;
+      default:
+        throw new Error("Invalid button id");
     }
   };
 
@@ -89,14 +100,14 @@ const WordsPage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-between items-center gap-4 text-xl">
+    <main className="flex-1 flex flex-col items-center justify-between text-xl">
       <StudyProgress
         curIndex={curIndex}
         memoryListLength={memoryList.length}
         totalLength={totalLength}
       />
-      <div className="flex flex-col items-center gap-4">
-        <div className="text-5xl">
+      <section className="flex flex-col items-center  w-full max-h-96 overflow-auto">
+        <div className="text-3xl">
           {words[curIndex].kanji?.split("·").map((item) => (
             <div key={item}>{item}</div>
           ))}
@@ -113,21 +124,23 @@ const WordsPage = () => {
                 </div>
               ))}
         </div>
-        <div className="h-64 overflow-auto">
+        <div className="h-64 overflow-auto w-full">
           {words[curIndex].exampleSentences.map((item, index) => (
             <div key={index}>
               <div
                 dangerouslySetInnerHTML={{
-                  __html: item.japanese,
+                  __html: showExampleSentences
+                    ? item.japanese
+                    : item.japanese.replace(/<rt>(.*?)<\/rt>/g, ""),
                 }}
               />
-              <div>{item.korean}</div>
+              <div>{showExampleSentences && item.korean}</div>
             </div>
           ))}
         </div>
-      </div>
+      </section>
       <StudyAction onClick={handleClick} />
-    </div>
+    </main>
   );
 };
 

@@ -7,8 +7,8 @@ interface StudyActionProps {
 
 const StudyAction = ({ onClick }: StudyActionProps) => {
   return (
-    <div className="fixed bottom-0 left-0  w-full p-4">
-      <div className="grid grid-cols-2 grid-rows-2 gap-4 max-w-md mx-auto">
+    <div className="h-32  w-full p-4 max-w-md ">
+      <div className="grid grid-cols-2 grid-rows-2 gap-4 ">
         <Button id="showMeaning" onClick={onClick}>
           뜻 보기
         </Button>
