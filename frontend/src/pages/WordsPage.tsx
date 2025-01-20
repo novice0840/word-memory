@@ -47,37 +47,36 @@ const WordsPage = () => {
     (localStorage.getItem(level) as string) || "[]"
   );
 
-  const [curIndex, setCurIndex] = useState<number>(0);
-  const [koreanHidden, setKoreanHidden] = useState<boolean>(true);
-  const [hiraganaHidden, setHiraganaHidden] = useState<boolean>(true);
+  const [curIndex, setCurIndex] = useState(0);
+  const [koreanHidden, setKoreanHidden] = useState(true);
+  const [hiraganaHidden, setHiraganaHidden] = useState(true);
+
+  const gotoNextWord = (nextIndex: number) => {
+    while (memoryList.includes(nextIndex)) {
+      nextIndex += 1;
+    }
+    setKoreanHidden(true);
+    setHiraganaHidden(true);
+    setCurIndex(nextIndex);
+  };
 
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     const buttonId = event.currentTarget.id;
+    let nextIndex = curIndex + 1;
+
     if (buttonId === "showMeaning") {
       setKoreanHidden(!koreanHidden);
       setHiraganaHidden(!hiraganaHidden);
+      return;
     } else if (buttonId === "memorization") {
       if (memoryList.length == totalLength - 1) {
         localStorage.setItem(level, JSON.stringify([]));
         return 0;
       }
-      let nextIndex = curIndex + 1;
-      while (memoryList.includes(nextIndex)) {
-        nextIndex += 1;
-      }
-      memoryList?.push(curIndex);
       localStorage.setItem(level, JSON.stringify(memoryList));
-      setCurIndex(nextIndex);
-      setKoreanHidden(true);
-      setHiraganaHidden(true);
+      gotoNextWord(nextIndex);
     } else if (buttonId === "again") {
-      let nextIndex = curIndex + 1;
-      while (memoryList.includes(nextIndex)) {
-        nextIndex += 1;
-      }
-      setKoreanHidden(true);
-      setHiraganaHidden(true);
-      setCurIndex(nextIndex);
+      gotoNextWord(nextIndex);
     }
   };
 
