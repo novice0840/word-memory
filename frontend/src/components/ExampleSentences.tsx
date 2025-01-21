@@ -11,7 +11,7 @@ const ExampleSentences = ({
   showMeaning,
 }: ExampleSentencesProps) => {
   return (
-    <div className="h-64 overflow-auto w-full text-xl">
+    <div className="h-64 overflow-auto w-full text-xl rounded-md border p-4">
       {sentences.map((item, index) => (
         <div key={index}>
           <div
