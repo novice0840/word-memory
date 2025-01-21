@@ -1,5 +1,4 @@
-import { MouseEvent } from "react";
-import { Navigate, useParams, useNavigate } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import { useLocalStorage, setLocalStorage } from "@/hooks/useLocalStorage";
 import { LEVELS } from "@/constants/word";
 import {
@@ -8,14 +7,12 @@ import {
   ExampleSentences,
   Word,
 } from "@/components";
-import { useWord } from "@/hooks/useWord";
 import { getJLPTWords, getNextIndex } from "@/utils/word";
 import type { Level, Word as WordType } from "@/types/word";
 import { useStudyAction } from "@/hooks/useStudyAction";
 
 const WordsPage = () => {
   const { level = "" } = useParams();
-  const navigate = useNavigate();
   const { memoryList, curIndex } = useLocalStorage<{
     memoryList: number[];
     curIndex: number;
@@ -42,13 +39,13 @@ const WordsPage = () => {
   const handleGoPrevWord = () => {
     const prevIndex = curIndex > 0 ? curIndex - 1 : totalLength - 1;
     initWord();
-    setLocalStorage(level, JSON.stringify({ memoryList, curIndex: prevIndex }));
+    setLocalStorage(level, { memoryList, curIndex: prevIndex });
   };
 
   const handleGoNextWord = () => {
     const nextIndex = getNextIndex(curIndex, memoryList, totalLength);
     initWord();
-    setLocalStorage(level, JSON.stringify({ memoryList, curIndex: nextIndex }));
+    setLocalStorage(level, { memoryList, curIndex: nextIndex });
   };
 
   return (

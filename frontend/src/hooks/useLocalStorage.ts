@@ -30,8 +30,8 @@ const useLocalStorage = <T>(key: string, defaultValue: T): T => {
   return useSyncExternalStore(subscribe, getSnapshot);
 };
 
-const setLocalStorage = (key: string, value: string): void => {
-  localStorage.setItem(key, value);
+const setLocalStorage = (key: string, value: Object): void => {
+  localStorage.setItem(key, JSON.stringify(value));
   window.dispatchEvent(new Event("storage"));
 };
 
