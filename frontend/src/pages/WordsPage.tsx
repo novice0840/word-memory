@@ -35,16 +35,20 @@ const getWords = (level: Level) => {
 };
 
 const WordsPage = () => {
-  const { level = "N1" } = useParams();
+  const { level = "" } = useParams();
 
-  if (!["N1", "N2", "N3", "N4", "N5"].includes(level || "")) {
+  if (!["N1", "N2", "N3", "N4", "N5"].includes(level)) {
     return <Navigate to="/" />;
   }
 
   const words = getWords(level as Level) as Word[];
   const totalLength = words.length;
-  const memoryList = JSON.parse(
-    (localStorage.getItem(level) as string) || "[]"
+  const { memoryList } = JSON.parse(
+    localStorage.getItem(level) ||
+      `{
+    "memoryList": [],
+    "curIndex": 0
+    }`
   );
 
   const [curIndex, setCurIndex] = useState(0);
@@ -75,12 +79,11 @@ const WordsPage = () => {
         setShowExampleSentences(!showExampleSentences);
         break;
       case "memorization":
+        localStorage.setItem(level, JSON.stringify({ memoryList, curIndex }));
         if (memoryList.length == totalLength - 1) {
-          localStorage.setItem(level, JSON.stringify([]));
           return 0;
         }
 
-        localStorage.setItem(level, JSON.stringify(memoryList));
         gotoNextWord(nextIndex);
         break;
       case "again":
@@ -100,14 +103,14 @@ const WordsPage = () => {
   }, []);
 
   return (
-    <main className="flex-1 flex flex-col items-center justify-between text-xl">
+    <main className="flex-1 flex flex-col items-center justify-between p-4">
       <StudyProgress
         curIndex={curIndex}
         memoryListLength={memoryList.length}
         totalLength={totalLength}
       />
-      <section className="flex flex-col items-center  w-full max-h-96 overflow-auto">
-        <div className="text-3xl">
+      <section className="flex flex-col items-center  w-full max-h-96 overflow-auto text-xl">
+        <div className="text-2xl">
           {words[curIndex].kanji?.split("·").map((item) => (
             <div key={item}>{item}</div>
           ))}
