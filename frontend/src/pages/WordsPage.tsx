@@ -89,7 +89,9 @@ const WordsPage = () => {
         setLocalStorage(
           level,
           JSON.stringify({
-            memoryList: [...memoryList, curIndex],
+            memoryList: memoryList.includes(curIndex)
+              ? memoryList
+              : [...memoryList, curIndex],
             curIndex: nextIndex,
           })
         );
@@ -106,6 +108,21 @@ const WordsPage = () => {
     }
   };
 
+  const handleGoPrevWord = () => {
+    const prevIndex = curIndex > 0 ? curIndex - 1 : totalLength - 1;
+    initWord();
+    setLocalStorage(level, JSON.stringify({ memoryList, curIndex: prevIndex }));
+  };
+
+  const handleGoNextWord = () => {
+    const nextIndex =
+      getNextIndex(curIndex, memoryList) < totalLength
+        ? getNextIndex(curIndex, memoryList)
+        : 0;
+    initWord();
+    setLocalStorage(level, JSON.stringify({ memoryList, curIndex: nextIndex }));
+  };
+
   return (
     <main className="flex-1 flex flex-col items-center justify-between p-4">
       <section className="w-full">
@@ -113,6 +130,8 @@ const WordsPage = () => {
           curIndex={curIndex}
           memoryListLength={memoryList.length}
           totalLength={totalLength}
+          onGoPrevWord={handleGoPrevWord}
+          onGoNextWord={handleGoNextWord}
         />
         <section className="w-full max-h-96 overflow-auto">
           <Word

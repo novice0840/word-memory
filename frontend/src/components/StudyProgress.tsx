@@ -4,16 +4,20 @@ interface StudyProgressProps {
   curIndex: number;
   memoryListLength: number;
   totalLength: number;
+  onGoPrevWord: () => void;
+  onGoNextWord: () => void;
 }
 
 const StudyProgress = ({
   curIndex,
   memoryListLength,
   totalLength,
+  onGoPrevWord,
+  onGoNextWord,
 }: StudyProgressProps) => {
   return (
     <div className="flex justify-between items-center w-full  ">
-      <FatArrowLeft />
+      <FatArrowLeft onClick={onGoPrevWord} />
       <div>
         <div>
           전체 단어 {curIndex}/{totalLength}
@@ -22,7 +26,7 @@ const StudyProgress = ({
           외운 단어 {memoryListLength}/{totalLength}
         </div>
       </div>
-      <FatArrowRight />
+      <FatArrowRight onClick={onGoNextWord} />
     </div>
   );
 };
