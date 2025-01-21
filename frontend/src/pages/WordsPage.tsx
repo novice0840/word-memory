@@ -1,4 +1,4 @@
-import { useEffect, useState, MouseEvent } from "react";
+import { useState, MouseEvent } from "react";
 import { Navigate, useParams } from "react-router-dom";
 
 import JLPT_N1_WORDS from "@/words/JLPT_N1_WORDS.json";
@@ -9,8 +9,9 @@ import JLPT_N5_WORDS from "@/words/JLPT_N5_WORDS.json";
 import StudyProgress from "@/components/StudyProgress";
 import StudyAction from "@/components/StudyAction";
 import { useLocalStorage, setLocalStorage } from "@/hooks/useLocalStorage";
+import { LEVELS } from "@/constants/word";
 
-type Level = "N1" | "N2" | "N3" | "N4" | "N5";
+type Level = (typeof LEVELS)[number];
 
 type Word = {
   koreans: string[];
@@ -53,19 +54,23 @@ const WordsPage = () => {
   const [hiraganaHidden, setHiraganaHidden] = useState(true);
   const [showExampleSentences, setShowExampleSentences] = useState(false);
 
-  const gotoNextWord = (nextIndex: number) => {
-    while (memoryList.includes(nextIndex)) {
-      nextIndex += 1;
-    }
+  const initWord = () => {
     setKoreanHidden(true);
     setHiraganaHidden(true);
     setShowExampleSentences(false);
-    setLocalStorage(level, JSON.stringify({ memoryList, curIndex: nextIndex }));
+  };
+
+  const getNextIndex = (curIndex: number, memoryList: number[]) => {
+    let nextIndex = curIndex + 1;
+    while (memoryList.includes(nextIndex)) {
+      nextIndex += 1;
+    }
+    return nextIndex;
   };
 
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     const buttonId = event.currentTarget.id;
-    let nextIndex = curIndex + 1;
+    const nextIndex = getNextIndex(curIndex, memoryList);
 
     switch (buttonId) {
       case "showMeaning":
@@ -80,12 +85,7 @@ const WordsPage = () => {
           return 0;
         }
 
-        while (memoryList.includes(nextIndex)) {
-          nextIndex += 1;
-        }
-        setKoreanHidden(true);
-        setHiraganaHidden(true);
-        setShowExampleSentences(false);
+        initWord();
         setLocalStorage(
           level,
           JSON.stringify({
@@ -95,7 +95,11 @@ const WordsPage = () => {
         );
         break;
       case "again":
-        gotoNextWord(nextIndex);
+        initWord();
+        setLocalStorage(
+          level,
+          JSON.stringify({ memoryList, curIndex: nextIndex })
+        );
         break;
       default:
         throw new Error("Invalid button id");
@@ -111,7 +115,7 @@ const WordsPage = () => {
           totalLength={totalLength}
         />
         <section className="flex flex-col items-center  w-full max-h-96 overflow-auto">
-          <div className="text-6xl">
+          <div className="text-4xl">
             {words[curIndex].kanji?.split("·").map((item) => (
               <div key={item}>{item}</div>
             ))}
