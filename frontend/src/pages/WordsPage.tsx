@@ -10,12 +10,12 @@ import StudyProgress from "@/components/StudyProgress";
 import StudyAction from "@/components/StudyAction";
 import { useLocalStorage, setLocalStorage } from "@/hooks/useLocalStorage";
 import { LEVELS } from "@/constants/word";
+import ExampleSentences from "@/components/ExampleSentences";
 
 type Level = (typeof LEVELS)[number];
 
 type Word = {
   koreans: string[];
-  original: string;
   pronunciation: string;
   kanji: string | null;
   level: Level;
@@ -49,6 +49,8 @@ const WordsPage = () => {
     memoryList: [],
     curIndex: 0,
   });
+
+  const { kanji, pronunciation, koreans, exampleSentences } = words[curIndex];
 
   const [koreanHidden, setKoreanHidden] = useState(true);
   const [hiraganaHidden, setHiraganaHidden] = useState(true);
@@ -114,38 +116,26 @@ const WordsPage = () => {
           memoryListLength={memoryList.length}
           totalLength={totalLength}
         />
-        <section className="flex flex-col items-center  w-full max-h-96 overflow-auto">
+        <section className="flex flex-col items-center w-full max-h-96 overflow-auto">
           <div className="text-4xl">
-            {words[curIndex].kanji?.split("·").map((item) => (
+            {kanji?.split("·").map((item) => (
               <div key={item}>{item}</div>
             ))}
           </div>
-          <div>
-            {hiraganaHidden ? "히라가나 숨김" : words[curIndex].pronunciation}
-          </div>
+          <div>{hiraganaHidden ? "히라가나 숨김" : pronunciation}</div>
           <div>
             {koreanHidden
               ? "한국어 숨김"
-              : words[curIndex].koreans?.map((item) => (
+              : koreans?.map((item) => (
                   <div className="text-center" key={item}>
                     {item}
                   </div>
                 ))}
           </div>
-          <div className="h-64 overflow-auto w-full text-xl">
-            {words[curIndex].exampleSentences.map((item, index) => (
-              <div key={index}>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: showExampleSentences
-                      ? item.japanese
-                      : item.japanese.replace(/<rt>(.*?)<\/rt>/g, ""),
-                  }}
-                />
-                <div>{showExampleSentences && item.korean}</div>
-              </div>
-            ))}
-          </div>
+          <ExampleSentences
+            sentences={exampleSentences}
+            showMeaning={showExampleSentences}
+          />
         </section>
       </section>
 
