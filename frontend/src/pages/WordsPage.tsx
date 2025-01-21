@@ -51,15 +51,13 @@ const WordsPage = () => {
   });
 
   const { kanji, pronunciation, koreans, exampleSentences } = words[curIndex];
-
-  const [koreanHidden, setKoreanHidden] = useState(true);
-  const [hiraganaHidden, setHiraganaHidden] = useState(true);
-  const [showExampleSentences, setShowExampleSentences] = useState(false);
+  const [showWordMeaning, setShowWordMeaning] = useState(false);
+  const [showExampleSentencesMeaning, setShowExampleSentencesMeaning] =
+    useState(false);
 
   const initWord = () => {
-    setKoreanHidden(true);
-    setHiraganaHidden(true);
-    setShowExampleSentences(false);
+    setShowWordMeaning(false);
+    setShowExampleSentencesMeaning(false);
   };
 
   const getNextIndex = (curIndex: number, memoryList: number[]) => {
@@ -76,11 +74,10 @@ const WordsPage = () => {
 
     switch (buttonId) {
       case "showMeaning":
-        setKoreanHidden(!koreanHidden);
-        setHiraganaHidden(!hiraganaHidden);
+        setShowWordMeaning(!showWordMeaning);
         break;
       case "showExampleSentences":
-        setShowExampleSentences(!showExampleSentences);
+        setShowExampleSentencesMeaning(!showExampleSentencesMeaning);
         break;
       case "memorization":
         if (memoryList.length == totalLength - 1) {
@@ -122,9 +119,9 @@ const WordsPage = () => {
               <div key={item}>{item}</div>
             ))}
           </div>
-          <div>{hiraganaHidden ? "히라가나 숨김" : pronunciation}</div>
+          <div>{showWordMeaning ? "히라가나 숨김" : pronunciation}</div>
           <div>
-            {koreanHidden
+            {showWordMeaning
               ? "한국어 숨김"
               : koreans?.map((item) => (
                   <div className="text-center" key={item}>
@@ -134,7 +131,7 @@ const WordsPage = () => {
           </div>
           <ExampleSentences
             sentences={exampleSentences}
-            showMeaning={showExampleSentences}
+            showMeaning={showExampleSentencesMeaning}
           />
         </section>
       </section>

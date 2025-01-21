@@ -1,5 +1,3 @@
-import React from "react";
-
 interface ExampleSentencesProps {
   sentences: {
     korean: string;
