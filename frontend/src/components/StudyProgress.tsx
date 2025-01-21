@@ -20,7 +20,7 @@ const StudyProgress = ({
       <FatArrowLeft onClick={onGoPrevWord} />
       <div>
         <div>
-          전체 단어 {curIndex}/{totalLength}
+          전체 단어 {curIndex + 1}/{totalLength}
         </div>
         <div>
           외운 단어 {memoryListLength}/{totalLength}

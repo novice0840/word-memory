@@ -1,5 +1,5 @@
-import { useState, MouseEvent } from "react";
-import { Navigate, useParams } from "react-router-dom";
+import { MouseEvent } from "react";
+import { Navigate, useParams, useNavigate } from "react-router-dom";
 
 import {
   JLPT_N1_WORDS,
@@ -16,6 +16,8 @@ import {
   ExampleSentences,
   Word,
 } from "@/components";
+import { useWord } from "@/hooks/useWord";
+import { getNextIndex } from "@/utils/word";
 
 type Level = (typeof LEVELS)[number];
 
@@ -40,13 +42,7 @@ const levelWords = {
 
 const WordsPage = () => {
   const { level = "" } = useParams();
-
-  if (!["N1", "N2", "N3", "N4", "N5"].includes(level)) {
-    return <Navigate to="/" />;
-  }
-
-  const words = levelWords[level as Level] as Word[];
-  const totalLength = words.length;
+  const navigate = useNavigate();
   const { memoryList, curIndex } = useLocalStorage<{
     memoryList: number[];
     curIndex: number;
@@ -54,28 +50,25 @@ const WordsPage = () => {
     memoryList: [],
     curIndex: 0,
   });
+  const words = levelWords[level as Level] as Word[];
+  const totalLength = words.length;
+
+  if (!LEVELS.includes(level as Level) || memoryList.length === totalLength) {
+    return <Navigate to="/" />;
+  }
 
   const { kanji, pronunciation, koreans, exampleSentences } = words[curIndex];
-  const [showWordMeaning, setShowWordMeaning] = useState(false);
-  const [showExampleSentencesMeaning, setShowExampleSentencesMeaning] =
-    useState(false);
-
-  const initWord = () => {
-    setShowWordMeaning(false);
-    setShowExampleSentencesMeaning(false);
-  };
-
-  const getNextIndex = (curIndex: number, memoryList: number[]) => {
-    let nextIndex = curIndex + 1;
-    while (memoryList.includes(nextIndex)) {
-      nextIndex += 1;
-    }
-    return nextIndex;
-  };
+  const {
+    showWordMeaning,
+    showExampleSentencesMeaning,
+    initWord,
+    setShowWordMeaning,
+    setShowExampleSentencesMeaning,
+  } = useWord();
 
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     const buttonId = event.currentTarget.id;
-    const nextIndex = getNextIndex(curIndex, memoryList);
+    const nextIndex = getNextIndex(curIndex, memoryList, totalLength);
 
     switch (buttonId) {
       case "meaning":
@@ -85,10 +78,6 @@ const WordsPage = () => {
         setShowExampleSentencesMeaning(!showExampleSentencesMeaning);
         break;
       case "memorization":
-        if (memoryList.length == totalLength - 1) {
-          return 0;
-        }
-
         initWord();
         setLocalStorage(
           level,
@@ -99,6 +88,10 @@ const WordsPage = () => {
             curIndex: nextIndex,
           })
         );
+
+        if (memoryList.length == totalLength - 1) {
+          navigate("/");
+        }
         break;
       case "again":
         initWord();
@@ -119,10 +112,8 @@ const WordsPage = () => {
   };
 
   const handleGoNextWord = () => {
-    const nextIndex =
-      getNextIndex(curIndex, memoryList) < totalLength
-        ? getNextIndex(curIndex, memoryList)
-        : 0;
+    const nextIndex = getNextIndex(curIndex, memoryList, totalLength);
+
     initWord();
     setLocalStorage(level, JSON.stringify({ memoryList, curIndex: nextIndex }));
   };
