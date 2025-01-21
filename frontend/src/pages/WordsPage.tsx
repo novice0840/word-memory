@@ -6,11 +6,12 @@ import JLPT_N2_WORDS from "@/words/JLPT_N2_WORDS.json";
 import JLPT_N3_WORDS from "@/words/JLPT_N3_WORDS.json";
 import JLPT_N4_WORDS from "@/words/JLPT_N4_WORDS.json";
 import JLPT_N5_WORDS from "@/words/JLPT_N5_WORDS.json";
-import StudyProgress from "@/components/StudyProgress";
-import StudyAction from "@/components/StudyAction";
 import { useLocalStorage, setLocalStorage } from "@/hooks/useLocalStorage";
 import { LEVELS } from "@/constants/word";
+import StudyAction from "@/components/StudyAction";
+import StudyProgress from "@/components/StudyProgress";
 import ExampleSentences from "@/components/ExampleSentences";
+import Word from "@/components/Word";
 
 type Level = (typeof LEVELS)[number];
 
@@ -73,10 +74,10 @@ const WordsPage = () => {
     const nextIndex = getNextIndex(curIndex, memoryList);
 
     switch (buttonId) {
-      case "showMeaning":
+      case "meaning":
         setShowWordMeaning(!showWordMeaning);
         break;
-      case "showExampleSentences":
+      case "sentence":
         setShowExampleSentencesMeaning(!showExampleSentencesMeaning);
         break;
       case "memorization":
@@ -114,21 +115,12 @@ const WordsPage = () => {
           totalLength={totalLength}
         />
         <section className="flex flex-col items-center w-full max-h-96 overflow-auto">
-          <div className="text-4xl">
-            {kanji?.split("·").map((item) => (
-              <div key={item}>{item}</div>
-            ))}
-          </div>
-          <div>{showWordMeaning ? "히라가나 숨김" : pronunciation}</div>
-          <div>
-            {showWordMeaning
-              ? "한국어 숨김"
-              : koreans?.map((item) => (
-                  <div className="text-center" key={item}>
-                    {item}
-                  </div>
-                ))}
-          </div>
+          <Word
+            kanji={kanji}
+            pronunciation={pronunciation}
+            koreans={koreans}
+            showMeaning={showWordMeaning}
+          />
           <ExampleSentences
             sentences={exampleSentences}
             showMeaning={showExampleSentencesMeaning}
