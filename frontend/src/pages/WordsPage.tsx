@@ -109,8 +109,8 @@ const WordsPage = () => {
         memoryListLength={memoryList.length}
         totalLength={totalLength}
       />
-      <section className="flex flex-col items-center  w-full max-h-96 overflow-auto text-xl">
-        <div className="text-2xl">
+      <section className="flex flex-col items-center  w-full max-h-96 overflow-auto">
+        <div className="text-6xl">
           {words[curIndex].kanji?.split("·").map((item) => (
             <div key={item}>{item}</div>
           ))}
@@ -127,7 +127,7 @@ const WordsPage = () => {
                 </div>
               ))}
         </div>
-        <div className="h-64 overflow-auto w-full">
+        <div className="h-64 overflow-auto w-full text-2xl">
           {words[curIndex].exampleSentences.map((item, index) => (
             <div key={index}>
               <div

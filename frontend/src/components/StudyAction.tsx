@@ -7,7 +7,7 @@ interface StudyActionProps {
 
 const StudyAction = ({ onClick }: StudyActionProps) => {
   return (
-    <div className="h-32  w-full  max-w-md ">
+    <div className="h-32  w-full  max-w-md  ">
       <div className="grid grid-cols-2 grid-rows-2 gap-4 ">
         <Button id="showMeaning" onClick={onClick}>
           뜻 보기
