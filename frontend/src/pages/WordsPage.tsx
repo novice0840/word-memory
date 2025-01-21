@@ -114,7 +114,7 @@ const WordsPage = () => {
           memoryListLength={memoryList.length}
           totalLength={totalLength}
         />
-        <section className="flex flex-col items-center w-full max-h-96 overflow-auto">
+        <section className="w-full max-h-96 overflow-auto">
           <Word
             kanji={kanji}
             pronunciation={pronunciation}

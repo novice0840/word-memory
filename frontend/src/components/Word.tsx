@@ -7,17 +7,23 @@ interface WordProps {
 
 const Word = ({ kanji, pronunciation, koreans, showMeaning }: WordProps) => {
   return (
-    <div className="text-center">
+    <div className="text-center h-32">
       <div className="text-4xl">
         {kanji?.split("·").map((item) => <div key={item}>{item}</div>) ||
           pronunciation}
       </div>
-      <div>{kanji && (showMeaning ? pronunciation : "히라가나 숨김")}</div>
-      <div>
-        {showMeaning
-          ? koreans?.map((item) => <div key={item}>{item}</div>)
-          : "한국어 숨김"}
-      </div>
+      {showMeaning ? (
+        <div>
+          <div>{kanji && pronunciation}</div>
+          <div>
+            {koreans?.map((item) => (
+              <div key={item}>{item}</div>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div>뜻 보기</div>
+      )}
     </div>
   );
 };
