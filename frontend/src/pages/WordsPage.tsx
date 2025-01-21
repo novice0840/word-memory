@@ -49,7 +49,6 @@ const WordsPage = () => {
     curIndex: 0,
   });
 
-  // const [curIndex, setCurIndex] = useState(0);
   const [koreanHidden, setKoreanHidden] = useState(true);
   const [hiraganaHidden, setHiraganaHidden] = useState(true);
   const [showExampleSentences, setShowExampleSentences] = useState(false);
@@ -102,15 +101,6 @@ const WordsPage = () => {
         throw new Error("Invalid button id");
     }
   };
-
-  useEffect(() => {
-    let nextIndex = curIndex;
-    while (memoryList.includes(nextIndex)) {
-      nextIndex += 1;
-    }
-    // setCurIndex(nextIndex);
-    setLocalStorage(level, JSON.stringify({ memoryList, curIndex: nextIndex }));
-  }, []);
 
   return (
     <main className="flex-1 flex flex-col items-center justify-between p-4">
