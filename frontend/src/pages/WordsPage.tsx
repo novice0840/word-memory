@@ -41,7 +41,7 @@ const WordsPage = () => {
 
   const words = levelWords[level as Level] as Word[];
   const totalLength = words.length;
-  const { memoryList } = useLocalStorage<{
+  const { memoryList, curIndex } = useLocalStorage<{
     memoryList: number[];
     curIndex: number;
   }>(level, {
@@ -49,7 +49,7 @@ const WordsPage = () => {
     curIndex: 0,
   });
 
-  const [curIndex, setCurIndex] = useState(0);
+  // const [curIndex, setCurIndex] = useState(0);
   const [koreanHidden, setKoreanHidden] = useState(true);
   const [hiraganaHidden, setHiraganaHidden] = useState(true);
   const [showExampleSentences, setShowExampleSentences] = useState(false);
@@ -61,7 +61,7 @@ const WordsPage = () => {
     setKoreanHidden(true);
     setHiraganaHidden(true);
     setShowExampleSentences(false);
-    setCurIndex(nextIndex);
+    setLocalStorage(level, JSON.stringify({ memoryList, curIndex: nextIndex }));
   };
 
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
@@ -77,15 +77,23 @@ const WordsPage = () => {
         setShowExampleSentences(!showExampleSentences);
         break;
       case "memorization":
-        localStorage.setItem(
-          level,
-          JSON.stringify({ memoryList: [...memoryList, curIndex], curIndex })
-        );
         if (memoryList.length == totalLength - 1) {
           return 0;
         }
 
-        gotoNextWord(nextIndex);
+        while (memoryList.includes(nextIndex)) {
+          nextIndex += 1;
+        }
+        setKoreanHidden(true);
+        setHiraganaHidden(true);
+        setShowExampleSentences(false);
+        setLocalStorage(
+          level,
+          JSON.stringify({
+            memoryList: [...memoryList, curIndex],
+            curIndex: nextIndex,
+          })
+        );
         break;
       case "again":
         gotoNextWord(nextIndex);
@@ -100,7 +108,8 @@ const WordsPage = () => {
     while (memoryList.includes(nextIndex)) {
       nextIndex += 1;
     }
-    setCurIndex(nextIndex);
+    // setCurIndex(nextIndex);
+    setLocalStorage(level, JSON.stringify({ memoryList, curIndex: nextIndex }));
   }, []);
 
   return (
