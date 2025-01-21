@@ -8,6 +8,7 @@ import JLPT_N4_WORDS from "@/words/JLPT_N4_WORDS.json";
 import JLPT_N5_WORDS from "@/words/JLPT_N5_WORDS.json";
 import StudyProgress from "@/components/StudyProgress";
 import StudyAction from "@/components/StudyAction";
+import { useLocalStorage, setLocalStorage } from "@/hooks/useLocalStorage";
 
 type Level = "N1" | "N2" | "N3" | "N4" | "N5";
 
@@ -23,15 +24,12 @@ type Word = {
   }[];
 };
 
-const getWords = (level: Level) => {
-  const levelWords = {
-    N1: JLPT_N1_WORDS,
-    N2: JLPT_N2_WORDS,
-    N3: JLPT_N3_WORDS,
-    N4: JLPT_N4_WORDS,
-    N5: JLPT_N5_WORDS,
-  };
-  return levelWords[level];
+const levelWords = {
+  N1: JLPT_N1_WORDS,
+  N2: JLPT_N2_WORDS,
+  N3: JLPT_N3_WORDS,
+  N4: JLPT_N4_WORDS,
+  N5: JLPT_N5_WORDS,
 };
 
 const WordsPage = () => {
@@ -41,15 +39,15 @@ const WordsPage = () => {
     return <Navigate to="/" />;
   }
 
-  const words = getWords(level as Level) as Word[];
+  const words = levelWords[level as Level] as Word[];
   const totalLength = words.length;
-  const { memoryList } = JSON.parse(
-    localStorage.getItem(level) ||
-      `{
-    "memoryList": [],
-    "curIndex": 0
-    }`
-  );
+  const { memoryList } = useLocalStorage<{
+    memoryList: number[];
+    curIndex: number;
+  }>(level, {
+    memoryList: [],
+    curIndex: 0,
+  });
 
   const [curIndex, setCurIndex] = useState(0);
   const [koreanHidden, setKoreanHidden] = useState(true);
@@ -79,7 +77,10 @@ const WordsPage = () => {
         setShowExampleSentences(!showExampleSentences);
         break;
       case "memorization":
-        localStorage.setItem(level, JSON.stringify({ memoryList, curIndex }));
+        localStorage.setItem(
+          level,
+          JSON.stringify({ memoryList: [...memoryList, curIndex], curIndex })
+        );
         if (memoryList.length == totalLength - 1) {
           return 0;
         }
@@ -104,44 +105,47 @@ const WordsPage = () => {
 
   return (
     <main className="flex-1 flex flex-col items-center justify-between p-4">
-      <StudyProgress
-        curIndex={curIndex}
-        memoryListLength={memoryList.length}
-        totalLength={totalLength}
-      />
-      <section className="flex flex-col items-center  w-full max-h-96 overflow-auto">
-        <div className="text-6xl">
-          {words[curIndex].kanji?.split("·").map((item) => (
-            <div key={item}>{item}</div>
-          ))}
-        </div>
-        <div>
-          {hiraganaHidden ? "히라가나 숨김" : words[curIndex].pronunciation}
-        </div>
-        <div>
-          {koreanHidden
-            ? "한국어 숨김"
-            : words[curIndex].koreans?.map((item) => (
-                <div className="text-center" key={item}>
-                  {item}
-                </div>
-              ))}
-        </div>
-        <div className="h-64 overflow-auto w-full text-2xl">
-          {words[curIndex].exampleSentences.map((item, index) => (
-            <div key={index}>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: showExampleSentences
-                    ? item.japanese
-                    : item.japanese.replace(/<rt>(.*?)<\/rt>/g, ""),
-                }}
-              />
-              <div>{showExampleSentences && item.korean}</div>
-            </div>
-          ))}
-        </div>
+      <section className="w-full">
+        <StudyProgress
+          curIndex={curIndex}
+          memoryListLength={memoryList.length}
+          totalLength={totalLength}
+        />
+        <section className="flex flex-col items-center  w-full max-h-96 overflow-auto">
+          <div className="text-6xl">
+            {words[curIndex].kanji?.split("·").map((item) => (
+              <div key={item}>{item}</div>
+            ))}
+          </div>
+          <div>
+            {hiraganaHidden ? "히라가나 숨김" : words[curIndex].pronunciation}
+          </div>
+          <div>
+            {koreanHidden
+              ? "한국어 숨김"
+              : words[curIndex].koreans?.map((item) => (
+                  <div className="text-center" key={item}>
+                    {item}
+                  </div>
+                ))}
+          </div>
+          <div className="h-64 overflow-auto w-full text-xl">
+            {words[curIndex].exampleSentences.map((item, index) => (
+              <div key={index}>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: showExampleSentences
+                      ? item.japanese
+                      : item.japanese.replace(/<rt>(.*?)<\/rt>/g, ""),
+                  }}
+                />
+                <div>{showExampleSentences && item.korean}</div>
+              </div>
+            ))}
+          </div>
+        </section>
       </section>
+
       <StudyAction onClick={handleClick} />
     </main>
   );
