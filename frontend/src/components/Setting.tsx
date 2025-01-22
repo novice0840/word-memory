@@ -1,13 +1,10 @@
 import { LEVELS } from "@/constants/word";
-import { Button } from "./ui/button";
-import { Level } from "@/types/word";
-
+import ResetDialog from "./ResetDialog";
 interface SettingProps {
   isSettingOpen: boolean;
-  onResetClick: (level: Level) => void;
 }
 
-const Setting = ({ isSettingOpen, onResetClick }: SettingProps) => {
+const Setting = ({ isSettingOpen }: SettingProps) => {
   return (
     <div
       className={`absolute right-0 top-6 bg-white rounded border w-64   transition-all duration-300 transform  p-2
@@ -23,7 +20,7 @@ const Setting = ({ isSettingOpen, onResetClick }: SettingProps) => {
           <li key={level}>
             <div className="flex justify-between items-center border rounded p-2">
               <span>{level}</span>
-              <Button onClick={() => onResetClick(level)}>초기화</Button>
+              <ResetDialog level={level} />
             </div>
           </li>
         ))}

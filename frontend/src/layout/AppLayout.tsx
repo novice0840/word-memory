@@ -23,10 +23,6 @@ const AppLayout = () => {
     setIsSettingOpen((prev) => !prev);
   };
 
-  const handleResetClick = (level: Level) => {
-    console.log(level);
-  };
-
   return (
     <div className="max-w-96 mx-auto relative h-screen overflow-hidden">
       <div
@@ -45,10 +41,7 @@ const AppLayout = () => {
           </Link>
           <div className="relative">
             <Cog onClick={handleSettingClick} />
-            <Setting
-              isSettingOpen={isSettingOpen}
-              onResetClick={handleResetClick}
-            />
+            <Setting isSettingOpen={isSettingOpen} />
           </div>
         </header>
         <Outlet />
