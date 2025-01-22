@@ -1,4 +1,4 @@
-const { getExampleSentences } = require("./queryWord");
+const { getSentences } = require("./queryWord");
 
 const fs = require("fs");
 const JLPT_BASE_URL = "https://ja.dict.naver.com/api/jako/getJLPTList";
@@ -31,7 +31,7 @@ const getPageWords = async (url) => {
       level: `N${level}`,
     };
 
-    word.sentences = await getExampleSentences(
+    word.sentences = await getSentences(
       word.kanji ? word.kanji.split("·")[0] : word.pronunciation
     );
     words.push(word);

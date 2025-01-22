@@ -6,7 +6,7 @@ const sleep = (milliseconds) => {
   }
 };
 
-const getExampleSentences = async (word) => {
+const getSentences = async (word) => {
   sleep(500);
   const url = `https://ja.dict.naver.com/api3/jako/search?query=${word}`;
   const headers = {
@@ -20,4 +20,4 @@ const getExampleSentences = async (word) => {
   }));
 };
 
-module.exports = { getExampleSentences };
+module.exports = { getSentences };

@@ -1,15 +1,13 @@
 const fs = require("fs");
-const { getExampleSentences } = require("./queryWord");
+const { getSentences } = require("./queryWord");
 async function modifyJson(filename) {
   try {
     const data = fs.readFileSync(`./${filename}`, "utf-8");
     const jsonData = JSON.parse(data);
 
     for (const word of jsonData) {
-      delete word.exampleSentences;
-      word.sentences = await getExampleSentences(
-        word.kanji ?? word.pronunciation
-      );
+      delete word.sentences;
+      word.sentences = await getSentences(word.kanji ?? word.pronunciation);
       console.log("Modifying word:", word.kanji ?? word.pronunciation);
     }
 

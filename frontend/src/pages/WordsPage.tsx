@@ -1,12 +1,7 @@
 import { Navigate, useParams } from "react-router-dom";
 import { useLocalStorage, setLocalStorage } from "@/hooks/useLocalStorage";
 import { LEVELS } from "@/constants/word";
-import {
-  StudyAction,
-  StudyProgress,
-  ExampleSentences,
-  Word,
-} from "@/components";
+import { StudyAction, StudyProgress, Sentences, Word } from "@/components";
 import { getJLPTWords, getNextIndex } from "@/utils/word";
 import type { Level, Word as WordType } from "@/types/word";
 import { useStudyAction } from "@/hooks/useStudyAction";
@@ -65,10 +60,7 @@ const WordsPage = () => {
             koreans={koreans}
             showMeaning={showWordMeaning}
           />
-          <ExampleSentences
-            sentences={sentences}
-            showMeaning={showSentencesMeaning}
-          />
+          <Sentences sentences={sentences} showMeaning={showSentencesMeaning} />
         </section>
       </section>
 

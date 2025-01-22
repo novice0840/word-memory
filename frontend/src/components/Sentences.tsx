@@ -1,4 +1,4 @@
-interface ExampleSentencesProps {
+interface SentencesProps {
   sentences: {
     korean: string;
     japanese: string;
@@ -6,10 +6,7 @@ interface ExampleSentencesProps {
   showMeaning: boolean;
 }
 
-const ExampleSentences = ({
-  sentences,
-  showMeaning,
-}: ExampleSentencesProps) => {
+const Sentences = ({ sentences, showMeaning }: SentencesProps) => {
   return (
     <div className="h-64 overflow-auto w-full text-xl rounded-md border p-4">
       {sentences.map((item, index) => (
@@ -28,4 +25,4 @@ const ExampleSentences = ({
   );
 };
 
-export default ExampleSentences;
+export default Sentences;

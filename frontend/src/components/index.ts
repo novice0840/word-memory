@@ -1,7 +1,7 @@
 import StudyAction from "@/components/StudyAction";
 import StudyProgress from "@/components/StudyProgress";
-import ExampleSentences from "@/components/ExampleSentences";
+import Sentences from "@/components/Sentences";
 import Word from "@/components/Word";
 import WordList from "@/components/WordList";
 
-export { StudyAction, StudyProgress, ExampleSentences, Word, WordList };
+export { StudyAction, StudyProgress, Sentences, Word, WordList };
