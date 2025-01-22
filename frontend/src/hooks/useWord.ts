@@ -2,19 +2,18 @@ import { useState } from "react";
 
 export const useWord = () => {
   const [showWordMeaning, setShowWordMeaning] = useState(false);
-  const [showExampleSentencesMeaning, setShowExampleSentencesMeaning] =
-    useState(false);
+  const [showSentencesMeaning, setShowSentencesMeaning] = useState(false);
 
   const initWord = () => {
     setShowWordMeaning(false);
-    setShowExampleSentencesMeaning(false);
+    setShowSentencesMeaning(false);
   };
 
   return {
     showWordMeaning,
-    showExampleSentencesMeaning,
+    showSentencesMeaning,
     setShowWordMeaning,
-    setShowExampleSentencesMeaning,
+    setShowSentencesMeaning,
     initWord,
   };
 };

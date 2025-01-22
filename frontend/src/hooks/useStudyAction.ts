@@ -20,10 +20,10 @@ const useStudyAction = () => {
 
   const {
     showWordMeaning,
-    showExampleSentencesMeaning,
-    initWord,
+    showSentencesMeaning,
     setShowWordMeaning,
-    setShowExampleSentencesMeaning,
+    setShowSentencesMeaning,
+    initWord,
   } = useWord();
 
   const handleStudyActionClick = (event: MouseEvent<HTMLButtonElement>) => {
@@ -35,7 +35,7 @@ const useStudyAction = () => {
         setShowWordMeaning(!showWordMeaning);
         break;
       case "sentence":
-        setShowExampleSentencesMeaning(!showExampleSentencesMeaning);
+        setShowSentencesMeaning(!showSentencesMeaning);
         break;
       case "memorization":
         initWord();
@@ -61,7 +61,7 @@ const useStudyAction = () => {
   return {
     handleStudyActionClick,
     showWordMeaning,
-    showExampleSentencesMeaning,
+    showSentencesMeaning,
     initWord,
   };
 };

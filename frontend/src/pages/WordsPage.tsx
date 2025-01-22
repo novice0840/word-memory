@@ -27,12 +27,12 @@ const WordsPage = () => {
     return <Navigate to="/" />;
   }
 
-  const { kanji, pronunciation, koreans, exampleSentences } = words[curIndex];
+  const { kanji, pronunciation, koreans, sentences } = words[curIndex];
 
   const {
     handleStudyActionClick,
     showWordMeaning,
-    showExampleSentencesMeaning,
+    showSentencesMeaning,
     initWord,
   } = useStudyAction();
 
@@ -66,8 +66,8 @@ const WordsPage = () => {
             showMeaning={showWordMeaning}
           />
           <ExampleSentences
-            sentences={exampleSentences}
-            showMeaning={showExampleSentencesMeaning}
+            sentences={sentences}
+            showMeaning={showSentencesMeaning}
           />
         </section>
       </section>

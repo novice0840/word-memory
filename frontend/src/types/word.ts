@@ -7,7 +7,7 @@ type Word = {
   pronunciation: string;
   kanji: string | null;
   level: Level;
-  exampleSentences: {
+  sentences: {
     korean: string;
     japanese: string;
   }[];
