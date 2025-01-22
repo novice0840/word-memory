@@ -39,15 +39,12 @@ const useStudyAction = () => {
         break;
       case "memorization":
         initWord();
-        setLocalStorage(
-          level,
-          JSON.stringify({
-            memoryList: memoryList.includes(curIndex)
-              ? memoryList
-              : [...memoryList, curIndex],
-            curIndex: nextIndex,
-          })
-        );
+        setLocalStorage(level, {
+          memoryList: memoryList.includes(curIndex)
+            ? memoryList
+            : [...memoryList, curIndex],
+          curIndex: nextIndex,
+        });
 
         if (memoryList.length == totalLength - 1) {
           navigate("/");
@@ -55,10 +52,7 @@ const useStudyAction = () => {
         break;
       case "again":
         initWord();
-        setLocalStorage(
-          level,
-          JSON.stringify({ memoryList, curIndex: nextIndex })
-        );
+        setLocalStorage(level, { memoryList, curIndex: nextIndex });
         break;
       default:
         throw new Error("Invalid button id");
