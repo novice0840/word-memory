@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom";
-import { ArrowLeft } from "@mynaui/icons-react";
+import { ArrowLeft, CheckCircle } from "@mynaui/icons-react";
 import { LEVELS } from "@/constants/word";
 import { Level } from "@/types/word";
 import { getJLPTWords } from "@/utils/word";
+import { useLocalStorage } from "@/hooks/useLocalStorage";
 
 interface WordListProps {
   isWordListOpen: boolean;
@@ -21,10 +22,19 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
   }
 
   const words = getJLPTWords(level);
+  const { memoryList } = useLocalStorage<{
+    memoryList: number[];
+    curIndex: number;
+  }>(level, {
+    memoryList: [],
+    curIndex: 0,
+  });
+
+  console.log(memoryList);
 
   return (
     <div
-      className={`fixed top-0 left-0 h-full w-full transition-transform duration-300 p-4  ${
+      className={`absolute top-0 left-0 h-full w-full transition-transform duration-300 p-4  ${
         isWordListOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
@@ -34,8 +44,9 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
       </div>
       <ul className="space-y-2 h-5/6 overflow-scroll">
         {words.map((word, i) => (
-          <li key={i} className="border rounded text-xl">
-            {word.kanji || word.pronunciation}
+          <li key={i} className="flex justify-between border rounded text-xl">
+            <span>{word.kanji || word.pronunciation}</span>
+            {memoryList.includes(i) && <CheckCircle />}
           </li>
         ))}
       </ul>
