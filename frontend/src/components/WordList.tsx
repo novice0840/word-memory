@@ -3,7 +3,8 @@ import { ArrowLeft, CheckCircle } from "@mynaui/icons-react";
 import { LEVELS } from "@/constants/word";
 import { Level } from "@/types/word";
 import { getJLPTWords } from "@/utils/word";
-import { useLocalStorage } from "@/hooks/useLocalStorage";
+import { useLocalStorage, setLocalStorage } from "@/hooks/useLocalStorage";
+import { useEffect, useRef } from "react";
 
 interface WordListProps {
   isWordListOpen: boolean;
@@ -22,7 +23,7 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
   }
 
   const words = getJLPTWords(level);
-  const { memoryList } = useLocalStorage<{
+  const { memoryList, curIndex } = useLocalStorage<{
     memoryList: number[];
     curIndex: number;
   }>(level, {
@@ -30,7 +31,24 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
     curIndex: 0,
   });
 
-  console.log(memoryList);
+  const handleWordClick = (wordIndex: number) => {
+    setLocalStorage(level, {
+      memoryList,
+      curIndex: wordIndex,
+    });
+    onWordListClose();
+  };
+
+  const itemRefs = useRef<(HTMLLIElement | null)[]>([]);
+
+  useEffect(() => {
+    if (isWordListOpen && curIndex >= 0 && itemRefs.current[curIndex]) {
+      itemRefs.current[curIndex]?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, [isWordListOpen, curIndex]);
 
   return (
     <div
@@ -44,7 +62,12 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
       </div>
       <ul className="space-y-2 h-5/6 overflow-scroll">
         {words.map((word, i) => (
-          <li key={i} className="flex justify-between border rounded text-xl">
+          <li
+            key={i}
+            ref={(el) => (itemRefs.current[i] = el)}
+            onClick={() => handleWordClick(i)}
+            className="flex justify-between border rounded text-xl"
+          >
             <span>{word.kanji || word.pronunciation}</span>
             {memoryList.includes(i) && <CheckCircle />}
           </li>
