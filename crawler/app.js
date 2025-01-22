@@ -30,10 +30,10 @@ const getPageWords = async (url) => {
       kanji: item.pron,
       level: `N${level}`,
     };
-    const exampleSentences = await getExampleSentences(
-      word.kanji ?? word.pronunciation
+
+    word.sentences = await getExampleSentences(
+      word.kanji ? word.kanji.split("·")[0] : word.pronunciation
     );
-    word.exampleSentences = exampleSentences;
     words.push(word);
     console.log("Crawling word:", word.kanji ?? word.pronunciation, word.level);
   }

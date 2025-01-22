@@ -4,10 +4,12 @@ import { LEVELS } from "@/constants/word";
 import type { Level } from "@/types/word";
 import { useState } from "react";
 import WordList from "@/components/WordList";
+import Setting from "@/components/Setting";
 
 const AppLayout = () => {
   const { level } = useParams();
   const [isWordListOpen, setIsWordListOpen] = useState(false);
+  const [isSettingOpen, setIsSettingOpen] = useState(false);
 
   const handleMenuClick = () => {
     setIsWordListOpen((prev) => !prev);
@@ -15,6 +17,14 @@ const AppLayout = () => {
 
   const handleWordListClose = () => {
     setIsWordListOpen(false);
+  };
+
+  const handleSettingClick = () => {
+    setIsSettingOpen((prev) => !prev);
+  };
+
+  const handleResetClick = (level: Level) => {
+    console.log(level);
   };
 
   return (
@@ -33,7 +43,13 @@ const AppLayout = () => {
           <Link to={`/`}>
             <Home />
           </Link>
-          <Cog />
+          <div className="relative">
+            <Cog onClick={handleSettingClick} />
+            <Setting
+              isSettingOpen={isSettingOpen}
+              onResetClick={handleResetClick}
+            />
+          </div>
         </header>
         <Outlet />
       </div>

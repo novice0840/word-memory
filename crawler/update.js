@@ -6,12 +6,11 @@ async function modifyJson(filename) {
     const jsonData = JSON.parse(data);
 
     for (const word of jsonData) {
-      word.exampleSentences.forEach(async (sentence) => {
-        sentence.korean = sentence.koreans;
-        delete sentence.koreans;
-      });
-
-      console.log("Modifying word:", word.pronunciation);
+      delete word.exampleSentences;
+      word.sentences = await getExampleSentences(
+        word.kanji ?? word.pronunciation
+      );
+      console.log("Modifying word:", word.kanji ?? word.pronunciation);
     }
 
     fs.writeFileSync(`./${filename}`, JSON.stringify(jsonData), "utf-8");
