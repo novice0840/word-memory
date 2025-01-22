@@ -11,8 +11,11 @@ const Setting = ({ isSettingOpen, onResetClick }: SettingProps) => {
   return (
     <div
       className={`absolute right-0 top-6 bg-white rounded border w-64   transition-all duration-300 transform  p-2
-            ${isSettingOpen ? "scale-100 opacity-100" : "scale-95 opacity-0"}
-          }`}
+            ${
+              isSettingOpen
+                ? "scale-100 opacity-100"
+                : "scale-95 opacity-0 z-[-1]"
+            }`}
     >
       <div className="text-center mb-2">설정</div>
       <ul className="space-y-2">
