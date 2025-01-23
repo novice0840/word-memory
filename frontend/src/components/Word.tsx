@@ -15,11 +15,7 @@ const Word = ({ kanji, pronunciation, koreans, showMeaning }: WordProps) => {
       {showMeaning ? (
         <div>
           <div>{kanji && pronunciation}</div>
-          <div>
-            {koreans?.map((item) => (
-              <div key={item}>{item}</div>
-            ))}
-          </div>
+          <div>{koreans?.join(", ")}</div>
         </div>
       ) : (
         <div>뜻 보기</div>
