@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { MouseEvent } from "react";
-import { getJLPTWords, getNextIndex } from "@/utils/word";
+import { getJLPTWords, getNextUnmemorizedIndex } from "@/utils/word";
 import { setLocalStorage } from "./useLocalStorage";
 import { Level, Word } from "@/types/word";
 import { useWord } from "./useWord";
@@ -23,7 +23,11 @@ const useStudyAction = () => {
 
   const handleStudyActionClick = (event: MouseEvent<HTMLButtonElement>) => {
     const buttonId = event.currentTarget.id;
-    const nextIndex = getNextIndex(curIndex, memoryList, totalLength);
+    const nextIndex = getNextUnmemorizedIndex(
+      curIndex,
+      memoryList,
+      totalLength
+    );
 
     switch (buttonId) {
       case "meaning":

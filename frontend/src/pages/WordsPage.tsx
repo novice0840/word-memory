@@ -2,7 +2,7 @@ import { Navigate, useParams } from "react-router-dom";
 import { setLocalStorage } from "@/hooks/useLocalStorage";
 import { LEVELS } from "@/constants/word";
 import { StudyAction, StudyProgress, Sentences, Word } from "@/components";
-import { getJLPTWords, getNextIndex } from "@/utils/word";
+import { getJLPTWords, getNextIndex, getPrevIndex } from "@/utils/word";
 import type { Level, Word as WordType } from "@/types/word";
 import { useStudyAction } from "@/hooks/useStudyAction";
 import { useGetMemoryList } from "@/hooks/useGetMemoryList";
@@ -22,13 +22,13 @@ const WordsPage = () => {
   const { kanji, pronunciation, koreans, sentences } = words[curIndex];
 
   const handleGoPrevWord = () => {
-    const prevIndex = curIndex > 0 ? curIndex - 1 : totalLength - 1;
+    const prevIndex = getPrevIndex(curIndex, totalLength);
     initWord();
     setLocalStorage(level, { memoryList, curIndex: prevIndex });
   };
 
   const handleGoNextWord = () => {
-    const nextIndex = getNextIndex(curIndex, memoryList, totalLength);
+    const nextIndex = getNextIndex(curIndex, totalLength);
     initWord();
     setLocalStorage(level, { memoryList, curIndex: nextIndex });
   };

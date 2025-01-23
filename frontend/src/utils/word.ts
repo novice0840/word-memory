@@ -7,13 +7,22 @@ import {
   JLPT_N5_WORDS,
 } from "@/words";
 
-export const getNextIndex = (
+export const getNextIndex = (curIndex: number, totalLength: number) => {
+  return (curIndex + 1) % totalLength;
+};
+
+export const getPrevIndex = (curIndex: number, totalLength: number) => {
+  return curIndex > 0 ? curIndex - 1 : totalLength - 1;
+};
+
+export const getNextUnmemorizedIndex = (
   curIndex: number,
   memoryList: number[],
   totalLength: number
 ) => {
-  // 다음 단어가 없을 경우 null을 반환
-  if (memoryList.length === totalLength) return null;
+  if (memoryList.length === totalLength) {
+    return null;
+  }
 
   let nextIndex = (curIndex + 1) % totalLength;
   while (memoryList.includes(nextIndex)) {
