@@ -30,5 +30,6 @@ export const getJLPTWords = (level: Level): Word[] => {
     N4: JLPT_N4_WORDS,
     N5: JLPT_N5_WORDS,
   } as Record<Level, Word[]>;
-  return levelWords[level];
+
+  return levelWords[level] || [];
 };

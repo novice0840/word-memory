@@ -3,8 +3,9 @@ import { ArrowLeft, CheckCircle } from "@mynaui/icons-react";
 import { LEVELS } from "@/constants/word";
 import { Level } from "@/types/word";
 import { getJLPTWords } from "@/utils/word";
-import { useLocalStorage, setLocalStorage } from "@/hooks/useLocalStorage";
+import { setLocalStorage } from "@/hooks/useLocalStorage";
 import { useEffect, useRef } from "react";
+import { useGetMemoryList } from "@/hooks/useGetMemoryList";
 
 interface WordListProps {
   isWordListOpen: boolean;
@@ -16,20 +17,11 @@ const isLevel = (value: string): value is Level => {
 };
 
 const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
-  const { level = "" } = useParams();
+  const { level = "N1" } = useParams();
+  const { memoryList, curIndex } = useGetMemoryList(level as Level);
+  const itemRefs = useRef<(HTMLLIElement | null)[]>([]);
 
-  if (!isLevel(level)) {
-    return null;
-  }
-
-  const words = getJLPTWords(level);
-  const { memoryList, curIndex } = useLocalStorage<{
-    memoryList: number[];
-    curIndex: number;
-  }>(level, {
-    memoryList: [],
-    curIndex: 0,
-  });
+  const words = getJLPTWords(level as Level);
 
   const handleWordClick = (wordIndex: number) => {
     setLocalStorage(level, {
@@ -39,8 +31,6 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
     onWordListClose();
   };
 
-  const itemRefs = useRef<(HTMLLIElement | null)[]>([]);
-
   useEffect(() => {
     if (isWordListOpen && curIndex >= 0 && itemRefs.current[curIndex]) {
       itemRefs.current[curIndex]?.scrollIntoView({
@@ -49,6 +39,10 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
       });
     }
   }, [isWordListOpen, curIndex]);
+
+  if (!isLevel(level) || !memoryList || !curIndex) {
+    return null;
+  }
 
   return (
     <div

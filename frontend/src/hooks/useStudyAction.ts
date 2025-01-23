@@ -1,20 +1,15 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { MouseEvent } from "react";
 import { getJLPTWords, getNextIndex } from "@/utils/word";
-import { setLocalStorage, useLocalStorage } from "./useLocalStorage";
+import { setLocalStorage } from "./useLocalStorage";
 import { Level, Word } from "@/types/word";
 import { useWord } from "./useWord";
+import { useGetMemoryList } from "./useGetMemoryList";
 
 const useStudyAction = () => {
   const navigate = useNavigate();
   const { level = "" } = useParams();
-  const { memoryList, curIndex } = useLocalStorage<{
-    memoryList: number[];
-    curIndex: number;
-  }>(level, {
-    memoryList: [],
-    curIndex: 0,
-  });
+  const { memoryList, curIndex } = useGetMemoryList(level as Level);
   const words = getJLPTWords(level as Level) as Word[];
   const totalLength = words.length;
 
