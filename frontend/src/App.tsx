@@ -1,9 +1,7 @@
 import * as React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import MainPage from "./pages/MainPage.tsx";
-import WordsPage from "./pages/WordsPage.tsx";
-import AppLayout from "./layout/AppLayout.tsx";
-import ErrorPage from "./pages/ErrorPage.tsx";
+import AppLayout from "@/layout/AppLayout.tsx";
+import { ErrorPage, MainPage, WordsPage } from "@/pages";
 
 const router = createBrowserRouter([
   {
