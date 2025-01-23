@@ -3,13 +3,13 @@ import { setLocalStorage } from "@/hooks/useLocalStorage";
 import { LEVELS } from "@/constants/word";
 import { StudyAction, StudyProgress, Sentences, Word } from "@/components";
 import { getJLPTWords, getNextIndex, getPrevIndex } from "@/utils/word";
-import type { Level, Word as WordType } from "@/types/word";
+import type { Level } from "@/types/word";
 import { useStudyAction } from "@/hooks/useStudyAction";
 import { useGetMemoryList } from "@/hooks/useGetMemoryList";
 
 const WordsPage = () => {
   const { level = "" } = useParams();
-  const words = getJLPTWords(level as Level) as WordType[];
+  const words = getJLPTWords(level as Level);
   const { memoryList, curIndex } = useGetMemoryList(level as Level);
   const {
     handleStudyActionClick,
