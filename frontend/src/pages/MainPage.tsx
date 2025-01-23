@@ -4,15 +4,15 @@ import { LEVELS } from "@/constants/word";
 import { getJLPTWords } from "@/utils/word";
 import { useGetMemoryList } from "@/hooks/useGetMemoryList";
 
-const JLPT_WORDS_LENGTH = {
-  N1: getJLPTWords("N1").length,
-  N2: getJLPTWords("N2").length,
-  N3: getJLPTWords("N3").length,
-  N4: getJLPTWords("N4").length,
-  N5: getJLPTWords("N5").length,
-};
-
 const MainPage = () => {
+  const JLPT_WORDS_LENGTH = {
+    N1: getJLPTWords("N1").length,
+    N2: getJLPTWords("N2").length,
+    N3: getJLPTWords("N3").length,
+    N4: getJLPTWords("N4").length,
+    N5: getJLPTWords("N5").length,
+  };
+
   const memoryListLength = {
     N1: useGetMemoryList("N1").memoryList.length,
     N2: useGetMemoryList("N2").memoryList.length,
@@ -31,6 +31,7 @@ const MainPage = () => {
           key={level}
           onClick={() => navigate(`/words/${level}`)}
           className="text-xl"
+          name={level}
         >
           {level}
         </Button>
