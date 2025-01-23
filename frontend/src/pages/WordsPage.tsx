@@ -9,8 +9,8 @@ import { useGetMemoryList } from "@/hooks/useGetMemoryList";
 
 const WordsPage = () => {
   const { level = "" } = useParams();
-  const words = getJLPTWords(level as Level);
-  const { memoryList, curIndex } = useGetMemoryList(level as Level);
+  const words = getJLPTWords(level);
+  const { memoryList, curIndex } = useGetMemoryList(level);
   const {
     handleStudyActionClick,
     showWordMeaning,

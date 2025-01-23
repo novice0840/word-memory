@@ -1,7 +1,6 @@
-import { Level } from "@/types/word";
 import { useLocalStorage } from "./useLocalStorage";
 
-export const useGetMemoryList = (level: Level) => {
+export const useGetMemoryList = (level: string) => {
   return useLocalStorage<{
     memoryList: number[];
     curIndex: number;
