@@ -10,7 +10,7 @@ const useStudyAction = () => {
   const navigate = useNavigate();
   const { level = "" } = useParams();
   const { memoryList, curIndex } = useGetMemoryList(level as Level);
-  const words = getJLPTWords(level as Level) as Word[];
+  const words = getJLPTWords(level) as Word[];
   const totalLength = words.length;
 
   const {
