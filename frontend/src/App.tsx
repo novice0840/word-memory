@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "@/layout/AppLayout.tsx";
 import { ErrorPage, MainPage, WordsPage } from "@/pages";
 
-const router = createBrowserRouter([
+const routes = [
   {
     path: "/",
     element: <AppLayout />,
@@ -13,7 +13,9 @@ const router = createBrowserRouter([
       { path: "/words/:level", element: <WordsPage /> },
     ],
   },
-]);
+];
+
+const router = createBrowserRouter(routes);
 
 function App() {
   return (
@@ -23,4 +25,5 @@ function App() {
   );
 }
 
+export { routes };
 export default App;
