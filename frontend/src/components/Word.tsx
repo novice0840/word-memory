@@ -9,8 +9,7 @@ const Word = ({ kanji, pronunciation, koreans, showMeaning }: WordProps) => {
   return (
     <div className="text-center h-32">
       <div className="text-4xl">
-        {kanji?.split("·").map((item) => <div key={item}>{item}</div>) ||
-          pronunciation}
+        {kanji?.split("·").join(", ") || pronunciation}
       </div>
       {showMeaning ? (
         <div>
