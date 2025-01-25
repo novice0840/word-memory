@@ -46,12 +46,15 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
 
   return (
     <div
+      aria-label="wordList"
       className={`absolute top-0 left-0 h-full w-full transition-transform duration-300 p-4  ${
         isWordListOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
       <div className="flex items-center justify-between mb-4">
-        <ArrowLeft onClick={onWordListClose} />
+        <button name="arrowLeftIcon" onClick={onWordListClose}>
+          <ArrowLeft />
+        </button>
         <h2 className="text-3xl font-bold">{level}</h2>
       </div>
       <ul className="space-y-2 h-5/6 overflow-scroll">
