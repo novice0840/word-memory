@@ -32,11 +32,13 @@ const AppLayout = () => {
       >
         <header className="flex justify-between">
           {LEVELS.includes(level as Level) ? (
-            <Menu onClick={handleMenuClick} />
+            <button name="menu" onClick={handleMenuClick}>
+              <Menu />
+            </button>
           ) : (
             <div className="w-6 h-6" />
           )}
-          <Link to={`/`}>
+          <Link to={`/`} aria-label="homeIcon">
             <Home />
           </Link>
           <div className="relative">

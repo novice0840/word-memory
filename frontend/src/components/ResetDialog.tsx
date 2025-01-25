@@ -33,7 +33,7 @@ const ResetDialog = ({ level }: ResetDialogProps) => {
         </DialogHeader>
         <DialogFooter className="sm:justify-start">
           <DialogClose asChild>
-            <Button onClick={handleResetClick} type="button">
+            <Button onClick={handleResetClick} type="button" className="w-full">
               초기화
             </Button>
           </DialogClose>
