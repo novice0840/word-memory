@@ -28,12 +28,10 @@ const Header = ({ onMenuClick }: HeaderProps) => {
       <Link to={`/`} aria-label="homeIcon">
         <Home />
       </Link>
-      <div
-        className="relative"
-        aria-label="menuIcon"
-        onClick={handleSettingClick}
-      >
-        <Cog />
+      <div className="relative">
+        <button aria-label="cogIcon" onClick={handleSettingClick}>
+          <Cog />
+        </button>
         <Setting isSettingOpen={isSettingOpen} />
       </div>
     </header>

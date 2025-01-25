@@ -7,6 +7,7 @@ interface SettingProps {
 const Setting = ({ isSettingOpen }: SettingProps) => {
   return (
     <div
+      aria-label="setting"
       className={`absolute right-0 top-6 bg-white rounded border w-64   transition-all duration-300 transform  p-2
             ${
               isSettingOpen
