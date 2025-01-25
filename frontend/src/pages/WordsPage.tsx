@@ -38,7 +38,7 @@ const WordsPage = () => {
   }
 
   return (
-    <main className="flex-1 flex flex-col items-center justify-between p-4">
+    <main className="flex-1 flex flex-col items-center justify-between">
       <section className="w-full">
         <StudyProgress
           curIndex={curIndex}

@@ -26,11 +26,11 @@ const AppLayout = () => {
   return (
     <div className="max-w-96 mx-auto relative h-screen overflow-hidden">
       <div
-        className={`h-full flex flex-col transition-transform duration-300 ${
+        className={`h-full flex flex-col transition-transform duration-300 p-4 ${
           isWordListOpen ? "translate-x-full" : "translate-x-0"
         }`}
       >
-        <header className="flex justify-between p-4">
+        <header className="flex justify-between">
           {LEVELS.includes(level as Level) ? (
             <Menu onClick={handleMenuClick} />
           ) : (
