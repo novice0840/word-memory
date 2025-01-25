@@ -1,15 +1,10 @@
-import { Link, Outlet, useParams } from "react-router-dom";
-import { Menu, Cog, Home } from "@mynaui/icons-react";
-import { LEVELS } from "@/constants/word";
-import type { Level } from "@/types/word";
+import { Outlet } from "react-router-dom";
 import { useState } from "react";
-import WordList from "@/components/WordList";
-import Setting from "@/components/Setting";
+import { WordList } from "@/components";
+import Header from "@/components/Header";
 
 const AppLayout = () => {
-  const { level } = useParams();
   const [isWordListOpen, setIsWordListOpen] = useState(false);
-  const [isSettingOpen, setIsSettingOpen] = useState(false);
 
   const handleMenuClick = () => {
     setIsWordListOpen((prev) => !prev);
@@ -19,10 +14,6 @@ const AppLayout = () => {
     setIsWordListOpen(false);
   };
 
-  const handleSettingClick = () => {
-    setIsSettingOpen((prev) => !prev);
-  };
-
   return (
     <div className="max-w-96 mx-auto relative h-screen overflow-hidden">
       <div
@@ -30,22 +21,7 @@ const AppLayout = () => {
           isWordListOpen ? "translate-x-full" : "translate-x-0"
         }`}
       >
-        <header className="flex justify-between">
-          {LEVELS.includes(level as Level) ? (
-            <button name="menu" onClick={handleMenuClick}>
-              <Menu />
-            </button>
-          ) : (
-            <div className="w-6 h-6" />
-          )}
-          <Link to={`/`} aria-label="homeIcon">
-            <Home />
-          </Link>
-          <div className="relative">
-            <Cog onClick={handleSettingClick} />
-            <Setting isSettingOpen={isSettingOpen} />
-          </div>
-        </header>
+        <Header onMenuClick={handleMenuClick} />
         <Outlet />
       </div>
 
