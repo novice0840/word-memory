@@ -31,7 +31,7 @@ export const getNextUnmemorizedIndex = (
   return nextIndex;
 };
 
-const isValidLevel = (level: string): level is Level => {
+export const isValidLevel = (level: string): level is Level => {
   return ["N1", "N2", "N3", "N4", "N5"].includes(level);
 };
 

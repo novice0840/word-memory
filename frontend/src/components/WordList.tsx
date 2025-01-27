@@ -1,8 +1,7 @@
 import { useParams } from "react-router-dom";
 import { ArrowLeft, CheckCircle } from "@mynaui/icons-react";
-import { LEVELS } from "@/constants/word";
 import { Level } from "@/types/word";
-import { getJLPTWords } from "@/utils/word";
+import { getJLPTWords, isValidLevel } from "@/utils/word";
 import { setLocalStorage } from "@/hooks/useLocalStorage";
 import { useEffect, useRef } from "react";
 import { useGetMemoryList } from "@/hooks/useGetMemoryList";
@@ -11,10 +10,6 @@ interface WordListProps {
   isWordListOpen: boolean;
   onWordListClose: () => void;
 }
-
-const isLevel = (value: string): value is Level => {
-  return LEVELS.includes(value as Level);
-};
 
 const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
   const { level = "N1" } = useParams();
@@ -40,7 +35,7 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
     }
   }, [isWordListOpen, curIndex]);
 
-  if (!isLevel(level) || !memoryList || !curIndex) {
+  if (!isValidLevel(level)) {
     return null;
   }
 
@@ -52,7 +47,7 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
       }`}
     >
       <div className="flex items-center justify-between mb-4">
-        <button name="arrowLeftIcon" onClick={onWordListClose}>
+        <button aria-label="arrowLeftIcon" onClick={onWordListClose}>
           <ArrowLeft />
         </button>
         <h2 className="text-3xl font-bold">{level}</h2>
