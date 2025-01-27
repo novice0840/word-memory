@@ -1,19 +1,12 @@
-const { getSentences } = require("./queryWord");
+const { getJapaneseSentences } = require("./queryWord");
+const { saveJSON, sleep, getTotalPage } = require("./utils");
 
-const fs = require("fs");
 const JLPT_BASE_URL = "https://ja.dict.naver.com/api/jako/getJLPTList";
+
 const getTotalPage = async (url) => {
   const response = await fetch(url);
   const jsonData = await response.json();
   return jsonData.m_totalPage;
-};
-
-const sleep = (milliseconds) => {
-  const start = new Date().getTime();
-  let elapsed = 0;
-  while (elapsed < milliseconds) {
-    elapsed = new Date().getTime() - start;
-  }
 };
 
 const getPageWords = async (url) => {
@@ -31,7 +24,7 @@ const getPageWords = async (url) => {
       level: `N${level}`,
     };
 
-    word.sentences = await getSentences(
+    word.sentences = await getJapaneseSentences(
       word.kanji ? word.kanji.split("·")[0] : word.pronunciation
     );
     words.push(word);
@@ -51,11 +44,6 @@ const getWords = async (url, level) => {
     words.push(...(await getPageWords(url)));
   }
   return words;
-};
-
-const saveJSON = (fileName, jsonName) => {
-  const jsonString = JSON.stringify(jsonName);
-  fs.writeFileSync(fileName, jsonString, "utf-8");
 };
 
 const getAllJLPTWords = async () => {

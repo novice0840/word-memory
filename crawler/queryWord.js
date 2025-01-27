@@ -1,12 +1,6 @@
-const sleep = (milliseconds) => {
-  const start = new Date().getTime();
-  let elapsed = 0;
-  while (elapsed < milliseconds) {
-    elapsed = new Date().getTime() - start;
-  }
-};
+const { sleep } = require("./utils");
 
-const getSentences = async (word) => {
+const getJapaneseSentences = async (word) => {
   sleep(500);
   const url = `https://ja.dict.naver.com/api3/jako/search?query=${word}`;
   const headers = {
@@ -20,4 +14,4 @@ const getSentences = async (word) => {
   }));
 };
 
-module.exports = { getSentences };
+module.exports = { getJapaneseSentences };
