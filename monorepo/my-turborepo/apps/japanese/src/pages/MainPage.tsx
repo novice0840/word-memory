@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { LEVELS } from "@/constants/word";
 import { getJLPTWords } from "@/utils/word";
 import { useGetMemoryList } from "@/hooks/useGetMemoryList";
+import { Button as ShardButton } from "@repo/ui/button";
 
 const MainPage = () => {
   const JLPT_WORDS_LENGTH = {
@@ -24,6 +25,9 @@ const MainPage = () => {
 
   return (
     <div className="flex flex-col items-center gap-6 pt-24">
+      <ShardButton appName="docs" className="{styles.secondary}">
+        Open alert
+      </ShardButton>
       <h1 className="text-4xl font-extrabold">일본어 단어 암기</h1>
       {LEVELS.map((level) => (
         <Button
