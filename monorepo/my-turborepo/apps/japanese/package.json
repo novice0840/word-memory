@@ -12,6 +12,6 @@
     "coverage": "vitest --coverage"
   },
   "dependencies": {
-    "@repo/ui": "*"
+    "@shared/ui": "*"
   }
 }

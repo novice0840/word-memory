@@ -1,8 +1,14 @@
 {
-  "name": "ui",
+  "name": "@shared/ui",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "exports": {
+    "./button": "./src/components/ui/button.tsx",
+    "./dialog": "./src/components/ui/dialog.tsx",
+    "./input": "./src/components/ui/input.tsx",
+    "./label": "./src/components/ui/label.tsx"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

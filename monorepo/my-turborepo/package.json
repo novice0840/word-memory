@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@repo/ui": "*",
+    "@shared/ui": "*",
     "next": "^15.1.6",
     "@mynaui/icons-react": "^0.3.3",
     "@radix-ui/react-dialog": "^1.1.4",
