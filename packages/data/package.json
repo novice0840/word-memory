@@ -6,11 +6,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "exports": {
-    "./japanese/jlpt_n1": "./words/JLPT_N1_WORDS.json",
-    "./japanese/jlpt_n2": "./words/JLPT_N2_WORDS.json",
-    "./japanese/jlpt_n3": "./words/JLPT_N3_WORDS.json",
-    "./japanese/jlpt_n4": "./words/JLPT_N4_WORDS.json",
-    "./japanese/jlpt_n5": "./words/JLPT_N5_WORDS.json"
+    "./japanese/jlpt_n1": "./words/japanese/JLPT_N1_WORDS.json",
+    "./japanese/jlpt_n2": "./words/japanese/JLPT_N2_WORDS.json",
+    "./japanese/jlpt_n3": "./words/japanese/JLPT_N3_WORDS.json",
+    "./japanese/jlpt_n4": "./words/japanese/JLPT_N4_WORDS.json",
+    "./japanese/jlpt_n5": "./words/japanese/JLPT_N5_WORDS.json"
   },
   "keywords": [],
   "author": "",
