@@ -1,9 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import { Button } from "@shared/ui/button";
 import { LEVELS } from "@/constants/word";
 import { getJLPTWords } from "@/utils/word";
 import { useGetMemoryList } from "@/hooks/useGetMemoryList";
-import { Button as A } from "@shared/ui/button";
 
 const MainPage = () => {
   const JLPT_WORDS_LENGTH = {

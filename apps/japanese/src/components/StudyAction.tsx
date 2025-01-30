@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "./ui/button";
+import { Button } from "@shared/ui/button";
 
 interface StudyActionProps {
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
