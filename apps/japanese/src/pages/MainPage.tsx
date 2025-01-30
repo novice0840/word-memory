@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { Button } from "@shared/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@shared/ui/card";
+
 import { LEVELS } from "@/constants/word";
 import { getJLPTWords } from "@/utils/word";
 import { useGetMemoryList } from "@/hooks/useGetMemoryList";
@@ -22,19 +23,29 @@ const MainPage = () => {
   };
   const navigate = useNavigate();
 
+  const roundToDecimal = (num: number, decimalPlaces = 1) => {
+    const factor = Math.pow(10, decimalPlaces);
+    return Math.round(num * factor) / factor;
+  };
+
   return (
-    <div className="flex flex-col items-center gap-6 pt-24">
+    <div className="flex flex-col items-center gap-6 pt-4">
       <h1 className="text-4xl font-extrabold">일본어 단어 암기</h1>
       {LEVELS.map((level) => (
-        <Button
-          disabled={memoryListLength[level] === JLPT_WORDS_LENGTH[level]}
-          key={level}
+        <Card
+          className="h-18 p-2 w-full"
           onClick={() => navigate(`/words/${level}`)}
-          className="text-xl"
-          name={level}
         >
-          {level}
-        </Button>
+          <CardHeader className="p-0">
+            <CardTitle className="text-lg">{level}</CardTitle>
+          </CardHeader>
+          <CardContent className="p-0">
+            {`달성율 ${roundToDecimal(
+              memoryListLength[level] / JLPT_WORDS_LENGTH[level],
+              3
+            )}% ${memoryListLength[level]} / ${JLPT_WORDS_LENGTH[level]}`}
+          </CardContent>
+        </Card>
       ))}
     </div>
   );
