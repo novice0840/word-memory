@@ -10,11 +10,9 @@ interface SentencesProps {
 
 const Sentences = ({ sentences, showMeaning }: SentencesProps) => {
   const handleVoiceClick = (text: string) => {
-    console.log(text);
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "ja-JP"; // 일본어 설정
+    utterance.lang = "ja-JP";
 
-    // 사용 가능한 일본어 음성을 찾기
     const voices = window.speechSynthesis.getVoices();
     const japaneseVoice = voices.find((voice) => voice.lang.startsWith("ja"));
 
@@ -42,7 +40,7 @@ const Sentences = ({ sentences, showMeaning }: SentencesProps) => {
                 handleVoiceClick(
                   item.japanese
                     .replace(/<rt>(.*?)<\/rt>/g, "")
-                    .replace(/<\/?(ruby|rb|rt)>/g, "")
+                    .replace(/<[^>]+>/g, "")
                 )
               }
             >
