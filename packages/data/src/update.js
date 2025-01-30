@@ -1,17 +1,18 @@
 const fs = require("fs");
-const { getSentences } = require("./queryWord");
+
 async function modifyJson(filename) {
   try {
     const data = fs.readFileSync(`./${filename}`, "utf-8");
     const jsonData = JSON.parse(data);
 
     for (const word of jsonData) {
-      delete word.sentences;
-      word.sentences = await getSentences(word.kanji ?? word.pronunciation);
-      console.log("Modifying word:", word.kanji ?? word.pronunciation);
+      word.sentences = word.sentences.map((sentence) => {
+        sentence.japanese = sentence.japanese.replace(/<\/?strong>/g, "");
+        return sentence;
+      });
     }
 
-    fs.writeFileSync(`./${filename}`, JSON.stringify(jsonData), "utf-8");
+    fs.writeFileSync(`../words/${filename}`, JSON.stringify(jsonData), "utf-8");
 
     console.log("JSON 파일이 성공적으로 수정되었습니다.");
   } catch (error) {
@@ -19,8 +20,8 @@ async function modifyJson(filename) {
   }
 }
 
-modifyJson("JLPT_N5_WORDS.json");
-modifyJson("JLPT_N4_WORDS.json");
-modifyJson("JLPT_N3_WORDS.json");
-modifyJson("JLPT_N2_WORDS.json");
-modifyJson("JLPT_N1_WORDS.json");
+modifyJson("../words/JLPT_N5_WORDS.json");
+modifyJson("../words/JLPT_N4_WORDS.json");
+modifyJson("../words/JLPT_N3_WORDS.json");
+modifyJson("../words/JLPT_N2_WORDS.json");
+modifyJson("../words/JLPT_N1_WORDS.json");
