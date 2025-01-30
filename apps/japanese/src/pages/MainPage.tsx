@@ -25,7 +25,6 @@ const MainPage = () => {
 
   return (
     <div className="flex flex-col items-center gap-6 pt-24">
-      <A>Click me</A>
       <h1 className="text-4xl font-extrabold">일본어 단어 암기</h1>
       {LEVELS.map((level) => (
         <Button
