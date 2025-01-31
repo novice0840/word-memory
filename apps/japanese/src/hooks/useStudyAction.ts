@@ -1,16 +1,19 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { MouseEvent } from "react";
 import { getJLPTWords, getNextUnmemorizedIndex } from "@/utils/word";
 import { setLocalStorage } from "./useLocalStorage";
 import { Level, Word } from "@/types/word";
 import { useWord } from "./useWord";
 import { useGetMemoryList } from "./useGetMemoryList";
+import { useDialog } from "@/context/DialogContext";
 
 const useStudyAction = () => {
   const { level = "" } = useParams();
   const { memoryList, curIndex } = useGetMemoryList(level as Level);
   const words = getJLPTWords(level) as Word[];
   const totalLength = words.length;
+  const { open } = useDialog();
+  const navigate = useNavigate();
 
   const {
     showWordMeaning,
@@ -36,10 +39,6 @@ const useStudyAction = () => {
         setShowSentencesMeaning(!showSentencesMeaning);
         break;
       case "memorization":
-        if (memoryList.length == totalLength) {
-          return;
-        }
-
         initWord();
         setLocalStorage(level, {
           memoryList: memoryList.includes(curIndex)
@@ -47,6 +46,16 @@ const useStudyAction = () => {
             : [...memoryList, curIndex],
           curIndex: nextIndex,
         });
+
+        if (memoryList.length === totalLength - 1) {
+          open({
+            title: "모든 단어를 외웠습니다 🎉",
+            description: "확인 버튼을 누르면 홈으로 돌아갑니다",
+            onConfirmClick: () => {
+              navigate("/");
+            },
+          });
+        }
 
         break;
       case "again":

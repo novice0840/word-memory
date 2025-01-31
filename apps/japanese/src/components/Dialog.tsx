@@ -26,7 +26,7 @@ const Dialog = ({
 }: DialogProps) => {
   return (
     <DialogPrimitive open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="w-64 rounded">
+      <DialogContent className="w-80 rounded">
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
           <DialogDescription>{description}</DialogDescription>
