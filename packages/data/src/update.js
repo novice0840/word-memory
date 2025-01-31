@@ -6,6 +6,9 @@ async function modifyJson(filename) {
     const jsonData = JSON.parse(data);
 
     for (const word of jsonData) {
+      word.koreans = word.koreans.map((korean) =>
+        korean.replace(/\(=[^)]*\)/g, "")
+      );
     }
 
     fs.writeFileSync(`${filename}`, JSON.stringify(jsonData), "utf-8");
@@ -17,3 +20,4 @@ async function modifyJson(filename) {
 }
 
 modifyJson("../words/english/TOEIC_WORDS.json");
+modifyJson("../words/english/TOEFL_WORDS.json");
