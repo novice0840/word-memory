@@ -15,7 +15,7 @@ const AppLayout = () => {
   };
 
   return (
-    <div className="max-w-96 mx-auto relative h-screen overflow-hidden">
+    <div className="max-w-xl mx-auto relative h-screen overflow-hidden">
       <div
         className={`h-full flex flex-col transition-transform duration-300 p-4 ${
           isWordListOpen ? "translate-x-full" : "translate-x-0"

@@ -1,19 +1,19 @@
 interface WordProps {
-  kanji: string | null;
+  original: string | null;
   pronunciation: string;
   koreans: string[];
   showMeaning: boolean;
 }
 
-const Word = ({ kanji, pronunciation, koreans, showMeaning }: WordProps) => {
+const Word = ({ original, pronunciation, koreans, showMeaning }: WordProps) => {
   return (
     <div className="text-center h-32">
       <div className="text-4xl">
-        {kanji?.split("·").join(", ") || pronunciation}
+        {original?.split("·").join(", ") || pronunciation}
       </div>
       {showMeaning ? (
         <div>
-          <div>{kanji && pronunciation}</div>
+          <div>{original && pronunciation}</div>
           <div>{koreans?.join(", ")}</div>
         </div>
       ) : (

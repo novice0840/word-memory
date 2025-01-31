@@ -19,7 +19,7 @@ const WordsPage = () => {
   } = useStudyAction();
   const totalLength = words.length;
 
-  const { kanji, pronunciation, koreans, sentences } = words[curIndex];
+  const { original, pronunciation, koreans, sentences } = words[curIndex];
 
   const handleGoPrevWord = () => {
     const prevIndex = getPrevIndex(curIndex, totalLength);
@@ -49,7 +49,7 @@ const WordsPage = () => {
         />
         <section className="w-full max-h-96 overflow-auto">
           <Word
-            kanji={kanji}
+            original={original}
             pronunciation={pronunciation}
             koreans={koreans}
             showMeaning={showWordMeaning}

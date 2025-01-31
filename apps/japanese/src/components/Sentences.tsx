@@ -3,7 +3,7 @@ import { VolumeHigh } from "@mynaui/icons-react";
 interface SentencesProps {
   sentences: {
     korean: string;
-    japanese: string;
+    original: string;
   }[];
   showMeaning: boolean;
 }
@@ -31,14 +31,14 @@ const Sentences = ({ sentences, showMeaning }: SentencesProps) => {
             <div
               dangerouslySetInnerHTML={{
                 __html: showMeaning
-                  ? item.japanese
-                  : item.japanese.replace(/<rt>(.*?)<\/rt>/g, ""),
+                  ? item.original
+                  : item.original.replace(/<rt>(.*?)<\/rt>/g, ""),
               }}
             />
             <button
               onClick={() =>
                 handleVoiceClick(
-                  item.japanese
+                  item.original
                     .replace(/<rt>(.*?)<\/rt>/g, "")
                     .replace(/<[^>]+>/g, "")
                 )

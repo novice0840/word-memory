@@ -33,6 +33,7 @@ const MainPage = () => {
       <h1 className="text-4xl font-extrabold">일본어 단어 암기</h1>
       {LEVELS.map((level) => (
         <Card
+          key={level}
           className="h-18 p-2 w-full"
           onClick={() => navigate(`/words/${level}`)}
         >
