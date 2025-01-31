@@ -15,7 +15,7 @@ const MainPage = () => {
       {HSK_LEVELS.map((level) => (
         <Card
           key={level}
-          className="h-18 p-2 w-full"
+          className="p-1 w-full"
           onClick={() => navigate(`/words/${level}`)}
         >
           <CardHeader className="p-0">

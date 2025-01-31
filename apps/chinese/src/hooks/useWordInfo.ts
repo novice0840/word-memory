@@ -1,4 +1,4 @@
-import { getHSKWords } from "@/utils/word";
+import { getHSKWords } from "@/utils/chinese";
 import { useGetMemoryList } from "./useGetMemoryList";
 
 export const useWordInfo = () => {

@@ -1,15 +1,16 @@
 import { Navigate, useParams } from "react-router-dom";
 import { setLocalStorage } from "@/hooks/useLocalStorage";
-import { LEVELS } from "@/constants/word";
+import { HSK_LEVELS } from "@/constants/word";
 import { StudyAction, StudyProgress, Sentences, Word } from "@/components";
-import { getJLPTWords, getNextIndex, getPrevIndex } from "@/utils/word";
-import type { Level } from "@/types/word";
+import { getNextIndex, getPrevIndex } from "@/utils/word";
+import type { HSKLevel } from "@/types/word";
 import { useStudyAction } from "@/hooks/useStudyAction";
 import { useGetMemoryList } from "@/hooks/useGetMemoryList";
+import { getHSKWords } from "@/utils/chinese";
 
 const WordsPage = () => {
   const { level = "" } = useParams();
-  const words = getJLPTWords(level);
+  const words = getHSKWords(level);
   const totalLength = words.length;
   const { memoryList, curIndex } = useGetMemoryList(level);
   const {
@@ -33,7 +34,7 @@ const WordsPage = () => {
     setLocalStorage(level, { memoryList, curIndex: nextIndex });
   };
 
-  if (!LEVELS.includes(level as Level)) {
+  if (!HSK_LEVELS.includes(level as HSKLevel)) {
     return <Navigate to="/" />;
   }
 
