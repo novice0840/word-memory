@@ -1,1 +1,9 @@
 export const LEVELS = ["N1", "N2", "N3", "N4", "N5"] as const;
+export const HSK_LEVELS = [
+  "HSK1",
+  "HSK2",
+  "HSK3",
+  "HSK4",
+  "HSK5",
+  "HSK6",
+] as const;

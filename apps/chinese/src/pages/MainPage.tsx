@@ -1,25 +1,35 @@
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@shared/ui/card";
 
-import { LEVELS } from "@/constants/word";
-import { getJLPTWords } from "@/utils/word";
+import { HSK_LEVELS } from "@/constants/word";
+import { getHSKWords } from "@/utils/word";
 import { useGetMemoryList } from "@/hooks/useGetMemoryList";
 
 const MainPage = () => {
-  const JLPT_WORDS_LENGTH = {
-    N1: getJLPTWords("N1").length,
-    N2: getJLPTWords("N2").length,
-    N3: getJLPTWords("N3").length,
-    N4: getJLPTWords("N4").length,
-    N5: getJLPTWords("N5").length,
+  const hskLength = {
+    HSK1: getHSKWords("HSK1").length,
+    HSK2: getHSKWords("HSK2").length,
+    HSK3: getHSKWords("HSK3").length,
+    HSK4: getHSKWords("HSK4").length,
+    HSK5: getHSKWords("HSK5").length,
+    HSK6: getHSKWords("HSK6").length,
   };
 
+  // const JLPT_WORDS_LENGTH = {
+  //   N1: getJLPTWords("N1").length,
+  //   N2: getJLPTWords("N2").length,
+  //   N3: getJLPTWords("N3").length,
+  //   N4: getJLPTWords("N4").length,
+  //   N5: getJLPTWords("N5").length,
+  // };
+
   const memoryListLength = {
-    N1: useGetMemoryList("N1").memoryList.length,
-    N2: useGetMemoryList("N2").memoryList.length,
-    N3: useGetMemoryList("N3").memoryList.length,
-    N4: useGetMemoryList("N4").memoryList.length,
-    N5: useGetMemoryList("N5").memoryList.length,
+    HSK1: useGetMemoryList("HSK1").memoryList.length,
+    HSK2: useGetMemoryList("HSK2").memoryList.length,
+    HSK3: useGetMemoryList("HSK3").memoryList.length,
+    HSK4: useGetMemoryList("HSK4").memoryList.length,
+    HSK5: useGetMemoryList("HSK5").memoryList.length,
+    HSK6: useGetMemoryList("HSK6").memoryList.length,
   };
   const navigate = useNavigate();
 
@@ -30,8 +40,8 @@ const MainPage = () => {
 
   return (
     <div className="flex flex-col items-center gap-6 pt-4">
-      <h1 className="text-4xl font-extrabold">일본어 단어 암기</h1>
-      {LEVELS.map((level) => (
+      <h1 className="text-4xl font-extrabold">중국어 단어 암기</h1>
+      {HSK_LEVELS.map((level) => (
         <Card
           key={level}
           className="h-18 p-2 w-full"
@@ -42,9 +52,9 @@ const MainPage = () => {
           </CardHeader>
           <CardContent className="p-0">
             {`달성율 ${roundToDecimal(
-              memoryListLength[level] / JLPT_WORDS_LENGTH[level],
+              memoryListLength[level] / hskLength[level],
               3
-            )}% ${memoryListLength[level]} / ${JLPT_WORDS_LENGTH[level]}`}
+            )}% ${memoryListLength[level]} / ${hskLength[level]}`}
           </CardContent>
         </Card>
       ))}

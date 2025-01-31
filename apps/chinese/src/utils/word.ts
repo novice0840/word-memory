@@ -1,9 +1,29 @@
-import { Level, Word } from "@/types/word";
+import { ChineseWord, HSKLevel, Level, Word } from "@/types/word";
 import JLPT_N1_WORDS from "@shared/data/japanese/jlpt_n1";
-import JLPT_N2_WORDS from "@shared/data/japanese/jlpt_n1";
-import JLPT_N3_WORDS from "@shared/data/japanese/jlpt_n1";
-import JLPT_N4_WORDS from "@shared/data/japanese/jlpt_n1";
-import JLPT_N5_WORDS from "@shared/data/japanese/jlpt_n1";
+import JLPT_N2_WORDS from "@shared/data/japanese/jlpt_n2";
+import JLPT_N3_WORDS from "@shared/data/japanese/jlpt_n3";
+import JLPT_N4_WORDS from "@shared/data/japanese/jlpt_n4";
+import JLPT_N5_WORDS from "@shared/data/japanese/jlpt_n5";
+
+import HSK1_WORDS from "@shared/data/chinese/hsk1";
+import HSK2_WORDS from "@shared/data/chinese/hsk2";
+import HSK3_WORDS from "@shared/data/chinese/hsk3";
+import HSK4_WORDS from "@shared/data/chinese/hsk4";
+import HSK5_WORDS from "@shared/data/chinese/hsk5";
+import HSK6_WORDS from "@shared/data/chinese/hsk6";
+
+export const getHSKWords = (level: HSKLevel): ChineseWord[] => {
+  const HSK_WORDS_MAP = {
+    HSK1: HSK1_WORDS,
+    HSK2: HSK2_WORDS,
+    HSK3: HSK3_WORDS,
+    HSK4: HSK4_WORDS,
+    HSK5: HSK5_WORDS,
+    HSK6: HSK6_WORDS,
+  } as Record<HSKLevel, ChineseWord[]>;
+
+  return HSK_WORDS_MAP[level] || [];
+};
 
 export const getNextIndex = (curIndex: number, totalLength: number) => {
   return (curIndex + 1) % totalLength;

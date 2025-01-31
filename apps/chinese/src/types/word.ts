@@ -1,5 +1,6 @@
-import { LEVELS } from "@/constants/word";
+import { HSK_LEVELS, LEVELS } from "@/constants/word";
 
+type HSKLevel = (typeof HSK_LEVELS)[number];
 type Level = (typeof LEVELS)[number];
 
 type Word = {
@@ -13,4 +14,15 @@ type Word = {
   }[];
 };
 
-export type { Word, Level };
+type ChineseWord = {
+  koreans: string[];
+  pronunciation: string;
+  original: string | null;
+  level: HSKLevel;
+  sentences: {
+    korean: string;
+    original: string;
+  }[];
+};
+
+export type { ChineseWord, HSKLevel, Word, Level };
