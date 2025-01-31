@@ -60,7 +60,7 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
             onClick={() => handleWordClick(i)}
             className="flex justify-between border rounded text-xl"
           >
-            <span>{word.kanji || word.pronunciation}</span>
+            <span>{word.original || word.pronunciation}</span>
             {memoryList.includes(i) && <CheckCircle />}
           </li>
         ))}
