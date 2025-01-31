@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { MouseEvent } from "react";
 import { getJLPTWords, getNextUnmemorizedIndex } from "@/utils/word";
 import { setLocalStorage } from "./useLocalStorage";
@@ -7,7 +7,6 @@ import { useWord } from "./useWord";
 import { useGetMemoryList } from "./useGetMemoryList";
 
 const useStudyAction = () => {
-  const navigate = useNavigate();
   const { level = "" } = useParams();
   const { memoryList, curIndex } = useGetMemoryList(level as Level);
   const words = getJLPTWords(level) as Word[];
