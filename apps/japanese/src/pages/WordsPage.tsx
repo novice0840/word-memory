@@ -10,6 +10,7 @@ import { useGetMemoryList } from "@/hooks/useGetMemoryList";
 const WordsPage = () => {
   const { level = "" } = useParams();
   const words = getJLPTWords(level);
+  const totalLength = words.length;
   const { memoryList, curIndex } = useGetMemoryList(level);
   const {
     handleStudyActionClick,
@@ -17,7 +18,6 @@ const WordsPage = () => {
     showSentencesMeaning,
     initWord,
   } = useStudyAction();
-  const totalLength = words.length;
 
   const { original, pronunciation, koreans, sentences } = words[curIndex];
 

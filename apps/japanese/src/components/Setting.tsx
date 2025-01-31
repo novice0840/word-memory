@@ -1,10 +1,24 @@
 import { LEVELS } from "@/constants/word";
-import ResetDialog from "./ResetDialog";
+import { useDialog } from "@/context/DialogContext";
+import { Button } from "@shared/ui/button";
+import { setLocalStorage } from "@/hooks/useLocalStorage";
 interface SettingProps {
   isSettingOpen: boolean;
 }
 
 const Setting = ({ isSettingOpen }: SettingProps) => {
+  const { open } = useDialog();
+
+  const handleResetClick = (level: string) => {
+    open({
+      title: `${level} 단어장 초기화`,
+      description: "정말로 초기화하시겠습니까?",
+      onConfirmClick: () => {
+        setLocalStorage(level, { memoryList: [], curIndex: 0 });
+      },
+    });
+  };
+
   return (
     <div
       aria-label="setting"
@@ -21,7 +35,7 @@ const Setting = ({ isSettingOpen }: SettingProps) => {
           <li key={level}>
             <div className="flex justify-between items-center border rounded p-2">
               <span>{level}</span>
-              <ResetDialog level={level} />
+              <Button onClick={() => handleResetClick(level)}>초기화</Button>
             </div>
           </li>
         ))}
