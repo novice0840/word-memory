@@ -10,7 +10,15 @@
     "./japanese/jlpt_n2": "./words/japanese/JLPT_N2_WORDS.json",
     "./japanese/jlpt_n3": "./words/japanese/JLPT_N3_WORDS.json",
     "./japanese/jlpt_n4": "./words/japanese/JLPT_N4_WORDS.json",
-    "./japanese/jlpt_n5": "./words/japanese/JLPT_N5_WORDS.json"
+    "./japanese/jlpt_n5": "./words/japanese/JLPT_N5_WORDS.json",
+    "./chinese/hsk1": "./words/chinese/HSK_1_WORDS.json",
+    "./chinese/hsk2": "./words/chinese/HSK_1_WORDS.json",
+    "./chinese/hsk3": "./words/chinese/HSK_1_WORDS.json",
+    "./chinese/hsk4": "./words/chinese/HSK_1_WORDS.json",
+    "./chinese/hsk5": "./words/chinese/HSK_1_WORDS.json",
+    "./chinese/hsk6": "./words/chinese/HSK_1_WORDS.json",
+    "./english/toeic": "./words/english/TOEIC_WORDS.json",
+    "./english/toefl": "./words/english/TOEFL_WORDS.json"
   },
   "keywords": [],
   "author": "",
