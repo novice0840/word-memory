@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "apps/japanese/index.html"
-    }
-  ]
-}
