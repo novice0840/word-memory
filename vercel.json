@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/apps/japanese/index.html"
+      "destination": "apps/japanese/index.html"
     }
   ]
 }
