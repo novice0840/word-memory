@@ -12,7 +12,7 @@ const getJapaneseSentences = async (word) => {
   const data = await response.json();
   return data.searchResultMap.searchResultListMap.EXAMPLE.items.map((item) => ({
     korean: item.expExample2,
-    japanese: item.expExample1,
+    original: item.expExample1,
   }));
 };
 
@@ -33,15 +33,19 @@ const getPageWords = async (url) => {
     let word = {
       koreans: item.means?.map((mean) => mean.replace(/;/g, ", ")),
       pronunciation: item.show_entry,
-      kanji: item.pron,
+      original: item.pron,
       level: `N${level}`,
     };
 
     word.sentences = await getJapaneseSentences(
-      word.kanji ? word.kanji.split("·")[0] : word.pronunciation
+      word.original ? word.original.split("·")[0] : word.pronunciation
     );
     words.push(word);
-    console.log("Crawling word:", word.kanji ?? word.pronunciation, word.level);
+    console.log(
+      "Crawling word:",
+      word.original ?? word.pronunciation,
+      word.level
+    );
   }
   return words;
 };
