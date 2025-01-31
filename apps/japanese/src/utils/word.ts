@@ -1,9 +1,9 @@
 import { Level, Word } from "@/types/word";
 import JLPT_N1_WORDS from "@shared/data/japanese/jlpt_n1";
-import JLPT_N2_WORDS from "@shared/data/japanese/jlpt_n1";
-import JLPT_N3_WORDS from "@shared/data/japanese/jlpt_n1";
-import JLPT_N4_WORDS from "@shared/data/japanese/jlpt_n1";
-import JLPT_N5_WORDS from "@shared/data/japanese/jlpt_n1";
+import JLPT_N2_WORDS from "@shared/data/japanese/jlpt_n2";
+import JLPT_N3_WORDS from "@shared/data/japanese/jlpt_n3";
+import JLPT_N4_WORDS from "@shared/data/japanese/jlpt_n4";
+import JLPT_N5_WORDS from "@shared/data/japanese/jlpt_n5";
 
 export const getNextIndex = (curIndex: number, totalLength: number) => {
   return (curIndex + 1) % totalLength;
