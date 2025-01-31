@@ -33,7 +33,7 @@ const WordsPage = () => {
     setLocalStorage(level, { memoryList, curIndex: nextIndex });
   };
 
-  if (!LEVELS.includes(level as Level) || memoryList?.length === totalLength) {
+  if (!LEVELS.includes(level as Level)) {
     return <Navigate to="/" />;
   }
 

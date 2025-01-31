@@ -37,6 +37,10 @@ const useStudyAction = () => {
         setShowSentencesMeaning(!showSentencesMeaning);
         break;
       case "memorization":
+        if (memoryList.length == totalLength) {
+          return;
+        }
+
         initWord();
         setLocalStorage(level, {
           memoryList: memoryList.includes(curIndex)
@@ -45,9 +49,6 @@ const useStudyAction = () => {
           curIndex: nextIndex,
         });
 
-        if (memoryList.length == totalLength - 1) {
-          navigate("/");
-        }
         break;
       case "again":
         initWord();
