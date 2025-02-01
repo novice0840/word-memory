@@ -6,7 +6,7 @@ import { setLocalStorage } from "./useLocalStorage";
 import { Level, Word } from "@/types/word";
 import { useWord } from "./useWord";
 import { useGetMemoryList } from "./useGetMemoryList";
-import { useDialog } from "@/context/DialogContext";
+import { useDialog } from "@shared/ui/context";
 
 const useStudyAction = () => {
   const { level = "" } = useParams();

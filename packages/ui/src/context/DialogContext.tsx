@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import Dialog from "@/components/Dialog";
+import Dialog from "../components/Dialog";
 
 interface DialogData {
   title: string;
