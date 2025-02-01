@@ -1,11 +1,11 @@
 import { describe, it, expect } from "vitest";
 import {
-  getJLPTWords,
   getNextIndex,
   getNextUnmemorizedIndex,
   getPrevIndex,
 } from "@/utils/word";
 import JLPT_N1_WORDS from "@shared/data/japanese/jlpt_n1";
+import { getHSKWords } from "@/utils/chinese";
 
 describe("Word Util Test", () => {
   it("getNextIndex 함수 실행 시 다음 인덱스를 반환한한다", () => {
@@ -73,23 +73,23 @@ describe("Word Util Test", () => {
     expect(nextIndex).toBe(2);
   });
 
-  it("getJLPTWords은 입력 level에 맞는 단어 목록을 반환한다", () => {
+  it("getHSKWords은 입력 level에 맞는 단어 목록을 반환한다", () => {
     // Given
     const level = "N1";
 
     // When
-    const words = getJLPTWords(level);
+    const words = getHSKWords(level);
 
     // Then
     expect(words).toEqual(JLPT_N1_WORDS);
   });
 
-  it("getJLPTWords에 잘못된 level을 넣은 경우 빈 배열을 반환한다", () => {
+  it("getHSKWords에 잘못된 level을 넣은 경우 빈 배열을 반환한다", () => {
     // Given
     const level = "N6";
 
     // When
-    const words = getJLPTWords(level);
+    const words = getHSKWords(level);
 
     // Then
     expect(words).toEqual([]);
