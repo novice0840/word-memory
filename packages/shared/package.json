@@ -1,17 +1,14 @@
 {
-  "name": "@shared/ui",
+  "name": "shared",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "exports": {
-    "./button": "./src/components/ui/button.tsx",
-    "./dialog": "./src/components/ui/dialog.tsx",
-    "./input": "./src/components/ui/input.tsx",
-    "./label": "./src/components/ui/label.tsx",
-    "./card": "./src/components/ui/card.tsx",
+    "./ui": "./src/components/ui/index.ts",
     "./utils": "./src/utils/index.ts",
     "./pages": "./src/pages/index.ts",
-    "./context": "./src/context/index.ts"
+    "./context": "./src/context/index.ts",
+    "./hooks": "./src/hooks/index.ts"
   },
   "scripts": {
     "dev": "vite",

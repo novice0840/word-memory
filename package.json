@@ -8,8 +8,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "dependencies": {
-    "@shared/data": "*",
-    "@shared/ui": "*",
+    "data": "*",
+    "shared": "*",
     "next": "^15.1.6",
     "@mynaui/icons-react": "^0.3.3",
     "@radix-ui/react-dialog": "^1.1.4",

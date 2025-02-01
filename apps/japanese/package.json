@@ -12,7 +12,7 @@
     "coverage": "vitest --coverage"
   },
   "dependencies": {
-    "@shared/ui": "*",
-    "@shared/data": "*"
+    "data": "*",
+    "shared": "*"
   }
 }
