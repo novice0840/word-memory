@@ -22,6 +22,7 @@ type ChineseWord = {
   sentences: {
     korean: string;
     original: string;
+    pronunciation: string;
   }[];
 };
 
