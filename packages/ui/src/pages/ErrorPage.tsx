@@ -1,7 +1,7 @@
 import { Button } from "@shared/ui/button";
 import { Link } from "react-router-dom";
-import { ERROR_PAGE_TITLE, ERROR_PAGE_BUTTON_TEXT } from "@/constants/message";
 import { DangerCircle } from "@mynaui/icons-react";
+import { ERROR_PAGE_BUTTON_TEXT, ERROR_PAGE_TITLE } from "../constant/message";
 
 const ErrorPage = () => {
   return (

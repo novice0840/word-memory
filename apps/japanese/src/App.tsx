@@ -1,7 +1,8 @@
 import * as React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "@/layout/AppLayout.tsx";
-import { ErrorPage, MainPage, WordsPage } from "@/pages";
+import { MainPage, WordsPage } from "@/pages";
+import { ErrorPage } from "@shared/ui/pages";
 
 const routes = [
   {
@@ -15,12 +16,16 @@ const routes = [
   },
 ];
 
-const router = createBrowserRouter(routes);
+const router = createBrowserRouter(routes, {
+  future: {
+    v7_relativeSplatPath: true,
+  },
+});
 
 function App() {
   return (
     <React.Fragment>
-      <RouterProvider router={router} />
+      <RouterProvider router={router} future={{ v7_startTransition: true }} />
     </React.Fragment>
   );
 }

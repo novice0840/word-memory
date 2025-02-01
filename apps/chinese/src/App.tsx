@@ -1,7 +1,8 @@
 import * as React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "@/layout/AppLayout.tsx";
-import { ErrorPage, MainPage, WordsPage } from "@/pages";
+import { MainPage, WordsPage } from "@/pages";
+import { ErrorPage } from "@shared/ui/pages";
 
 const routes = [
   {
