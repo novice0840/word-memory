@@ -15,12 +15,16 @@ const routes = [
   },
 ];
 
-const router = createBrowserRouter(routes);
+const router = createBrowserRouter(routes, {
+  future: {
+    v7_relativeSplatPath: true,
+  },
+});
 
 function App() {
   return (
     <React.Fragment>
-      <RouterProvider router={router} />
+      <RouterProvider router={router} future={{ v7_startTransition: true }} />
     </React.Fragment>
   );
 }
