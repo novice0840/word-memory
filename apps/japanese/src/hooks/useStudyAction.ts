@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { MouseEvent } from "react";
-import { getJLPTWords, getNextUnmemorizedIndex } from "@/utils/word";
+import { getJLPTWords } from "@/utils/japanese";
+import { getNextUnmemorizedIndex } from "@shared/ui/utils";
 import { setLocalStorage } from "./useLocalStorage";
 import { Level, Word } from "@/types/word";
 import { useWord } from "./useWord";

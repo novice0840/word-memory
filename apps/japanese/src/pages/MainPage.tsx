@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@shared/ui/card";
 
 import { LEVELS } from "@/constants/word";
-import { getJLPTWords } from "@/utils/word";
+import { getJLPTWords } from "@/utils/japanese";
 import { useGetMemoryList } from "@/hooks/useGetMemoryList";
 
 const MainPage = () => {

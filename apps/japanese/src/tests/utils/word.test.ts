@@ -4,7 +4,7 @@ import {
   getNextIndex,
   getNextUnmemorizedIndex,
   getPrevIndex,
-} from "@/utils/word";
+} from "@/utils/japanese";
 import JLPT_N1_WORDS from "@shared/data/japanese/jlpt_n1";
 
 describe("Word Util Test", () => {

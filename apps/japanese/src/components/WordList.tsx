@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { ArrowLeft, CheckCircle } from "@mynaui/icons-react";
 import { Level } from "@/types/word";
-import { getJLPTWords, isValidLevel } from "@/utils/word";
+import { getJLPTWords, isValidJLPTLevel } from "@/utils/japanese";
 import { setLocalStorage } from "@/hooks/useLocalStorage";
 import { useEffect, useRef } from "react";
 import { useGetMemoryList } from "@/hooks/useGetMemoryList";
@@ -35,7 +35,7 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
     }
   }, [isWordListOpen, curIndex]);
 
-  if (!isValidLevel(level)) {
+  if (!isValidJLPTLevel(level)) {
     return null;
   }
 
