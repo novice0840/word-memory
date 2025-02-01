@@ -1,8 +1,9 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { MouseEvent } from "react";
-import { getJLPTWords, getNextUnmemorizedIndex } from "@/utils/word";
+import { getNextUnmemorizedIndex } from "@/utils/word";
+import { getHSKWords } from "@/utils/chinese";
 import { setLocalStorage } from "./useLocalStorage";
-import { Level, Word } from "@/types/word";
+import { Level } from "@/types/word";
 import { useWord } from "./useWord";
 import { useGetMemoryList } from "./useGetMemoryList";
 import { useDialog } from "@/context/DialogContext";
@@ -10,7 +11,8 @@ import { useDialog } from "@/context/DialogContext";
 const useStudyAction = () => {
   const { level = "" } = useParams();
   const { memoryList, curIndex } = useGetMemoryList(level as Level);
-  const words = getJLPTWords(level) as Word[];
+  const words = getHSKWords(level);
+
   const totalLength = words.length;
   const { open } = useDialog();
   const navigate = useNavigate();
