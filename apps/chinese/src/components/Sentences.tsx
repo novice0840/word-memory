@@ -1,6 +1,5 @@
 import { readSentence } from "@/utils/word";
 import { VolumeHigh } from "@mynaui/icons-react";
-import { read } from "fs";
 
 interface SentencesProps {
   sentences: {
