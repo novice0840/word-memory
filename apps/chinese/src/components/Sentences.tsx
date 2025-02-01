@@ -1,4 +1,6 @@
+import { readSentence } from "@/utils/word";
 import { VolumeHigh } from "@mynaui/icons-react";
+import { read } from "fs";
 
 interface SentencesProps {
   sentences: {
@@ -9,20 +11,6 @@ interface SentencesProps {
 }
 
 const Sentences = ({ sentences, showMeaning }: SentencesProps) => {
-  const handleVoiceClick = (text: string) => {
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "ja-JP";
-
-    const voices = window.speechSynthesis.getVoices();
-    const japaneseVoice = voices.find((voice) => voice.lang.startsWith("ja"));
-
-    if (japaneseVoice) {
-      utterance.voice = japaneseVoice;
-    }
-
-    speechSynthesis.speak(utterance);
-  };
-
   return (
     <div className="h-64 overflow-auto w-full text-xl rounded-md border p-x-4 space-y-4">
       {sentences.map((item, index) => (
@@ -37,10 +25,11 @@ const Sentences = ({ sentences, showMeaning }: SentencesProps) => {
             />
             <button
               onClick={() =>
-                handleVoiceClick(
+                readSentence(
                   item.original
                     .replace(/<rt>(.*?)<\/rt>/g, "")
-                    .replace(/<[^>]+>/g, "")
+                    .replace(/<[^>]+>/g, ""),
+                  "chinese"
                 )
               }
             >

@@ -1,11 +1,11 @@
-import React from "react";
+import { MouseEvent } from "react";
 import { Button } from "@shared/ui/button";
 import { getHSKWords } from "@/utils/chinese";
 import { useParams } from "react-router-dom";
 import { useGetMemoryList } from "@/hooks/useGetMemoryList";
 
 interface StudyActionProps {
-  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick: (event: MouseEvent<HTMLButtonElement>) => void;
 }
 
 const StudyAction = ({ onClick }: StudyActionProps) => {

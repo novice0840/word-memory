@@ -48,3 +48,44 @@ export const getJLPTWords = (level: string): Word[] => {
 
   return levelWords[level];
 };
+
+export const readSentence = (
+  text: string,
+  language: "japanese" | "chinese"
+) => {
+  // Japanese voice -> Microsoft Haruka - Japanese (Japan)
+  // Chinese voice -> Google 普通话（中国大陆）
+
+  const langToTag = {
+    japanese: "ja-JP",
+    chinese: "zh-CN",
+  };
+
+  if (!window.speechSynthesis) {
+    console.error("음성 합성이 지원되지 않는 브라우저입니다.");
+    return;
+  }
+
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = langToTag[language];
+
+  const voices = window.speechSynthesis.getVoices();
+  const preferredVoices: Record<string, string> = {
+    "ja-JP": "Microsoft Haruka - Japanese (Japan)",
+    "zh-CN": "Google 普通话（中国大陆）",
+  };
+  const selectedVoice = voices.find(
+    (voice) =>
+      voice.name.normalize().replace(/\s+/g, "") ===
+      preferredVoices[langToTag[language]].normalize().replace(/\s+/g, "")
+  );
+
+  if (selectedVoice) {
+    utterance.voice = selectedVoice;
+  } else {
+    console.warn(
+      `선택한 언어(${language})에 대한 특정 보이스를 찾지 못했습니다. 기본 보이스 사용.`
+    );
+  }
+  speechSynthesis.speak(utterance);
+};
