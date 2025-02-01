@@ -5,6 +5,7 @@ interface SentencesProps {
   sentences: {
     korean: string;
     original: string;
+    pronunciation: string;
   }[];
   showMeaning: boolean;
 }
@@ -14,24 +15,12 @@ const Sentences = ({ sentences, showMeaning }: SentencesProps) => {
     <div className="h-64 overflow-auto w-full text-xl rounded-md border p-x-4 space-y-4">
       {sentences.map((item, index) => (
         <div key={index}>
-          <div className="flex items-center space-x-2  ">
-            <div
-              dangerouslySetInnerHTML={{
-                __html: showMeaning
-                  ? item.original
-                  : item.original.replace(/<rt>(.*?)<\/rt>/g, ""),
-              }}
-            />
-            <button
-              onClick={() =>
-                readSentence(
-                  item.original
-                    .replace(/<rt>(.*?)<\/rt>/g, "")
-                    .replace(/<[^>]+>/g, ""),
-                  "chinese"
-                )
-              }
-            >
+          <div className="flex items-center space-x-2">
+            <div>
+              <div>{item.original}</div>
+              <div>{showMeaning && item.pronunciation}</div>
+            </div>
+            <button onClick={() => readSentence(item.original, "chinese")}>
               <VolumeHigh />
             </button>
           </div>
