@@ -1,4 +1,4 @@
-import { LEVELS } from "@/constants/word";
+import { HSK_LEVELS } from "@/constants/word";
 import { useDialog } from "@/context/DialogContext";
 import { Button } from "@shared/ui/button";
 import { setLocalStorage } from "@/hooks/useLocalStorage";
@@ -31,7 +31,7 @@ const Setting = ({ isSettingOpen }: SettingProps) => {
     >
       <div className="text-center mb-2">설정</div>
       <ul className="space-y-2">
-        {LEVELS.map((level) => (
+        {HSK_LEVELS.map((level) => (
           <li key={level}>
             <div className="flex justify-between items-center border rounded p-2">
               <span>{level}</span>
