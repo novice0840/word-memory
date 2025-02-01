@@ -8,7 +8,8 @@
     "./dialog": "./src/components/ui/dialog.tsx",
     "./input": "./src/components/ui/input.tsx",
     "./label": "./src/components/ui/label.tsx",
-    "./card": "./src/components/ui/card.tsx"
+    "./card": "./src/components/ui/card.tsx",
+    "./utils": "./src/utils/index.ts"
   },
   "scripts": {
     "dev": "vite",
