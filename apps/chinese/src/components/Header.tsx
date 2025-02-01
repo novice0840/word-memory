@@ -1,5 +1,5 @@
-import { LEVELS } from "@/constants/word";
-import { Level } from "@/types/word";
+import { HSK_LEVELS } from "@/constants/word";
+import { HSKLevel } from "@/types/word";
 import { Cog, Home, Menu } from "@mynaui/icons-react";
 import { useState } from "react";
 import Setting from "./Setting";
@@ -18,7 +18,7 @@ const Header = ({ onMenuClick }: HeaderProps) => {
 
   return (
     <header className="flex justify-between">
-      {LEVELS.includes(level as Level) ? (
+      {HSK_LEVELS.includes(level as HSKLevel) ? (
         <button aria-label="menuIcon" onClick={onMenuClick}>
           <Menu />
         </button>

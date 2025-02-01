@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
 import { ArrowLeft, CheckCircle } from "@mynaui/icons-react";
-import { Level } from "@/types/word";
-import { getJLPTWords, isValidLevel } from "@/utils/word";
+import { HSKLevel } from "@/types/word";
+import { isValidHSKLevel } from "@/utils/chinese";
 import { setLocalStorage } from "@/hooks/useLocalStorage";
 import { useEffect, useRef } from "react";
 import { useGetMemoryList } from "@/hooks/useGetMemoryList";
+import { getHSKWords } from "@/utils/chinese";
 
 interface WordListProps {
   isWordListOpen: boolean;
@@ -12,11 +13,10 @@ interface WordListProps {
 }
 
 const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
-  const { level = "N1" } = useParams();
-  const { memoryList, curIndex } = useGetMemoryList(level as Level);
+  const { level = "" } = useParams();
+  const { memoryList, curIndex } = useGetMemoryList(level as HSKLevel);
   const itemRefs = useRef<(HTMLLIElement | null)[]>([]);
-
-  const words = getJLPTWords(level as Level);
+  const words = getHSKWords(level as HSKLevel);
 
   const handleWordClick = (wordIndex: number) => {
     setLocalStorage(level, {
@@ -35,7 +35,7 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
     }
   }, [isWordListOpen, curIndex]);
 
-  if (!isValidLevel(level)) {
+  if (!isValidHSKLevel(level)) {
     return null;
   }
 
@@ -60,7 +60,9 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
             onClick={() => handleWordClick(i)}
             className="flex justify-between border rounded text-xl"
           >
-            <span>{word.original || word.pronunciation}</span>
+            <span className="font-chinese">
+              {word.original || word.pronunciation}
+            </span>
             {memoryList.includes(i) && <CheckCircle />}
           </li>
         ))}
