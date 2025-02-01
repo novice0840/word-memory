@@ -2,8 +2,15 @@
 
 - React, TypeScript, PWA 기반
 - 약 7000개의 일본어 단어 수록됨
-- 현재 일본어, 중국어 제공
+- 일본어, 중국어 제공
 - 추후 다른 언어 추가 예정
+- 현재 영어 버전 개발중
+
+## 배포링크
+
+- [일본어](japanese-word-memory.vercel.app)
+- [중국어](chinese-word-memory.vercel.app)
+- [영어](english-word-memory.vercel.app)
 
 ## 단어 형태
 
