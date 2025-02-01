@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { MouseEvent } from "react";
-import { getNextUnmemorizedIndex } from "@/utils/word";
+import { getNextUnmemorizedIndex } from "@shared/ui/utils";
 import { getHSKWords } from "@/utils/chinese";
 import { setLocalStorage } from "./useLocalStorage";
 import { Level } from "@/types/word";

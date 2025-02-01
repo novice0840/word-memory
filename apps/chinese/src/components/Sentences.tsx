@@ -1,4 +1,4 @@
-import { readSentence } from "@/utils/word";
+import { readSentence } from "@shared/ui/utils";
 import { VolumeHigh } from "@mynaui/icons-react";
 
 interface SentencesProps {

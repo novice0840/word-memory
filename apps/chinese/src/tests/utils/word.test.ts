@@ -3,7 +3,7 @@ import {
   getNextIndex,
   getNextUnmemorizedIndex,
   getPrevIndex,
-} from "@/utils/word";
+} from "@shared/ui/utils";
 import JLPT_N1_WORDS from "@shared/data/japanese/jlpt_n1";
 import { getHSKWords } from "@/utils/chinese";
 
