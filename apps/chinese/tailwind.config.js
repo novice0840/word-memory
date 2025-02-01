@@ -11,6 +11,15 @@ export default {
   },
   theme: {
     extend: {
+      fontFamily: {
+        chinese: [
+          "Noto Sans SC",
+          "PingFang SC",
+          "Microsoft YaHei",
+          "SimHei",
+          "sans-serif",
+        ],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

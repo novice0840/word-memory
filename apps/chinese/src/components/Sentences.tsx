@@ -17,15 +17,15 @@ const Sentences = ({ sentences, showMeaning }: SentencesProps) => {
         <div key={index}>
           <div className="flex items-center space-x-2">
             <div>
-              <div>{item.original}</div>
-              <div>{showMeaning && item.pronunciation}</div>
+              <div className="font-chinese">{item.original}</div>
+              <div className="text-sm">{showMeaning && item.pronunciation}</div>
             </div>
             <button onClick={() => readSentence(item.original, "chinese")}>
               <VolumeHigh />
             </button>
           </div>
 
-          <div>{showMeaning && item.korean}</div>
+          <div className="text-sm">{showMeaning && item.korean}</div>
         </div>
       ))}
     </div>
