@@ -10,7 +10,8 @@
     "./label": "./src/components/ui/label.tsx",
     "./card": "./src/components/ui/card.tsx",
     "./utils": "./src/utils/index.ts",
-    "./pages": "./src/pages/index.ts"
+    "./pages": "./src/pages/index.ts",
+    "./context": "./src/context/index.ts"
   },
   "scripts": {
     "dev": "vite",

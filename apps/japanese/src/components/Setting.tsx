@@ -1,5 +1,6 @@
 import { LEVELS } from "@/constants/word";
-import { useDialog } from "@/context/DialogContext";
+import { useDialog } from "@shared/ui/context";
+
 import { Button } from "@shared/ui/button";
 import { setLocalStorage } from "@/hooks/useLocalStorage";
 interface SettingProps {
