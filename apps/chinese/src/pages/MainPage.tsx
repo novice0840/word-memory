@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "shared/ui";
 import { roundToDecimal } from "shared/utils";
-
 import { HSK_LEVELS } from "@/constants/word";
 import { useWordInfo } from "@/hooks/useWordInfo";
 

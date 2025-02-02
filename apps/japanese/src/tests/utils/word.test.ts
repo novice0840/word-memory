@@ -1,10 +1,10 @@
 import { describe, it, expect } from "vitest";
+import { getJLPTWords } from "@/utils/japanese";
 import {
-  getJLPTWords,
   getNextIndex,
   getNextUnmemorizedIndex,
   getPrevIndex,
-} from "@/utils/japanese";
+} from "shared/utils";
 import JLPT_N1_WORDS from "@shared/data/japanese/jlpt_n1";
 
 describe("Word Util Test", () => {

@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
-import { ERROR_PAGE_TITLE, ERROR_PAGE_BUTTON_TEXT } from "@/constants/message";
+import { ERROR_PAGE_TITLE, ERROR_PAGE_BUTTON_TEXT } from "shared/constants";
 import { routes } from "@/App";
 
 describe("ErrorPage Test", () => {

@@ -8,7 +8,9 @@
     "./utils": "./src/utils/index.ts",
     "./pages": "./src/pages/index.ts",
     "./context": "./src/context/index.ts",
-    "./hooks": "./src/hooks/index.ts"
+    "./hooks": "./src/hooks/index.ts",
+    "./types": "./src/types/index.ts",
+    "./constants": "./src/constants/index.ts"
   },
   "scripts": {
     "dev": "vite",
