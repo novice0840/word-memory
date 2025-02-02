@@ -2,7 +2,7 @@ import { Navigate, useParams } from "react-router-dom";
 import { setLocalStorage } from "shared/hooks";
 import { LEVELS } from "@/constants/word";
 import { StudyAction, StudyProgress, Sentences, Word } from "@/components";
-import { getJLPTWords } from "@/utils/japanese";
+import { getWords } from "@/utils/word";
 import { getNextIndex, getPrevIndex } from "shared/utils";
 import type { Level } from "@/types/word";
 import { useStudyAction } from "@/hooks/useStudyAction";
@@ -10,7 +10,7 @@ import { useGetMemoryList } from "shared/hooks";
 
 const WordsPage = () => {
   const { level = "" } = useParams();
-  const words = getJLPTWords(level);
+  const words = getWords(level);
   const totalLength = words.length;
   const { memoryList, curIndex } = useGetMemoryList(level);
   const {

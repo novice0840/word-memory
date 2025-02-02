@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "shared/ui";
-import { getJLPTWords } from "@/utils/japanese";
+import { getWords } from "@/utils/word";
 import { useParams } from "react-router-dom";
 import { useGetMemoryList } from "shared/hooks";
 
@@ -10,7 +10,7 @@ interface StudyActionProps {
 
 const StudyAction = ({ onClick }: StudyActionProps) => {
   const { level = "" } = useParams();
-  const words = getJLPTWords(level);
+  const words = getWords(level);
   const totalLength = words.length;
   const { memoryList } = useGetMemoryList(level);
 

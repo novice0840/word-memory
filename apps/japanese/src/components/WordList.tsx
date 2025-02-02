@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { ArrowLeft, CircleCheckBig } from "lucide-react";
 
 import { Level } from "@/types/word";
-import { getJLPTWords, isValidJLPTLevel } from "@/utils/japanese";
+import { getWords, isValidLevel } from "@/utils/word";
 import { setLocalStorage, useGetMemoryList } from "shared/hooks";
 
 interface WordListProps {
@@ -16,7 +16,7 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
   const { memoryList, curIndex } = useGetMemoryList(level);
   const itemRefs = useRef<(HTMLLIElement | null)[]>([]);
 
-  const words = getJLPTWords(level as Level);
+  const words = getWords(level as Level);
 
   const handleWordClick = (wordIndex: number) => {
     setLocalStorage(level, {
@@ -35,7 +35,7 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
     }
   }, [isWordListOpen, curIndex]);
 
-  if (!isValidJLPTLevel(level)) {
+  if (!isValidLevel(level)) {
     return null;
   }
 

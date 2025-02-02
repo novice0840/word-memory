@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { MouseEvent } from "react";
-import { getJLPTWords } from "@/utils/japanese";
+import { getWords } from "@/utils/word";
 import { getNextUnmemorizedIndex } from "shared/utils";
 import { Level, Word } from "@/types/word";
 import { useWord } from "./useWord";
@@ -10,7 +10,7 @@ import { useDialog } from "shared/context";
 const useStudyAction = () => {
   const { level = "" } = useParams();
   const { memoryList, curIndex } = useGetMemoryList(level as Level);
-  const words = getJLPTWords(level) as Word[];
+  const words = getWords(level) as Word[];
   const totalLength = words.length;
   const { open } = useDialog();
   const navigate = useNavigate();
