@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
-import { ArrowLeft, CheckCircle } from "@mynaui/icons-react";
+import { ArrowLeft, CircleCheckBig } from "lucide-react";
+
 import { Level } from "@/types/word";
 import { getJLPTWords, isValidJLPTLevel } from "@/utils/japanese";
 import { setLocalStorage, useGetMemoryList } from "shared/hooks";
@@ -60,7 +61,7 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
             className="flex justify-between border rounded text-xl"
           >
             <span>{word.original || word.pronunciation}</span>
-            {memoryList.includes(i) && <CheckCircle />}
+            {memoryList.includes(i) && <CircleCheckBig />}
           </li>
         ))}
       </ul>
