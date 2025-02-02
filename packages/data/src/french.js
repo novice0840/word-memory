@@ -54,12 +54,30 @@ const getFrenchWords = async (words) => {
 };
 
 const getAllFrenchWords = async () => {
-  saveJSON("FRENCH_A1_WORDS.json", await getFrenchWords(FRENCH_A1_WORDS));
-  saveJSON("FRENCH_A2_WORDS.json", await getFrenchWords(FRENCH_A2_WORDS));
-  saveJSON("FRENCH_B1_WORDS.json", await getFrenchWords(FRENCH_B1_WORDS));
-  saveJSON("FRENCH_B2_WORDS.json", await getFrenchWords(FRENCH_B2_WORDS));
-  saveJSON("FRENCH_C1_WORDS.json", await getFrenchWords(FRENCH_C1_WORDS));
-  saveJSON("FRENCH_C2_WORDS.json", await getFrenchWords(FRENCH_C2_WORDS));
+  saveJSON(
+    "../words/french/FRENCH_A1_WORDS.json",
+    await getFrenchWords(FRENCH_A1_WORDS)
+  );
+  saveJSON(
+    "../words/french/FRENCH_A2_WORDS.json",
+    await getFrenchWords(FRENCH_A2_WORDS)
+  );
+  saveJSON(
+    "../words/french/FRENCH_B1_WORDS.json",
+    await getFrenchWords(FRENCH_B1_WORDS)
+  );
+  saveJSON(
+    "../words/french/FRENCH_B2_WORDS.json",
+    await getFrenchWords(FRENCH_B2_WORDS)
+  );
+  saveJSON(
+    "../words/french/FRENCH_C1_WORDS.json",
+    await getFrenchWords(FRENCH_C1_WORDS)
+  );
+  saveJSON(
+    "../words/french/FRENCH_C2_WORDS.json",
+    await getFrenchWords(FRENCH_C2_WORDS)
+  );
 };
 
 getAllFrenchWords();
