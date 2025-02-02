@@ -1,8 +1,8 @@
-import * as React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "@/layout/AppLayout.tsx";
 import { MainPage, WordsPage } from "@/pages";
 import { ErrorPage } from "shared/pages";
+import { DialogProvider } from "shared/context";
 
 const routes = [
   {
@@ -24,9 +24,9 @@ const router = createBrowserRouter(routes, {
 
 function App() {
   return (
-    <React.Fragment>
+    <DialogProvider>
       <RouterProvider router={router} future={{ v7_startTransition: true }} />
-    </React.Fragment>
+    </DialogProvider>
   );
 }
 

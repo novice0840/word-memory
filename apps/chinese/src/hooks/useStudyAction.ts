@@ -1,15 +1,14 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { MouseEvent } from "react";
 import { getNextUnmemorizedIndex } from "shared/utils";
-import { getHSKWords } from "@/utils/chinese";
-import { HSKLevel } from "@/types/word";
-import { useWord } from "./useWord";
 import { useGetMemoryList, setLocalStorage } from "shared/hooks";
 import { useDialog } from "shared/context";
+import { getHSKWords } from "@/utils/chinese";
+import { useWord } from "./useWord";
 
 const useStudyAction = () => {
   const { level = "" } = useParams();
-  const { memoryList, curIndex } = useGetMemoryList(level as HSKLevel);
+  const { memoryList, curIndex } = useGetMemoryList(level);
   const words = getHSKWords(level);
 
   const totalLength = words.length;
