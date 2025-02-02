@@ -4,6 +4,8 @@ import { WordList } from "@/components";
 import Header from "@/components/Header";
 import { DialogProvider } from "shared/context";
 
+const HSKLevels = ["HSK1", "HSK2", "HSK3", "HSK4", "HSK5", "HSK6"];
+
 const AppLayout = () => {
   const [isWordListOpen, setIsWordListOpen] = useState(false);
 
@@ -23,7 +25,7 @@ const AppLayout = () => {
             isWordListOpen ? "translate-x-full" : "translate-x-0"
           }`}
         >
-          <Header onMenuClick={handleMenuClick} />
+          <Header onMenuClick={handleMenuClick} levels={HSKLevels} />
           <Outlet />
         </div>
 
