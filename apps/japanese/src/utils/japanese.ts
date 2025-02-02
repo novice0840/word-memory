@@ -1,9 +1,11 @@
 import { Level, Word } from "@/types/word";
-import JLPT_N1_WORDS from "@shared/data/japanese/jlpt_n1";
-import JLPT_N2_WORDS from "@shared/data/japanese/jlpt_n2";
-import JLPT_N3_WORDS from "@shared/data/japanese/jlpt_n3";
-import JLPT_N4_WORDS from "@shared/data/japanese/jlpt_n4";
-import JLPT_N5_WORDS from "@shared/data/japanese/jlpt_n5";
+import {
+  JLPT_N1_WORDS,
+  JLPT_N2_WORDS,
+  JLPT_N3_WORDS,
+  JLPT_N4_WORDS,
+  JLPT_N5_WORDS,
+} from "data";
 
 export const isValidJLPTLevel = (level: string): level is Level => {
   return ["N1", "N2", "N3", "N4", "N5"].includes(level);

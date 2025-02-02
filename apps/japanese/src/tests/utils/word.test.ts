@@ -5,7 +5,7 @@ import {
   getNextUnmemorizedIndex,
   getPrevIndex,
 } from "shared/utils";
-import JLPT_N1_WORDS from "@shared/data/japanese/jlpt_n1";
+import { JLPT_N1_WORDS } from "data";
 
 describe("Word Util Test", () => {
   it("getNextIndex 함수 실행 시 다음 인덱스를 반환한한다", () => {
