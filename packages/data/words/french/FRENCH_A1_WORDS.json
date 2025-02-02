@@ -1,0 +1,1165 @@
+[
+  {
+    "original": "bonjour",
+    "koreans": [
+      "(낮 인사) 안녕하십니까, 안녕",
+      "(좋지 않은 일을 당하여 비꼼·체념의 뜻)",
+      "[지방어:캐나다] (헤어지면서) 안녕히 가십시오, 안녕 "
+    ],
+    "sentences": [
+      {
+        "korean": "안녕하세요.  (점심) (기본표현>인사/안부>인사",
+        "original": "Bonjour"
+      },
+      {
+        "korean": "네가 그를 초대하면 분위기는 끝장이야",
+        "original": "Si tu l'invites, bonjour l'ambiance"
+      },
+      {
+        "korean": "그녀는 그에게 다정하게[따뜻하게, 냉정하게] 인사를 했",
+        "original": "Elle lui a adressé un bonjour cordial[chaleureux, froid]"
+      },
+      {
+        "korean": "[속어] (여러분) 안녕(하십니까",
+        "original": "Bien le bonjour (à tout le monde)"
+      },
+      {
+        "korean": "[구어] 더 이상 믿을 수 없어",
+        "original": "Bonjour la confiance"
+      }
+    ]
+  },
+  {
+    "original": "merci",
+    "koreans": ["고마움, 감사, 사례", "자비, 연민, 호의 "],
+    "sentences": [
+      { "korean": "고마", "original": "merc" },
+      { "korean": "감사합니다. (기본표현>감사>감사", "original": "Merci" },
+      {
+        "korean": "당신에게 진심으로 감사를 드려야겠습니",
+        "original": "Je vous dois un grand merci"
+      },
+      {
+        "korean": "도와주어서 정말로 고맙다고 그(녀)에게 말씀 전해 주세",
+        "original": "Dites-lui un grand merci pour son aide"
+      },
+      {
+        "korean": "마실 것 좀 드시겠어요?―아니요, 저는 목이 마르지 않습니",
+        "original": "Voulez-vous quelque chose à boire?―Merci, je n'ai pas soif"
+      }
+    ]
+  },
+  {
+    "original": "oui",
+    "koreans": [
+      "(긍정의 물음에 대한 긍정의 대답) 예, 그렇습니다 (↔<span class=\"related_word\" lang=\"fr\"><autoLink search=\"non-\">non</autoLink></span>)",
+      "(의문형으로)"
+    ],
+    "sentences": [
+      {
+        "korean": "좀 나아졌어요?─그럼요, 물론이지요 (강조",
+        "original": "Ça va mieux?─Oui, oui"
+      },
+      { "korean": "그는 내게 그렇다고 말했", "original": "Il m'a dit oui" },
+      { "korean": "모든 일에 오냐 오냐 하", "original": "dire oui à tou" },
+      {
+        "korean": "확실한 대답을 하지 않",
+        "original": "ne dire ni oui, ni no"
+      },
+      {
+        "korean": "(동의의 표시로) 머리를 끄덕이",
+        "original": "faire oui de la têt"
+      }
+    ]
+  },
+  {
+    "original": "non",
+    "koreans": [
+      "(긍정 의문에 대해) 아니(오)",
+      "(부정 의문에 대해) 네 (이 아닙니다)"
+    ],
+    "sentences": [
+      {
+        "korean": "머리를 흔들어 아니라고 하",
+        "original": "faire non de la tête,faire signe que no"
+      },
+      {
+        "korean": "설탕 좀 드릴까요?―아니오, 고맙지만 됐어",
+        "original": "Voulez-vous du sucre?―Non merci"
+      },
+      {
+        "korean": "그는 언제나 아니라고 말한",
+        "original": "Il dit toujours non"
+      },
+      {
+        "korean": "그는 떠났으나, 나는 떠나지 않았",
+        "original": "Il est parti, moi non"
+      },
+      {
+        "korean": "나는 당신에게 아니라고 말합니",
+        "original": "Je vous dis que non"
+      }
+    ]
+  },
+  {
+    "original": "s'il vous plaît",
+    "koreans": [
+      "[<autoLink search=\"phrase\">Phrase</autoLink>] formal please, <autoLink search=\"if\">if</autoLink> you please"
+    ],
+    "sentences": [
+      { "korean": "콜라 한 잔 주세", "original": "Un coca, s'il vous plaît" },
+      {
+        "korean": "성냥 좀 빌려 주세",
+        "original": "Auriez-vous des allumettes, s'il vous plaît? / Auriez-vous du feu, s'il vous plaît"
+      },
+      {
+        "korean": "신분증 좀 보여 주시",
+        "original": "Vos papiers, s'il vous plaît"
+      },
+      {
+        "korean": "곰탕 2인분[두 그릇] 주세",
+        "original": "Deux gomtang, s'il vous plaît"
+      },
+      {
+        "korean": "부디 제게 용기를 주소",
+        "original": "Encouragez-moi s'il vous plaît"
+      }
+    ]
+  },
+  {
+    "original": "au revoir",
+    "koreans": [
+      "<autoLink search=\"utiliser\">S’utilise</autoLink> <autoLink search=\"pour\">pour</autoLink> <autoLink search=\"prendre\">prendre</autoLink> <autoLink search=\"conge\">congé</autoLink> <autoLink search=\"de\">de</autoLink> <autoLink search=\"un\">quelqu’un</autoLink>.",
+      "<autoLink search=\"action\">Action</autoLink> <autoLink search=\"dire\">de dire</autoLink> <strong><autoLink search=\"au\">au</autoLink> <autoLink search=\"revoir\">revoir</autoLink></strong>, <autoLink search=\"prendre\">de prendre</autoLink> <autoLink search=\"conge\">congé</autoLink> <autoLink search=\"de\">de</autoLink> <autoLink search=\"un\">quelqu’un</autoLink>."
+    ],
+    "sentences": [
+      { "korean": "…에게 작별 인사를 하", "original": "dire au revoir à q" },
+      {
+        "korean": "…에게 감사하다고 말하다[작별인사를 하다",
+        "original": "dire merci[au revoir] à q"
+      },
+      {
+        "korean": "손을 흔들어 작별 인사를 하",
+        "original": "faire au revoir de la mai"
+      },
+      {
+        "korean": "안녕하시기를 빌며 이만 줄입니",
+        "original": "En abrégeant ma lettre, je vous dis au revoir"
+      },
+      {
+        "korean": "그 녀석은 작별 인사도 없이 돌아서서 떠났",
+        "original": "Ce type est parti sans même me dire au revoir"
+      }
+    ]
+  },
+  {
+    "original": "ami",
+    "koreans": ["친구, 동료", "애인, 연인,정부 "],
+    "sentences": [
+      {
+        "korean": "그는 정확한 것을 좋아한",
+        "original": "Il est ami de la précision"
+      },
+      {
+        "korean": "가족의 친구,허물없이 드나드는 친",
+        "original": "ami de la famille[maison"
+      },
+      {
+        "korean": "이 사람아 (친구간에 또는 윗사람이 아랫사람을 대할 때 부르는 말",
+        "original": "mon petit[jeune] ami!,Eh! l'ami"
+      },
+      {
+        "korean": "그는 한때 니콜과 매우 친했었",
+        "original": "[ami de[avec] qn/qc] Il a été une fois très ami de Nicole"
+      },
+      { "korean": "자연을 애호하는 사", "original": "ami de la natur" }
+    ]
+  },
+  {
+    "original": "famille",
+    "koreans": [
+      "가족, 가정, 세대,자식, 자녀",
+      "친족, 친척",
+      "가문, 혈통,명문(名門)"
+    ],
+    "sentences": [
+      {
+        "korean": "친척에 대한 유대(紐帶) 의식(意識",
+        "original": "esprit de famill"
+      },
+      {
+        "korean": "그는 나의 친척이 아닙니",
+        "original": "Il n'est pas de ma famille"
+      },
+      {
+        "korean": "(결혼하여) 어느 집과 친척관계가 되",
+        "original": "entrer dans une famille (par son mariage"
+      },
+      { "korean": "부양 가족이 있", "original": "être chargé de famill" },
+      {
+        "korean": "아이들은 잘 있나요",
+        "original": "Comment va la petite famille"
+      }
+    ]
+  },
+  {
+    "original": "école",
+    "koreans": [
+      "학교",
+      "(성인용) 교습소, 강습소, 학원",
+      "(한정된 뜻) 유치원, 초등학교"
+    ],
+    "sentences": [
+      {
+        "korean": "불행은 때때로 인간 형성에 좋은 학습원이",
+        "original": "Le malheur est parfois une bonne école pour former un homme"
+      },
+      {
+        "korean": "소대[부대] 단위 훈",
+        "original": "école de la section[du bataillon"
+      },
+      { "korean": "남자[여자] 학", "original": "école de garçons [filles" },
+      {
+        "korean": "(초등학교 교사 양성을 위한) 교육대학",
+        "original": "école normale d'instituteur"
+      },
+      {
+        "korean": "신병의 기초 군사 훈련 (현재는 formation commune de base라고 함",
+        "original": "école du solda"
+      }
+    ]
+  },
+  {
+    "original": "manger",
+    "koreans": ["먹다", "[비유] (먹을 듯이) 에 열중하다, 열심히 하다 "],
+    "sentences": [
+      {
+        "korean": "먹을 것이 하나도 남아 있지 않",
+        "original": "Il n'y a plus rien à manger"
+      },
+      {
+        "korean": "가지고 온 음식을 여기서 드셔도 됩니",
+        "original": "Ici on peut apporter son manger"
+      },
+      { "korean": "…을 뚫어지게 바라보", "original": "manger qn des yeu" },
+      { "korean": "고양이에게 밥을 주", "original": "donner à manger au cha" },
+      {
+        "korean": "어린애[환자]에게 밥을 먹여주",
+        "original": "faire manger un enfant[malade"
+      }
+    ]
+  },
+  {
+    "original": "boire",
+    "koreans": ["마시다", "(보어 없이) 물[술]을 마시다,술꾼이다"],
+    "sentences": [
+      {
+        "korean": "…의 건강을 위해 건배하",
+        "original": "[boire à] boire à la santé de q"
+      },
+      {
+        "korean": "식음(食飮),마실 것과 먹을 ",
+        "original": "le boire et le mange"
+      },
+      { "korean": "이 술은 마실 만하", "original": "Ce vin se laisse boire" },
+      { "korean": "…을 위해 축배를 들", "original": "boire en honneur de q" },
+      {
+        "korean": "환자에게 약을 복용하도록 하",
+        "original": "faire boire un malad"
+      }
+    ]
+  },
+  {
+    "original": "parler",
+    "koreans": ["말하다, 이야기하다", "자백하다, 털어놓다"],
+    "sentences": [
+      { "korean": "라디오 방송을 통해 말하", "original": "parler à la radi" },
+      {
+        "korean": "…의 심정에 호소하다, 감동시키",
+        "original": "parler au cœur de q"
+      },
+      {
+        "korean": "…의 귀에 대고 이야기하",
+        "original": "parler à l'oreille de q"
+      },
+      {
+        "korean": "친구 중의 한 사람에게 말하",
+        "original": "parler à un de ses ami"
+      },
+      {
+        "korean": "…에게 말하는 태도가 경멸적이",
+        "original": "parler à qn comme à un chie"
+      }
+    ]
+  },
+  {
+    "original": "écouter",
+    "koreans": [
+      "듣다,(의 말에) 귀를 기울이다",
+      "(충고·요구 따위를) 들어주다, 받아들이다, 따르다"
+    ],
+    "sentences": [
+      { "korean": "귀를 기울이", "original": "écoute" },
+      {
+        "korean": "비가 내리는 소리에 귀를 기울이",
+        "original": "[écouter qn/qc+inf.] écouter la pluie tombe"
+      },
+      {
+        "korean": "친구의 충고를 받아들이다[따르다",
+        "original": "écouter les conseils d'un am"
+      },
+      {
+        "korean": "라디오로 연주[뉴스]를 듣",
+        "original": "écouter un concert[les informations] à la radi"
+      },
+      {
+        "korean": "…인지 아닌지[얼마나 …한지] 귀를 기울이",
+        "original": "écouter si[comme]+ind"
+      }
+    ]
+  },
+  {
+    "original": "regarder",
+    "koreans": ["보다, 바라보다,지켜보다", "관찰하다, 지켜보다 "],
+    "sentences": [
+      {
+        "korean": "돈 쓰기를 주저하다, 인색하게 굴",
+        "original": "regarder à la dépens"
+      },
+      {
+        "korean": "…을 적의에 찬 시선으로 쳐다보",
+        "original": "regarder qn de traver"
+      },
+      {
+        "korean": "자동차 교체 비용을 아끼",
+        "original": "regarder à changer de voitur"
+      },
+      {
+        "korean": "자기 모습을 거울에 비춰보",
+        "original": "se regarder dans un miroi"
+      },
+      {
+        "korean": "비가 내리는 것을 바라보",
+        "original": "[regarder (qc/qn)+inf.] regarder la pluie tomber[tomber la pluie"
+      }
+    ]
+  },
+  {
+    "original": "aller",
+    "koreans": [
+      "(방향) (주어는 사람) 가다",
+      "(수단) (로, 편으로) 가다",
+      "(행선지) (에) 가다 "
+    ],
+    "sentences": [
+      { "korean": "가", "original": "aller" },
+      {
+        "korean": "어디로 가야 할지 우리는 모른",
+        "original": "Nous ne savons où alle"
+      },
+      {
+        "korean": "이 도시에서 저 도시로 가",
+        "original": "aller de ville en vill"
+      },
+      {
+        "korean": "마르세이유행 편도표 한 ",
+        "original": "un aller (simple) pour Marseill"
+      },
+      {
+        "korean": "걸어서[말을 타고, 자전거를 타고] 가",
+        "original": "aller à pied[cheval, bicyclette"
+      }
+    ]
+  },
+  {
+    "original": "avoir",
+    "koreans": [
+      "가지다, 소유하다,지니다 ",
+      "(상품을) 보유하다,취급하다",
+      "(자격·지위·권한 따위를) 가지다,누리다"
+    ],
+    "sentences": [
+      { "korean": "…에 참여하다,…의 몫을 받", "original": "avoir part à q" },
+      { "korean": "좋은 직업을 가지고 있", "original": "avoir un bon métie" },
+      { "korean": "노란 원피스를 입고 있", "original": "avoir une robe jaun" },
+      {
+        "korean": "집에 초대한 손님들이 있다",
+        "original": "avoir des invités chez so"
+      },
+      {
+        "korean": "…에 대해 우정을 느끼고 있",
+        "original": "avoir de l'amitié pour q"
+      }
+    ]
+  },
+  {
+    "original": "être",
+    "koreans": [
+      "있다 , •••이다.",
+      "((상황보어 없이 , 문어적 표현))",
+      "있다, 존재하다, 생존하다"
+    ],
+    "sentences": [
+      {
+        "korean": "사느냐 죽느냐, 이것이 문제",
+        "original": "Être ou ne pas être, voilà la question"
+      },
+      {
+        "korean": "이 아이는 기쁨 그 자체이",
+        "original": "Cet enfant est un être de joie"
+      },
+      {
+        "korean": "헛수고하다[돈을 잃다, 시간만 낭비하다",
+        "original": "en être pour sa peine[son argent, son temps"
+      },
+      {
+        "korean": "우리가 그런 지경에까지 이른 것은 아니",
+        "original": "[en être là (de qc)] Nous n'en sommes pas là"
+      },
+      {
+        "korean": "그를 해고할 단계에까지는 이르지 않았",
+        "original": "[en être à+inf.] Nous n'en sommes pas à le renvoyer"
+      }
+    ]
+  },
+  {
+    "original": "faire",
+    "koreans": ["(예술가·작가의) 기법, 수법", "하기, 행위"],
+    "sentences": [
+      { "korean": "하", "original": "faire" },
+      {
+        "korean": "(자기가 마실려고) 커피를 타",
+        "original": "se faire un caf"
+      },
+      {
+        "korean": "영화를 만들다, 영화에 출연하",
+        "original": "faire du ciném"
+      },
+      {
+        "korean": "눈을 깜박거려 신호를 보내",
+        "original": "faire un clin d'œi"
+      },
+      {
+        "korean": "…의 생활을 힘들게 만들",
+        "original": "faire la vie dure à q"
+      }
+    ]
+  },
+  {
+    "original": "dire",
+    "koreans": [
+      "말하다, 이야기하다",
+      "(하라고) 말하다, 명령[지시]하다 ",
+      "주장[단언]하다 "
+    ],
+    "sentences": [
+      {
+        "korean": "두 명이 모자라는 것을 발견하",
+        "original": "[à dire] trouver deux hommes à dir"
+      },
+      { "korean": "나직한 소리로 …을 말하", "original": "dire qc à voix bass" },
+      {
+        "korean": "굳이 말할 게 없다. 그런 대로 좋",
+        "original": "Rien à dire, ça va"
+      },
+      {
+        "korean": "나는 그것을 어머니에게 알리겠",
+        "original": "Je vais le dire à ma mère"
+      },
+      {
+        "korean": "두말할 것 없이 그가 이겼",
+        "original": "Il n'y a pas à dire, il a gagné"
+      }
+    ]
+  },
+  {
+    "original": "pouvoir",
+    "koreans": [
+      "힘, 능력, 역량",
+      "권위, 영향력, 지배력 ",
+      "(정치적) 권력, 정권,당국,[옛] 정체(政體)"
+    ],
+    "sentences": [
+      {
+        "korean": "…할 수 있는 능력이 있",
+        "original": "avoir le pouvoir de+inf"
+      },
+      {
+        "korean": "아들에 대한 아버지의 권",
+        "original": "pouvoir du père sur son fil"
+      },
+      {
+        "korean": "…을 자기의 지배하에 두",
+        "original": "avoir[tenir] qn en son pouvoi"
+      },
+      {
+        "korean": "…에 대해 영향력을 행사하",
+        "original": "exercer le pouvoir sur q"
+      },
+      {
+        "korean": "…에 대해 영향력을 가지고 있",
+        "original": "avoir du pouvoir sur[auprès de] q"
+      }
+    ]
+  },
+  {
+    "original": "soleil",
+    "koreans": ["태양, 해", "햇빛, 햇볕,해가 나는 날", "양지, 양지바른 곳"],
+    "sentences": [
+      {
+        "korean": "루이 14세의 표징인 태양상(像",
+        "original": "le soleil, emblème de Louis XI"
+      },
+      { "korean": "(팔·등이 드러나는) 여름", "original": "robe bain de solei" },
+      {
+        "korean": "[신화]태양을 끄는 수레[말",
+        "original": "le char[les chevaux] du Solei"
+      },
+      {
+        "korean": "방으로 햇빛이 든",
+        "original": "Le soleil donne dans la pièce"
+      },
+      { "korean": "아침 일찍 일어나", "original": "se lever avec le solei" }
+    ]
+  },
+  {
+    "original": "lune",
+    "koreans": [
+      "달",
+      "(<strong><autoLink search=\"lune\">Lune</autoLink></strong>) [천문]",
+      "(혹성의) 위성"
+    ],
+    "sentences": [
+      {
+        "korean": "조수에 미치는 달의 영",
+        "original": "action de la Lune sur les marée"
+      },
+      { "korean": "보름", "original": "pleine lun" },
+      { "korean": "월", "original": "éclipse de (la) Lun" },
+      { "korean": "달에 착륙하", "original": "atterrir sur la Lun" },
+      {
+        "korean": "상현[하현]",
+        "original": "premier[dernier] quartier de la Lun"
+      }
+    ]
+  },
+  {
+    "original": "étoile",
+    "koreans": ["별", "[천문] 항성", "(점성술의) 별, 운명의 별,운명"],
+    "sentences": [
+      {
+        "korean": "자동차 앞창에 난 방사성 균",
+        "original": "étoile sur un pare-bris"
+      },
+      {
+        "korean": "[성서](아기 예수에게) 세 동방박사를 인도한 ",
+        "original": "étoile des rois mage"
+      },
+      {
+        "korean": "행운의 별에 의해 인도되",
+        "original": "être conduit[guidé] par une bonne étoil"
+      },
+      {
+        "korean": "샛별, 금",
+        "original": "étoile du matin[soir],étoile du berge"
+      },
+      { "korean": "1등", "original": "étoile de première grandeu" }
+    ]
+  },
+  {
+    "original": "ciel",
+    "koreans": ["하늘", "기후, 풍토"],
+    "sentences": [
+      { "korean": "천벌을 받은 거", "original": "C'est un coup du ciel" },
+      { "korean": "하느님께 영광을", "original": "Le ciel soit loué" },
+      { "korean": "하늘이 맑", "original": "Le ciel est clair" },
+      {
+        "korean": "파리 지방에",
+        "original": "[sous le ciel de qc,sous le ciel+형용사] sous le ciel de Pari"
+      },
+      { "korean": "지중해 지역에", "original": "sous le ciel méditerranée" }
+    ]
+  },
+  {
+    "original": "terre",
+    "koreans": ["지면, 지표", "흙, 땅", "토양,경지, 농지,농경생활"],
+    "sentences": [
+      { "korean": "(섬에 대한) 육지, 본", "original": "terre ferm" },
+      {
+        "korean": "지상의 소금 (신약, 마태복음 5:13",
+        "original": "le sel de la terr"
+      },
+      {
+        "korean": "(말·차·침대 따위에서) 땅에 내려서",
+        "original": "mettre pied à terr"
+      },
+      {
+        "korean": "(기하학에서의) 기선(基線) (수평선과 직립선과의 교차",
+        "original": "ligne de terr"
+      },
+      {
+        "korean": "(군대의 퇴각시 행하는) 초토화 작",
+        "original": "politique de la terre brûlé"
+      }
+    ]
+  },
+  {
+    "original": "eau",
+    "koreans": [
+      "물",
+      "(집합적) (하천·호수·바다 따위의) 물",
+      "(복수) 온천(장), 광천(장)"
+    ],
+    "sentences": [
+      { "korean": "더운 물로 몸을 씻", "original": "se laver à l'eau chaud" },
+      {
+        "korean": "직물에 광택이 나게 하",
+        "original": "clonner de l'eau à une étoff"
+      },
+      { "korean": "땀에 흠뻑 젖", "original": "être (tout) en ea" },
+      { "korean": "비가 많이 내렸", "original": "Il est tombé beaucoup d'eau" },
+      { "korean": "선박을 진수시키", "original": "mettre un navire à l'ea" }
+    ]
+  },
+  {
+    "original": "feu",
+    "koreans": ["(일반적 의미) 불", "(난로용의) 불", "(요리·가열용의)불"],
+    "sentences": [
+      { "korean": "전투를 경험한 적이 있", "original": "avoir vu le fe" },
+      { "korean": "불길색 같은 주홍 머", "original": "une chevelure de fe" },
+      {
+        "korean": "[비유] 아주 짧은 바",
+        "original": "pantalon feu de planche"
+      },
+      {
+        "korean": "그는 얼굴이 확 달아 올랐",
+        "original": "Le feu lui a monté au visage"
+      },
+      {
+        "korean": "접시를 불에 올려 놓",
+        "original": "mettre un plat sur un fe"
+      }
+    ]
+  },
+  {
+    "original": "air",
+    "koreans": ["공기, 대기", "바람, 미풍,공기의 흐름", "하늘, 공중"],
+    "sentences": [
+      { "korean": "바람 한 점 없", "original": "Pas un souffle d'ai" },
+      {
+        "korean": "여기서는 숨이 막힐 지경이",
+        "original": "On manque d'air ici"
+      },
+      {
+        "korean": "그녀는 요정의 모습을 하고 있",
+        "original": "[un air de+무관사명사] Elle a un air de fée"
+      },
+      {
+        "korean": "도시에는 축제의 기분이 감돈",
+        "original": "La ville prend un air de fête"
+      },
+      {
+        "korean": "일제히 함성을 지르면서 (요청하다",
+        "original": "(demander) sur l'air de lampion"
+      }
+    ]
+  },
+  {
+    "original": "jour",
+    "koreans": ["하루, 날", "낮, 낮 동안", "날짜,요일"],
+    "sentences": [
+      {
+        "korean": "6월 10일이 무슨 요일이죠",
+        "original": "Quel jour tombera le 10 juin"
+      },
+      {
+        "korean": "해가 뜨기 전에[뜰 때] 일어나",
+        "original": "se lever avant[avec] le jou"
+      },
+      {
+        "korean": "우리는 같은 날에 태어났",
+        "original": "Nous sommes nés le même jour"
+      },
+      {
+        "korean": "그 곳은 기차로 하루 걸리는 거리에 있",
+        "original": "C'est à un jour de train"
+      },
+      {
+        "korean": "방에 햇빛이 들어오게 하",
+        "original": "laisser entrer le jour dans une pièc"
+      }
+    ]
+  },
+  {
+    "original": "nuit",
+    "koreans": ["밤, 야간,야음(夜陰)", "수면(시간)", "[문어] 어둠, 캄캄함"],
+    "sentences": [
+      {
+        "korean": "나는 간밤에 잠을 설쳤",
+        "original": "J'ai mal dormi cette nuit[la nuit dernière]"
+      },
+      {
+        "korean": "그는 밤새 한 숨도 못 잤",
+        "original": "Il n'a pas dormi de (toute) la nuit"
+      },
+      {
+        "korean": "(길을 가다가) 도중에 날이 저물",
+        "original": "être surpris[pris] par la nui"
+      },
+      { "korean": "한밤중", "original": "en pleine nuit,au milieu de la nui" },
+      {
+        "korean": "해질녘",
+        "original": "à la nuit tombante,à la tombée de la nui"
+      }
+    ]
+  },
+  {
+    "original": "matin",
+    "koreans": [
+      "아침,아침 나절 ",
+      "오전 (↔<span class=\"related_word\" lang=\"fr\"><autoLink search=\"après-midi\">après-midi</autoLink></span>)"
+    ],
+    "sentences": [
+      {
+        "korean": "어느날 아침 그가 나를 만나러 왔",
+        "original": "Il est venu me voir un matin"
+      },
+      {
+        "korean": "그 의사는 오전에는 환자를 받고 오후에는 왕진을 간",
+        "original": "Le docteur reçoit le matin et fait ses visites l'après-midi"
+      },
+      { "korean": "어느 겨울날 아침", "original": "par un matin d'hive" },
+      { "korean": "그 다음날 아", "original": "le lendemain mati" },
+      { "korean": "그 전날 아", "original": "la veille au mati" }
+    ]
+  },
+  {
+    "original": "soir",
+    "koreans": [
+      "저녁, 밤,황혼",
+      "오후",
+      "[비유·문어] 만년(晩年), 노년(老年), "
+    ],
+    "sentences": [
+      {
+        "korean": "아침부터 저녁까지, 한나절 내",
+        "original": "du matin au soi"
+      },
+      {
+        "korean": "4월 2일 화요일 저녁",
+        "original": "le mardi 2 avril au soi"
+      },
+      {
+        "korean": "뤼크는 비가 내리던 어느날 저녁에 돌아왔",
+        "original": "Luc est revenu un soir où[qu'] il pleuvait"
+      },
+      {
+        "korean": "인생의 말년 → soirée</autoLink",
+        "original": "le soir de la vi"
+      },
+      { "korean": "그 전날 저녁", "original": "la veille au soi" }
+    ]
+  },
+  {
+    "original": "semaine",
+    "koreans": ["주", "1주간, 7일간", "평일 (일요일·공휴일 이외의 근무일들), "],
+    "sentences": [
+      {
+        "korean": "주말에(= en week-end",
+        "original": "à la fin de la semaine,en fin de semain"
+      },
+      {
+        "korean": "일주일에 한 번(= hebdomadairement",
+        "original": "une fois la[par] semain"
+      },
+      {
+        "korean": "(일요일의 나들이옷에 대해) 평상",
+        "original": "habits de la semain"
+      },
+      {
+        "korean": "일 주일 예정으로 떠나",
+        "original": "partir pour une semain"
+      },
+      {
+        "korean": "쉬는 날없이 일주일간 일했",
+        "original": "J'ai eu une semaine chargée"
+      }
+    ]
+  },
+  {
+    "original": "mois",
+    "koreans": [
+      "달, 월,한 달, 1개월",
+      "월급,월세,월납금,1개월의 용돈",
+      "<strong><autoLink search=\"mois\">mois</autoLink></strong> <autoLink search=\"Marie\">de Marie</autoLink> 성모월(聖母月) (5월)"
+    ],
+    "sentences": [
+      { "korean": "한 달에 두 ", "original": "deux fois par moi" },
+      {
+        "korean": "집세가 두 달 밀리",
+        "original": "devoir deux mois à son propriétair"
+      },
+      { "korean": "월급으로 급료를 받", "original": "être payé au moi" },
+      { "korean": "생후 4개월의 아", "original": "bébé de quatre moi" },
+      { "korean": "이 달 15", "original": "le 15 de ce moi" }
+    ]
+  },
+  {
+    "original": "année",
+    "koreans": [
+      "(달력상의) 해, 연(年),(혹성의) 1년 ",
+      "(수량 표현과 함께) 년간",
+      "(특정한 기준에 의해 정해진) 년도,해,기간"
+    ],
+    "sentences": [
+      {
+        "korean": "그는 매년 나를 보러 온",
+        "original": "Chaque année il vient me voir"
+      },
+      {
+        "korean": "그는 6, 7세 사이에 글쓰기를 배웠",
+        "original": "Entre sa sixième et sa septième année, il a appris à écrire"
+      },
+      {
+        "korean": "그 여자는 몇 학년입니까?―그 여자는 의과대학 4학년이",
+        "original": "Elle est en quelle année?―Elle est en quatrième année de médecine"
+      },
+      {
+        "korean": "국제 여성의 ",
+        "original": "année international de la femm"
+      },
+      { "korean": "금", "original": "la présente année,cette anné" }
+    ]
+  },
+  {
+    "original": "heure",
+    "koreans": [
+      "시간, 한 시간",
+      "(시계의) 시, 시각",
+      "(특정한) 시각,(약속) 시간"
+    ],
+    "sentences": [
+      {
+        "korean": "한 시간 뒤에 돌아오시",
+        "original": "Revenez dans une heure"
+      },
+      {
+        "korean": "자신의 생이 끝날 때라고 생각하",
+        "original": "croire son heure arrivé"
+      },
+      {
+        "korean": "당신은 약속시간을 지키지 않으시는군",
+        "original": "[être à l'heure] Vous n'êtes pas à l'heure"
+      },
+      {
+        "korean": "…에게 시간당 50프랑을 지급하",
+        "original": "payer qn cinquante francs l'heur"
+      },
+      {
+        "korean": "이 시계의 시간은 정확하지 않",
+        "original": "Cette montre ne donne pas l'heure exacte"
+      }
+    ]
+  },
+  {
+    "original": "minute",
+    "koreans": [
+      "분(기호는 <strong><autoLink search=\"min\">min</autoLink></strong> 혹은 <strong><autoLink search=\"Mn\">mn</autoLink></strong>)",
+      "잠시, 잠깐, 순간 "
+    ],
+    "sentences": [
+      {
+        "korean": "〖구어〗 잠깐만! ⸨Minute, papillon ! 이라고도 함",
+        "original": "Minute"
+      },
+      {
+        "korean": "잠시 후에 돌아오겠",
+        "original": "Je reviens dans une minute"
+      },
+      { "korean": "최후의 순간까", "original": "jusqu'à la dernière minut" },
+      {
+        "korean": "일분간 묵념하",
+        "original": "observer une minute de silenc"
+      },
+      { "korean": "진실이 드러나는 순", "original": "minute de vérit" }
+    ]
+  },
+  {
+    "original": "seconde",
+    "koreans": ["(시간·각도의) 초", "순간, 잠깐 ", "바로 그 순간 "],
+    "sentences": [
+      {
+        "korean": "그가 그녀를 본 바로 그 순간",
+        "original": "à la seconde où il la vi"
+      },
+      {
+        "korean": "초당 3미터의 속도로 가",
+        "original": "aller à la vitesse de trois mètres par second"
+      },
+      {
+        "korean": "기다리세요. 그는 곧 도착할 거예",
+        "original": "Attendez-le, il va arriver d'une seconde à l'autre"
+      },
+      {
+        "korean": "재빨",
+        "original": "en une seconde[deux secondes],en une fraction de second"
+      },
+      { "korean": "곧, 당장에(= tout de suite", "original": "dans une second" }
+    ]
+  },
+  {
+    "original": "lundi",
+    "koreans": ["월요일"],
+    "sentences": [
+      {
+        "korean": "나는 (오는) 월요일에 출발할 예정이",
+        "original": "Je pars lundi (prochain)"
+      },
+      {
+        "korean": "오늘이 무슨 요일이지?―월요일이",
+        "original": "On est quel jour?―On est lundi"
+      },
+      { "korean": "부활제 이튿날의 월요", "original": "lundi de Pâque" },
+      { "korean": "부활제 전주(前週)의 월요", "original": "lundi sain" },
+      { "korean": "사육제 마지막 월요", "original": "lundi gra" }
+    ]
+  },
+  {
+    "original": "mardi",
+    "koreans": ["화요일"],
+    "sentences": [
+      {
+        "korean": "[구어] 오늘이 사육제는 아닐텐데 (이상한 옷차림을 한 사람을 놀리는 말",
+        "original": "Ce n'est pas mardi gras aujourd'hui"
+      },
+      {
+        "korean": "그는 화요일마다 온",
+        "original": "Il vient le mardi[tous les mardis]"
+      },
+      { "korean": "참회 화요일 (사육제의 마지막 날", "original": "Mardi gra" },
+      { "korean": "화요일에 오시", "original": "Venez mardi" },
+      {
+        "korean": "매주 화요일에는 문을 열지 않는 박물",
+        "original": "musée fermé le mard"
+      }
+    ]
+  },
+  {
+    "original": "mercredi",
+    "koreans": ["수요일"],
+    "sentences": [
+      {
+        "korean": "올해 크리스마스는 수요일이",
+        "original": "Noël tombe un mercredi"
+      },
+      {
+        "korean": "[종교]성회례(聖灰禮)의 ",
+        "original": "mercredi des Cendre"
+      },
+      {
+        "korean": "【기독교】 성회례(聖灰禮)의 날 ⸨신자 머리에 재를 뿌리거나 이마에 바르는 의례를 거행한다",
+        "original": "mercredi des Cendre"
+      },
+      {
+        "korean": "성회례 날은 사순절(四旬節)의 첫날이다",
+        "original": "Le mercredi des Cendres est le premier jour du carême"
+      },
+      {
+        "korean": "오늘은 수요일이다",
+        "original": "Nous sommes mercredi. Aujourd’hui c’est mercredi"
+      }
+    ]
+  },
+  {
+    "original": "jeudi",
+    "koreans": ["목요일"],
+    "sentences": [
+      {
+        "korean": "성 목요일 (부활절 전주(前週)의 목요일",
+        "original": "jeudi sain"
+      },
+      {
+        "korean": "성 목요일((부활절 전주의 목요일)",
+        "original": "Jeudi sain"
+      },
+      {
+        "korean": "예수승천일((부활절 40일 후)",
+        "original": "jeudi de l’Ascensio"
+      },
+      {
+        "korean": "조만 간에 오세요. 목요일이 좋겠군",
+        "original": "Venez un de ces jours, disons jeudi"
+      },
+      {
+        "korean": "이 마을은 목요일마다 장이 열린",
+        "original": "Dans ce village, le marché se tient le jeudi"
+      }
+    ]
+  },
+  {
+    "original": "vendredi",
+    "koreans": ["금요일", "[종교]"],
+    "sentences": [
+      {
+        "korean": "성금요일 (부활절 직전의 금요일",
+        "original": "vendredi sain"
+      },
+      {
+        "korean": "(액운을 가져온다는) 13일의 금요",
+        "original": "vendredi treiz"
+      },
+      { "korean": "지난[다음] 금요", "original": "vendredi dernier[prochain" },
+      {
+        "korean": "13일의 금요일 ((서양에서 기피하는 날의 하나))",
+        "original": "vendredi treiz"
+      },
+      {
+        "korean": "【가톨릭】 성 금요일 ((그리스도의 십자가에서의 죽음을 기념하는 부활절 직전의 금요일))",
+        "original": "vendredi sain"
+      }
+    ]
+  },
+  {
+    "original": "samedi",
+    "koreans": ["토요일"],
+    "sentences": [
+      { "korean": "부활절 직전 토요", "original": "Samedi sain" },
+      { "korean": "성 토요일((부활절 전의 토요일)", "original": "Samedi sain" },
+      { "korean": "게으름뱅이이", "original": "être né un samed" },
+      {
+        "korean": "1주일분의 급료를 술 마셔 버리",
+        "original": "faire le samed"
+      },
+      {
+        "korean": "좋아, 그러면 토요일에 봅시",
+        "original": "Bon, alors, à samedi"
+      }
+    ]
+  },
+  {
+    "original": "dimanche",
+    "koreans": ["일요일", "주일, 안식일", "공일, 쉬는 날"],
+    "sentences": [
+      {
+        "korean": "그날은 내가 쉬는 날이",
+        "original": "Ce jour-là, c'est mon dimanche"
+      },
+      {
+        "korean": "일요일을 가족과 보내",
+        "original": "passer le dimanche en famill"
+      },
+      {
+        "korean": "오늘은 일요일이",
+        "original": "C'est aujourd'hui dimanche.,Nous sommes dimanche., On est dimanche"
+      },
+      { "korean": "부활 주", "original": "dimanche de Pâque" },
+      { "korean": "주일을 지키", "original": "observer[fêter] le dimanch" }
+    ]
+  },
+  {
+    "original": "été",
+    "koreans": [
+      "여름",
+      "[구어] 여름다운[무더운] 여름",
+      "(여름 이외의) 따뜻한 시기"
+    ],
+    "sentences": [
+      {
+        "korean": "대천사 미카엘 축제 때의 따뜻한 날씨 (10월 중순경",
+        "original": "été de la Saint-Miche"
+      },
+      {
+        "korean": "성-마르탱 축제 때의 포근한 날씨 (11월 중순경),[비유] 노인이 다시 젊어",
+        "original": "été de la Saint-Marti"
+      },
+      {
+        "korean": "가을의 따뜻한 날",
+        "original": "été indien[[지방어:캐나다] des Indiens, des Sauvages"
+      },
+      { "korean": "한창 때", "original": "être dans son ét" },
+      { "korean": "춥고 비가 많이 오는 여", "original": "été pourr" }
+    ]
+  },
+  {
+    "original": "hiver",
+    "koreans": [
+      "겨울",
+      "<strong><autoLink search=\"hiver\">hiver</autoLink></strong> <autoLink search=\"astronomique\">astronomique</autoLink> 천문학상의 겨울 (동지부터 춘분까지)/<strong><autoLink search=\"hiver\">hiver</autoLink></strong> <autoLink search=\"boréal\">boréal</autoLink> 북반구의 겨울/<strong><autoLink search=\"hiver\">hiver</autoLink></strong> <autoLink search=\"austral\">austral</autoLink> 남반구의 겨울",
+      "[비유·문어] 성상(星霜),노년"
+    ],
+    "sentences": [
+      { "korean": "겨울", "original": "hive" },
+      {
+        "korean": "겨울철 스포츠를 하러 (산에) 가",
+        "original": "aller aux sports d'hive"
+      },
+      {
+        "korean": "[구어] (고령·중병으로) 그는 이번 겨울을 넘기지 못할 것이다, 그는 곧 죽을 것이",
+        "original": "Il ne passera pas l'hiver"
+      },
+      {
+        "korean": "겨울에는 해가 짧",
+        "original": "Les jours sont courts en hiver"
+      },
+      { "korean": "인생의 만", "original": "hiver de la vie[des ans" }
+    ]
+  },
+  {
+    "original": "printemps",
+    "koreans": ["봄,봄철", "[비유] 청춘(기)", "[옛·문어] (젊은 사람의) 나이"],
+    "sentences": [
+      {
+        "korean": "그녀는 열 다섯 살이었",
+        "original": "Elle avait quinze printemps"
+      },
+      {
+        "korean": "한창 젊은 시기이",
+        "original": "être au printemps de sa vi"
+      },
+      { "korean": "1968년 봄", "original": "au printemps de 196" },
+      {
+        "korean": "미·소간의 데탕",
+        "original": "printemps entre Washington et Mosco"
+      },
+      { "korean": "춘", "original": "équinoxe de printemp" }
+    ]
+  },
+  {
+    "original": "automne",
+    "koreans": ["가을", "[옛] 난숙기,조락기(凋落期), 초로기(初老期)"],
+    "sentences": [
+      {
+        "korean": "그는 해마다 가을이면 베니스에 오곤 했",
+        "original": "Il venait chaque automne à Venise"
+      },
+      {
+        "korean": "그는 지난 가을에 이미 거기 왔었",
+        "original": "Il y est déjà venu (à) l'automne dernier"
+      },
+      {
+        "korean": "1981년 가을",
+        "original": "dans[à] l'automne (de) 1981,en automne de l'année 198"
+      },
+      {
+        "korean": "인생의 초로기에 와 있",
+        "original": "être à[dans] l'automn"
+      },
+      { "korean": "비가 많이 오는[온] 가", "original": "automne pluvieu" }
+    ]
+  },
+  {
+    "original": "neige",
+    "koreans": [
+      "눈",
+      "겨울, 동절기,눈이 쌓인 산[지역]",
+      "눈 같은 것,눈처럼 흰 것"
+    ],
+    "sentences": [
+      { "korean": "스키를 탈 수 있는 노", "original": "neig" },
+      { "korean": "(달걀 흰자로 만든) 눈 과", "original": "œufs à la neig" },
+      { "korean": "겨울 스포츠장에 가", "original": "aller à la neig" },
+      { "korean": "겨울 스포", "original": "sports de la neig" },
+      { "korean": "눈싸", "original": "bataille de boules de neig" }
+    ]
+  }
+]
