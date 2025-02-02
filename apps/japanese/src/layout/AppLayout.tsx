@@ -1,8 +1,10 @@
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import { WordList } from "@/components";
-import Header from "@/components/Header";
 import { DialogProvider } from "shared/context";
+import { Header } from "shared/components";
+
+const LEVELS = ["N5", "N4", "N3", "N2", "N1"];
 
 const AppLayout = () => {
   const [isWordListOpen, setIsWordListOpen] = useState(false);
@@ -23,7 +25,7 @@ const AppLayout = () => {
             isWordListOpen ? "translate-x-full" : "translate-x-0"
           }`}
         >
-          <Header onMenuClick={handleMenuClick} />
+          <Header onMenuClick={handleMenuClick} levels={LEVELS} />
           <Outlet />
         </div>
 
