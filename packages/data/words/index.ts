@@ -14,7 +14,20 @@ import JLPT_N5_WORDS from "./japanese/JLPT_N5_WORDS.json";
 import TOEFL_WORDS from "./english/TOEFL_WORDS.json";
 import TOEIC_WORDS from "./english/TOEIC_WORDS.json";
 
+import FRENCH_A1_WORDS from "./french/FRENCH_A1_WORDS.json";
+import FRENCH_A2_WORDS from "./french/FRENCH_A2_WORDS.json";
+import FRENCH_B1_WORDS from "./french/FRENCH_B1_WORDS.json";
+import FRENCH_B2_WORDS from "./french/FRENCH_B2_WORDS.json";
+import FRENCH_C1_WORDS from "./french/FRENCH_C1_WORDS.json";
+import FRENCH_C2_WORDS from "./french/FRENCH_C2_WORDS.json";
+
 export {
+  FRENCH_A1_WORDS,
+  FRENCH_A2_WORDS,
+  FRENCH_B1_WORDS,
+  FRENCH_B2_WORDS,
+  FRENCH_C1_WORDS,
+  FRENCH_C2_WORDS,
   HSK_1_WORDS,
   HSK_2_WORDS,
   HSK_3_WORDS,

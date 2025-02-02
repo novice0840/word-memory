@@ -1,3 +1,12 @@
+import {
+  HSK_1_WORDS,
+  HSK_2_WORDS,
+  HSK_3_WORDS,
+  HSK_4_WORDS,
+  HSK_5_WORDS,
+  HSK_6_WORDS,
+} from "data";
+
 export const getNextIndex = (curIndex: number, totalLength: number) => {
   return (curIndex + 1) % totalLength;
 };
@@ -69,4 +78,47 @@ export const readSentence = (
   } else {
     speakText();
   }
+};
+
+const LEVELS = ["HSK1", "HSK2", "HSK3", "HSK4", "HSK5", "HSK6"] as const;
+type Level = (typeof LEVELS)[number];
+
+type Word = {
+  koreans: string[];
+  pronunciation: string;
+  original: string | null;
+  level: Level;
+  sentences: {
+    korean: string;
+    original: string;
+    pronunciation: string;
+  }[];
+};
+
+export const isValidLevel = (level: string, language: string): boolean => {
+  if (language === "chinese") {
+    return LEVELS.some((l) => l === level);
+  }
+  throw new Error("지원하지 않는 언어입니다.");
+};
+
+export const getWords = (level: string, language: string) => {
+  if (language === "chinese") {
+    const HSK_WORDS_MAP = {
+      HSK1: HSK_1_WORDS,
+      HSK2: HSK_2_WORDS,
+      HSK3: HSK_3_WORDS,
+      HSK4: HSK_4_WORDS,
+      HSK5: HSK_5_WORDS,
+      HSK6: HSK_6_WORDS,
+    } as Record<Level, Word[]>;
+
+    if (!isValidLevel(level, "chinese")) {
+      return [];
+    }
+
+    return HSK_WORDS_MAP[level as Level];
+  }
+
+  throw new Error("지원하지 않는 언어입니다.");
 };

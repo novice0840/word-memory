@@ -1,14 +1,14 @@
-import { getWords } from "@/utils/word";
+import { getWords } from "shared/utils";
 import { useGetMemoryList } from "shared/hooks";
 
 export const useWordInfo = () => {
   const wordLength = {
-    HSK1: getWords("HSK1").length,
-    HSK2: getWords("HSK2").length,
-    HSK3: getWords("HSK3").length,
-    HSK4: getWords("HSK4").length,
-    HSK5: getWords("HSK5").length,
-    HSK6: getWords("HSK6").length,
+    HSK1: getWords("HSK1", "chinese").length,
+    HSK2: getWords("HSK2", "chinese").length,
+    HSK3: getWords("HSK3", "chinese").length,
+    HSK4: getWords("HSK4", "chinese").length,
+    HSK5: getWords("HSK5", "chinese").length,
+    HSK6: getWords("HSK6", "chinese").length,
   };
 
   const memoryListLength = {
