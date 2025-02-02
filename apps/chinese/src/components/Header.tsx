@@ -2,7 +2,7 @@ import { HSK_LEVELS } from "@/constants/word";
 import { HSKLevel } from "@/types/word";
 import { Menu, Settings, House } from "lucide-react";
 import { useState } from "react";
-import Setting from "./Setting";
+import { Setting } from "shared/components";
 import { useParams, Link } from "react-router-dom";
 
 interface HeaderProps {
@@ -36,7 +36,10 @@ const Header = ({ onMenuClick }: HeaderProps) => {
         >
           <Settings />
         </button>
-        <Setting isSettingOpen={isSettingOpen} />
+        <Setting
+          isSettingOpen={isSettingOpen}
+          levels={["HSK1", "HSK2", "HSK3", "HSK4", "HSK5", "HSK6"]}
+        />
       </div>
     </header>
   );
