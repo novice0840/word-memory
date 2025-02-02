@@ -1,7 +1,8 @@
 import { Navigate, useParams } from "react-router-dom";
 import { setLocalStorage, useGetMemoryList } from "shared/hooks";
 import { LEVELS } from "@/constants/word";
-import { StudyAction, StudyProgress, Sentences, Word } from "@/components";
+import { StudyAction, Sentences, Word } from "@/components";
+import { StudyProgress } from "shared/components";
 import { getNextIndex, getPrevIndex } from "shared/utils";
 import type { Level } from "@/types/word";
 import { useStudyAction } from "@/hooks/useStudyAction";

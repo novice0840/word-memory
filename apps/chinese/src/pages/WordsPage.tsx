@@ -1,9 +1,9 @@
 import { Navigate, useParams } from "react-router-dom";
-import { setLocalStorage } from "shared/hooks";
-import { StudyAction, StudyProgress, Sentences, Word } from "@/components";
+import { setLocalStorage, useGetMemoryList } from "shared/hooks";
+import { StudyAction, Sentences, Word } from "@/components";
+import { StudyProgress } from "shared/components";
 import { getNextIndex, getPrevIndex } from "shared/utils";
 import { useStudyAction } from "@/hooks/useStudyAction";
-import { useGetMemoryList } from "shared/hooks";
 import { getWords, isValidLevel } from "@/utils/word";
 
 const WordsPage = () => {
