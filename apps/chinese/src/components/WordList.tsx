@@ -1,11 +1,10 @@
+import { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { ArrowLeft, CircleCheckBig } from "lucide-react";
+import { setLocalStorage, useGetMemoryList } from "shared/hooks";
+
 import { HSKLevel } from "@/types/word";
-import { isValidHSKLevel } from "@/utils/chinese";
-import { setLocalStorage } from "shared/hooks";
-import { useEffect, useRef } from "react";
-import { useGetMemoryList } from "shared/hooks";
-import { getHSKWords } from "@/utils/chinese";
+import { isValidHSKLevel, getHSKWords } from "@/utils/chinese";
 
 interface WordListProps {
   isWordListOpen: boolean;
