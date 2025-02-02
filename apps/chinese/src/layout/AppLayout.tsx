@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import { WordList } from "@/components";
-import Header from "@/components/Header";
+import { Header } from "shared/components";
 import { DialogProvider } from "shared/context";
 
 const HSKLevels = ["HSK1", "HSK2", "HSK3", "HSK4", "HSK5", "HSK6"];

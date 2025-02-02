@@ -1,3 +1,4 @@
 import Setting from "./Setting";
+import Header from "./Header";
 
-export { Setting };
+export { Setting, Header };
