@@ -16,7 +16,7 @@ const getFrenchSentences = async (word) => {
   const data = await response.json();
   return data.searchResultMap.searchResultListMap.EXAMPLE.items.map((item) => ({
     korean: item.expExample2
-      .replace(/.$/g, "")
+      .replace(/[.]$/g, "")
       .replace(/<[^>]+>/g, "")
       .replace(/\(↔[^>]+>/g, ""),
     original: item.expExample1
