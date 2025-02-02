@@ -2,8 +2,7 @@ import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import { WordList } from "@/components";
 import { Header } from "shared/components";
-
-const LEVELS = ["HSK1", "HSK2", "HSK3", "HSK4", "HSK5", "HSK6"];
+import { LEVELS } from "@/constants/word";
 
 const AppLayout = () => {
   const [isWordListOpen, setIsWordListOpen] = useState(false);
@@ -23,7 +22,10 @@ const AppLayout = () => {
           isWordListOpen ? "translate-x-full" : "translate-x-0"
         }`}
       >
-        <Header onMenuClick={handleMenuClick} levels={LEVELS} />
+        <Header
+          onMenuClick={handleMenuClick}
+          levels={LEVELS as unknown as string[]}
+        />
         <Outlet />
       </div>
 
