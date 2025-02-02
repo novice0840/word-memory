@@ -3,14 +3,14 @@ import { MouseEvent } from "react";
 import { getNextUnmemorizedIndex } from "shared/utils";
 import { getHSKWords } from "@/utils/chinese";
 import { setLocalStorage } from "./useLocalStorage";
-import { Level } from "@/types/word";
+import { HSKLevel } from "@/types/word";
 import { useWord } from "./useWord";
 import { useGetMemoryList } from "./useGetMemoryList";
 import { useDialog } from "shared/context";
 
 const useStudyAction = () => {
   const { level = "" } = useParams();
-  const { memoryList, curIndex } = useGetMemoryList(level as Level);
+  const { memoryList, curIndex } = useGetMemoryList(level as HSKLevel);
   const words = getHSKWords(level);
 
   const totalLength = words.length;
