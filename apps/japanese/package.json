@@ -10,9 +10,5 @@
     "preview": "vite preview",
     "test": "vitest",
     "coverage": "vitest --coverage"
-  },
-  "dependencies": {
-    "data": "*",
-    "shared": "*"
   }
 }
