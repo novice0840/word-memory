@@ -3,7 +3,7 @@ import { useState } from "react";
 import { WordList } from "@/components";
 import { Header } from "shared/components";
 
-const HSKLevels = ["HSK1", "HSK2", "HSK3", "HSK4", "HSK5", "HSK6"];
+const LEVELS = ["HSK1", "HSK2", "HSK3", "HSK4", "HSK5", "HSK6"];
 
 const AppLayout = () => {
   const [isWordListOpen, setIsWordListOpen] = useState(false);
@@ -23,7 +23,7 @@ const AppLayout = () => {
           isWordListOpen ? "translate-x-full" : "translate-x-0"
         }`}
       >
-        <Header onMenuClick={handleMenuClick} levels={HSKLevels} />
+        <Header onMenuClick={handleMenuClick} levels={LEVELS} />
         <Outlet />
       </div>
 
