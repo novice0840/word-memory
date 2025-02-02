@@ -3,8 +3,7 @@ import { MouseEvent } from "react";
 import { getWords } from "@/utils/word";
 import { getNextUnmemorizedIndex } from "shared/utils";
 import { Level, Word } from "@/types/word";
-import { useWord } from "./useWord";
-import { useGetMemoryList, setLocalStorage } from "shared/hooks";
+import { useWord, useGetMemoryList, setLocalStorage } from "shared/hooks";
 import { useDialog } from "shared/context";
 
 const useStudyAction = () => {
