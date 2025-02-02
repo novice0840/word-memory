@@ -5,7 +5,7 @@ import {
   getPrevIndex,
 } from "shared/utils";
 import { JLPT_N1_WORDS } from "data";
-import { getHSKWords } from "@/utils/chinese";
+import { getEnglishWords } from "@/utils/word";
 
 describe("Word Util Test", () => {
   it("getNextIndex 함수 실행 시 다음 인덱스를 반환한한다", () => {
@@ -73,23 +73,23 @@ describe("Word Util Test", () => {
     expect(nextIndex).toBe(2);
   });
 
-  it("getHSKWords은 입력 level에 맞는 단어 목록을 반환한다", () => {
+  it("getEnglishWords은 입력 level에 맞는 단어 목록을 반환한다", () => {
     // Given
     const level = "N1";
 
     // When
-    const words = getHSKWords(level);
+    const words = getEnglishWords(level);
 
     // Then
     expect(words).toEqual(JLPT_N1_WORDS);
   });
 
-  it("getHSKWords에 잘못된 level을 넣은 경우 빈 배열을 반환한다", () => {
+  it("getEnglishWords에 잘못된 level을 넣은 경우 빈 배열을 반환한다", () => {
     // Given
     const level = "N6";
 
     // When
-    const words = getHSKWords(level);
+    const words = getEnglishWords(level);
 
     // Then
     expect(words).toEqual([]);

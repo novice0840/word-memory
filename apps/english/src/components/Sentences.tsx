@@ -5,7 +5,6 @@ interface SentencesProps {
   sentences: {
     korean: string;
     original: string;
-    pronunciation: string;
   }[];
   showMeaning: boolean;
 }
@@ -18,7 +17,6 @@ const Sentences = ({ sentences, showMeaning }: SentencesProps) => {
           <div className="flex items-center space-x-2">
             <div>
               <div className="font-chinese">{item.original}</div>
-              <div className="text-sm">{showMeaning && item.pronunciation}</div>
             </div>
             <button onClick={() => readSentence(item.original, "chinese")}>
               <Volume2 />

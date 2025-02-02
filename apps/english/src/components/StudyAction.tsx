@@ -1,6 +1,6 @@
 import { MouseEvent } from "react";
 import { Button } from "shared/ui";
-import { getHSKWords } from "@/utils/chinese";
+import { getWords } from "@/utils/word";
 import { useParams } from "react-router-dom";
 import { useGetMemoryList } from "shared/hooks";
 
@@ -10,7 +10,7 @@ interface StudyActionProps {
 
 const StudyAction = ({ onClick }: StudyActionProps) => {
   const { level = "" } = useParams();
-  const words = getHSKWords(level as any);
+  const words = getWords(level);
   const totalLength = words.length;
   const { memoryList } = useGetMemoryList(level);
 

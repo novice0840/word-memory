@@ -1,10 +1,10 @@
-import { getEnglishWords } from "@/utils/chinese";
+import { getWords } from "@/utils/word";
 import { useGetMemoryList } from "shared/hooks";
 
 export const useWordInfo = () => {
   const englishLength = {
-    TOEIC: getEnglishWords("TOEIC").length,
-    TOEFL: getEnglishWords("TOEFL").length,
+    TOEIC: getWords("TOEIC").length,
+    TOEFL: getWords("TOEFL").length,
   };
 
   const memoryListLength = {
