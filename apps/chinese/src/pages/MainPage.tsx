@@ -18,7 +18,9 @@ const MainPage = () => {
           onClick={() => navigate(`/words/${level}`)}
         >
           <CardHeader className="p-0">
-            <CardTitle className="text-lg">{level}</CardTitle>
+            <CardTitle className="text-lg">
+              {level.slice(0, -1) + " " + level.slice(-1)}
+            </CardTitle>
           </CardHeader>
           <CardContent className="p-0">
             {`달성율 ${roundToDecimal(
