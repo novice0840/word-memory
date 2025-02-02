@@ -3,13 +3,13 @@ import { MouseEvent } from "react";
 import { getNextUnmemorizedIndex } from "shared/utils";
 import { useGetMemoryList, setLocalStorage } from "shared/hooks";
 import { useDialog } from "shared/context";
-import { getHSKWords } from "@/utils/chinese";
+import { getWords } from "@/utils/word";
 import { useWord } from "./useWord";
 
 const useStudyAction = () => {
   const { level = "" } = useParams();
   const { memoryList, curIndex } = useGetMemoryList(level);
-  const words = getHSKWords(level);
+  const words = getWords(level);
 
   const totalLength = words.length;
   const { open } = useDialog();

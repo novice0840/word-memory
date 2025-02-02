@@ -2,10 +2,10 @@ import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "shared/ui";
 import { roundToDecimal } from "shared/utils";
 import { useWordInfo } from "@/hooks/useWordInfo";
-import { HSK_LEVELS } from "@/constants/word";
+import { LEVELS } from "@/constants/word";
 
 const MainPage = () => {
-  const { hskLength, memoryListLength } = useWordInfo();
+  const { wordLength, memoryListLength } = useWordInfo();
   const navigate = useNavigate();
 
   return (
@@ -14,7 +14,7 @@ const MainPage = () => {
         중국어 단어 암기
       </h1>
       <div className="space-y-4 h-[32rem] overflow-auto">
-        {HSK_LEVELS.map((level) => (
+        {LEVELS.map((level) => (
           <Card
             key={level}
             className="p-1 w-full"
@@ -27,8 +27,8 @@ const MainPage = () => {
             </CardHeader>
             <CardContent className="p-0">
               {`달성율 ${roundToDecimal(
-                memoryListLength[level] / hskLength[level]
-              )}% ${memoryListLength[level]} / ${hskLength[level]}`}
+                memoryListLength[level] / wordLength[level]
+              )}% ${memoryListLength[level]} / ${wordLength[level]}`}
             </CardContent>
           </Card>
         ))}

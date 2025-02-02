@@ -2,8 +2,7 @@ import { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { ArrowLeft, CircleCheckBig } from "lucide-react";
 import { setLocalStorage, useGetMemoryList } from "shared/hooks";
-import { getWords } from "@/utils/word";
-import { isValidLevel } from "@/utils/word";
+import { getWords, isValidLevel } from "@/utils/word";
 
 interface WordListProps {
   isWordListOpen: boolean;
@@ -58,9 +57,7 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
             onClick={() => handleWordClick(i)}
             className="flex items-center justify-between border rounded text-xl "
           >
-            <span className="font-chinese">
-              {word.original || word.pronunciation}
-            </span>
+            <span>{word.original || word.pronunciation}</span>
             {memoryList.includes(i) && <CircleCheckBig />}
           </li>
         ))}

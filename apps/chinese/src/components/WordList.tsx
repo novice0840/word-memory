@@ -2,9 +2,7 @@ import { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { ArrowLeft, CircleCheckBig } from "lucide-react";
 import { setLocalStorage, useGetMemoryList } from "shared/hooks";
-
-import { HSKLevel } from "@/types/word";
-import { isValidHSKLevel, getHSKWords } from "@/utils/chinese";
+import { getWords, isValidLevel } from "@/utils/word";
 
 interface WordListProps {
   isWordListOpen: boolean;
@@ -13,9 +11,9 @@ interface WordListProps {
 
 const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
   const { level = "" } = useParams();
-  const { memoryList, curIndex } = useGetMemoryList(level as HSKLevel);
+  const { memoryList, curIndex } = useGetMemoryList(level);
   const itemRefs = useRef<(HTMLLIElement | null)[]>([]);
-  const words = getHSKWords(level as HSKLevel);
+  const words = getWords(level);
 
   const handleWordClick = (wordIndex: number) => {
     setLocalStorage(level, {
@@ -34,7 +32,7 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
     }
   }, [isWordListOpen, curIndex]);
 
-  if (!isValidHSKLevel(level)) {
+  if (!isValidLevel(level)) {
     return null;
   }
 

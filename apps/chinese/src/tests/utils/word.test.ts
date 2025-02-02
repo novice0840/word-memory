@@ -5,7 +5,7 @@ import {
   getPrevIndex,
 } from "shared/utils";
 import { JLPT_N1_WORDS } from "data";
-import { getHSKWords } from "@/utils/chinese";
+import { getHSKWords } from "@/utils/word";
 
 describe("Word Util Test", () => {
   it("getNextIndex 함수 실행 시 다음 인덱스를 반환한한다", () => {
