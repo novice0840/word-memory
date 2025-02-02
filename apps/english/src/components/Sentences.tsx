@@ -16,9 +16,9 @@ const Sentences = ({ sentences, showMeaning }: SentencesProps) => {
         <div key={index}>
           <div className="flex items-center space-x-2">
             <div>
-              <div className="font-chinese">{item.original}</div>
+              <div>{item.original}</div>
             </div>
-            <button onClick={() => readSentence(item.original, "chinese")}>
+            <button onClick={() => readSentence(item.original, "english")}>
               <Volume2 />
             </button>
           </div>

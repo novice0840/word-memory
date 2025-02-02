@@ -24,11 +24,12 @@ export const getNextUnmemorizedIndex = (
 
 export const readSentence = (
   text: string,
-  language: "japanese" | "chinese"
+  language: "japanese" | "chinese" | "english"
 ) => {
   const langToTag = {
     japanese: "ja-JP",
     chinese: "zh-CN",
+    english: "en-US",
   };
 
   if (!window.speechSynthesis) {
@@ -44,6 +45,7 @@ export const readSentence = (
     const preferredVoices: Record<string, string> = {
       "ja-JP": "Microsoft Haruka - Japanese (Japan)",
       "zh-CN": "Google 普通话（中国大陆）",
+      "en-US": "Google US English",
     };
 
     const selectedVoice = voices.find(
