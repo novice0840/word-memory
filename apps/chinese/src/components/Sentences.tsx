@@ -1,5 +1,5 @@
 import { readSentence } from "shared/utils";
-import { VolumeHigh } from "@mynaui/icons-react";
+import { Volume2 } from "lucide-react";
 
 interface SentencesProps {
   sentences: {
@@ -21,7 +21,7 @@ const Sentences = ({ sentences, showMeaning }: SentencesProps) => {
               <div className="text-sm">{showMeaning && item.pronunciation}</div>
             </div>
             <button onClick={() => readSentence(item.original, "chinese")}>
-              <VolumeHigh />
+              <Volume2 />
             </button>
           </div>
 

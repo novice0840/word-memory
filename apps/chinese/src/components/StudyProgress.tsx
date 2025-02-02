@@ -1,4 +1,4 @@
-import { FatArrowLeft, FatArrowRight } from "@mynaui/icons-react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
 
 interface StudyProgressProps {
   curIndex: number;
@@ -17,7 +17,7 @@ const StudyProgress = ({
 }: StudyProgressProps) => {
   return (
     <div className="flex justify-between items-center w-full  ">
-      <FatArrowLeft onClick={onGoPrevWord} />
+      <ArrowLeft onClick={onGoPrevWord} />
       <div>
         <div>
           전체 단어 {curIndex + 1}/{totalLength}
@@ -26,7 +26,7 @@ const StudyProgress = ({
           외운 단어 {memoryListLength}/{totalLength}
         </div>
       </div>
-      <FatArrowRight onClick={onGoNextWord} />
+      <ArrowRight onClick={onGoNextWord} />
     </div>
   );
 };

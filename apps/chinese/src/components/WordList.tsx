@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { ArrowLeft, CheckCircle } from "@mynaui/icons-react";
+import { ArrowLeft, CircleCheckBig } from "lucide-react";
 import { HSKLevel } from "@/types/word";
 import { isValidHSKLevel } from "@/utils/chinese";
 import { setLocalStorage } from "shared/hooks";
@@ -58,12 +58,12 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
             key={i}
             ref={(el) => (itemRefs.current[i] = el)}
             onClick={() => handleWordClick(i)}
-            className="flex justify-between border rounded text-xl"
+            className="flex items-center justify-between border rounded text-xl "
           >
             <span className="font-chinese">
               {word.original || word.pronunciation}
             </span>
-            {memoryList.includes(i) && <CheckCircle />}
+            {memoryList.includes(i) && <CircleCheckBig />}
           </li>
         ))}
       </ul>
