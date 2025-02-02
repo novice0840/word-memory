@@ -1,1 +1,861 @@
-[{"original":"vélo","koreans":["자전거 "],"sentences":[{"korean":"자전거 타기를 하다","original":"faire du vél"},{"korean":"자전거를 타고 가다","original":"aller à[en, sur son] vél"},{"korean":"경주용 자전거","original":"vélo de cours"},{"korean":"(우체국까지) 자전거를 타고 가다","original":"aller à véloen vélo, sur son vélo (jusqu’à la poste"},{"korean":"페달 1회전에 7미터 전진하는 자전거","original":"vélo qui développe 7 mètre"}]},{"original":"voiture","koreans":["수레,마차 ","자동차 ","(열차·지하철의) 객차, 차량"],"sentences":[{"korean":"자동차로[…의 자동차를 타고] 이동하다","original":"se déplacer en voiture[dans la voiture de qn"},{"korean":"차로 오셨습니까[차가 있으세요]?","original":"Vous êtes en voiture"},{"korean":"투[포] 도어 카","original":"voiture à deux[quatre] porte"},{"korean":"운전교습용 차","original":"voiture-écol"},{"korean":"드라이브하다(= rouler)","original":"faire de la voitur"}]},{"original":"train","koreans":["기차, 열차","철도 ","대열, 행렬,[옛] 짐바리 짐승의 대열"],"sentences":[{"korean":"고속열차 ([약] T.G.V.)","original":"Train à grande vitess"},{"korean":"기차가 플랫폼에 정차 중이다","original":"Le train est à quai"},{"korean":"(스키어 따위를 운송하는) 겨울 휴양지행 열차","original":"train de neig"},{"korean":"한 재산이 있다, 재산이 많다","original":"avoir un grand trai"},{"korean":"이것이 바로 세상 돌아가는 형편이다","original":"Voilà le train du monde"}]},{"original":"bus","koreans":["[구어] 버스, 시내버스,미니[마이크로] 버스 "],"sentences":[{"korean":"버스 정류장","original":"arrêt du bu"},{"korean":"버스 승차권","original":"ticket de bu"},{"korean":"버스를 타다","original":"prendre le bu"},{"korean":"이 버스는 뇌이이에 갑니까?","original":"Ce bus va-t-il à Neuilly"},{"korean":"버스가 정류장을 그냥 지나갔다","original":"Le bus a manqué un arrêt"}]},{"original":"gare","koreans":["[옛] 기차가 비켜 갈 수 있도록 되어 있는 곳","(기차의) 정거장, 역","선착장, 부두,(하천의 배가 비켜 갈 수 있게 되어 있는) 대피소"],"sentences":[{"korean":"그 친구 조심해야 돼","original":"Gare à ce type"},{"korean":"역으로 …을 맞이하러 가다","original":"aller chercher qn à la gar"},{"korean":"말을 듣지 않으면 혼날 줄 알아","original":"Gare à toi si tu désobéis"},{"korean":"…하지 않을까 주의해야 한다","original":"[옛·문어] [gare que+(ne) sub."},{"korean":"넘어지지 않도록 조심해","original":"Gare à ne pas tomber"}]},{"original":"hôtel","koreans":["호텔, 여관","(대영주의) 관저,(개인의) 대저택, 사저 ","공공 건축물"],"sentences":[{"korean":"조폐국","original":"Hôtel de la Monnai"},{"korean":"앵발리드 기념관 (나폴레옹의 묘 소재),[옛] 파리의 상이군인 병원","original":"Hôtel des Invalide"},{"korean":"별 3개짜리 호텔","original":"hôtel trois étoile"},{"korean":"왕실 시종부","original":"hôtel du ro"},{"korean":"중앙우체국","original":"Hôtel des Poste"}]},{"original":"restaurant","koreans":["음식점, 식당, 레스토랑","[옛] 영양식,보약, 강장제"],"sentences":[{"korean":"기운을 차리는 데는 술이 제일 좋다","original":"C'est un restaurant que le vin"},{"korean":"식권 (구내 식당이 없는 회사 따위에서 종업원들에게 점심 외식용으로 주는 티켓)","original":"ticket restaurant,titre restaurant ,chèque restauran"},{"korean":"패스트 푸드 식당","original":"restaurant à service rapid"},{"korean":"대중[싸구려] 음식점","original":"restaurant populaire[à bon marché"},{"korean":"카페 레스토랑 (음료와 식사를 같이 파는 곳)","original":"café-restauran"}]},{"original":"repas","koreans":["식사,식사시간","(동물의) 먹이,식사","[의학]"],"sentences":[{"korean":"하루에 세 끼 식사를 하다","original":"faire trois repas par jou"},{"korean":"나는 식사 시간에는 집에 있다","original":"Je suis chez moi à l'heure des repas"},{"korean":"육식동물의 먹이 먹는 모습을 구경하다","original":"assister au repas des fauve"},{"korean":"식사와 함께 복용해야 하는 약","original":"médicament à prendre pendant les repa"},{"korean":"예수와 제자들 간의 최후의 만찬","original":"dernier repas des apôtres et de Jésu"}]},{"original":"déjeuner","koreans":["[옛] [지방어:북프랑스·벨기에·캐나다] 아침식사 ","점심","(집합적) 점심 식사 (요리)"],"sentences":[{"korean":"점심을 먹다","original":"déjeune"},{"korean":"아침 식사를 게걸스럽게 먹어치우다","original":"déjeune"},{"korean":"고급 포도주를 곁들인 훌륭한 점심 식사","original":"bon déjeuner, arrosé de vins fin"},{"korean":"그는 아침 식사도 하지 않고 일하러 떠났다","original":"Il est parti travailler sans déjeuner"},{"korean":"…을 점심에 초대하다","original":"inviter qn à déjeune"}]},{"original":"dîner","koreans":["저녁 식사를 하다","식사를 하다 "],"sentences":[{"korean":"저녁식사를 하다","original":"dîne"},{"korean":"저녁을 먹다","original":"dîne"},{"korean":"…을 저녁 식사에 초대하다","original":"inviter qn à dîne"},{"korean":"…로 저녁 식사를 하다","original":"faire son dîner de[avec] q"},{"korean":"저녁 식사를 준비하다","original":"préparer[[속어] faire] le dîne"}]},{"original":"chambre","koreans":["방, 침실,[역사] 왕의 침실,[옛] 거실","(특수 설비가 된) 방","[비유] 법정,(법원의) 부(部)"],"sentences":[{"korean":"상공회의소([약] C.C.I.)","original":"chambre de commerce et d'industri"},{"korean":"(프랑스) 의회 (1946년 이후로는 Assemblée nationale)","original":"la Chambre (des députés"},{"korean":"(프랑스 최고재판소의) 형사및 경범죄[민사]부","original":"chambre criminelle [des requêtes"},{"korean":"(토지 공유에 관한 조정을 담당하는) 회계법원","original":"chambre régionale des comptes (1982"},{"korean":"의회의 다수[소수, 우, 좌]파","original":"majorité[minorité, droite, gauche] de la Chambr"}]},{"original":"travail","koreans":["일, 작업, 노동 ","직업,직책, 직무 ","노동,노동자, 노동 인구"],"sentences":[{"korean":"나는 오늘 저녁에 일이 있다","original":"J'ai du travail ce soir"},{"korean":"신체장애자부조센터 ([약] C.A.T.)","original":"centre d'aide par le travai"},{"korean":"생산의 한 요소인 노동","original":"le travail, facteur de productio"},{"korean":"노동자총연맹 ([약] C.G.T.)","original":"Confédération générale du travai"},{"korean":"평등 근로에 평등임금 (여권신장론자들의 주장)","original":"à travail égal, salaire éga"}]},{"original":"médecin","koreans":["의사,내과 의사","[비유] (고뇌 따위의) 치료사"],"sentences":[{"korean":"(목사·사제 따위의) 영혼의 치료사","original":"médecin de l'âme[des âmes"},{"korean":"해군 군의관","original":"médecin de la Marin"},{"korean":"병원에 가다","original":"aller chez le médeci"},{"korean":"의사의 진단[처방]","original":"diagnostic[ordonnance, prescriptions] du médeci"},{"korean":"(1968년 이후의) 통합 군의관","original":"médecin des armée"}]},{"original":"hôpital","koreans":["병원, 진료소([구어] <autoLink search=\"hosto\">hosto</autoLink>)","[역사] (19세기 이전의) 자선시설, 보호소 "],"sentences":[{"korean":"입원시키다","original":"envoyer[admettre] un malade dans[à] un hôpita"},{"korean":"주간병원(↔ hôpital de nuit)","original":"hôpital de jou"},{"korean":"야전병원","original":"hôpital de campagn"},{"korean":"육군[해군]병원","original":"hôpital militaire[maritime"},{"korean":"종합[전문]병원","original":"hôpital général[spécialisé"}]},{"original":"commerçant","koreans":["상업의, 상업에 종사하는","상업이 발달한[번창한], 상점이 많은"],"sentences":[{"korean":"언제나 같은 상점에서 물건을 구입하다","original":"se fournir toujours chez le même commerçan"},{"korean":"도매[소매]상인","original":"commerçant qui vend en gros[en détail"},{"korean":"단골이 많은 상인","original":"commerçant bien achaland"},{"korean":"상업지구","original":"quartier commerçan"},{"korean":"소상인","original":"petit commerçan"}]},{"original":"acheteur","koreans":["사는 사람, 구매자 , (↔<span class=\"related_word\" lang=\"fr\"><autoLink search=\"vendeur\">vendeur</autoLink></span>)","[상업] 구매계원"],"sentences":[{"korean":"모든 구매자에게 경품 증정 (판촉 문구)","original":"Prime à tout acheteur"},{"korean":"구매자의 지불 능력을 확인하다","original":"s'assurer de la solvabilité d'un acheteu"},{"korean":"드디어 그 집을 살 사람이 나섰다","original":"Enfin un acheteur s'est présenté pour la maison"},{"korean":"모든 구매객에게 무료로 선물이 증정될 것이다","original":"Un cadeau sera remis gracieusement à tout acheteur"},{"korean":"이 집은 아직 작자가 나서지 않고 있다","original":"On n'a toujours pas d'acheteur pour cette maison / Il n'y aucun acheteur pour cette maison"}]},{"original":"vendeur","koreans":["파는 사람, 판매인, 상인","판매원, 점원"],"sentences":[{"korean":"그는 상술에 아주 능하다","original":"C'est un excellent vendeur"},{"korean":"그는 이 땅을 사고자 하는데 나는 팔 생각이 없다","original":"Il veut acheter ce terrain, mais je ne suis pas vendeur"},{"korean":"무허가 노점상","original":"vendeur à la sauvett"},{"korean":"매도인과 매수인","original":"le vendeur et l'acheteu"},{"korean":"생선 장수","original":"vendeur de poisson"}]},{"original":"magasin","koreans":["상점, 가게 ","창고, 저장고, 보관소,(집합적) 저장품 ","[비유] 많이 있는 곳, 보고(寶庫)"],"sentences":[{"korean":"…의 재고가 있다","original":"avoir qc en magasi"},{"korean":"…을 창고에 넣다","original":"mettre qc en magasi"},{"korean":"[옛] …을 저장하다","original":"faire[tenir] un magasin de q"},{"korean":"연쇄점, 체인스토어","original":"magasin à succursales multiple"},{"korean":"도매점[소매점]","original":"magasin de vente en gros[au détail"}]},{"original":"supermarché","koreans":["슈퍼마켓"],"sentences":[{"korean":"슈퍼마켓","original":"supermarch"},{"korean":"우리집 아주 가까이에 슈퍼마켓이 있다. 그래서 매우 편리하다","original":"Il y a un supermarché tout près de chez moi, alors c'est très pratique"},{"korean":"이 슈퍼마켓에서는 도난 사건이 잦다","original":"Il y a de la fauche dans ce supermarché"},{"korean":"이 길을 조금만 내려가면 슈퍼마켓이 나와요","original":"Si vous descendez un petit peu ce chemin, vous trouverez [verrez] le supermarché"},{"korean":"슈퍼마켓의 정육 코너","original":"rayon boucherie d'un supermarch"}]},{"original":"cinéma","koreans":["영화","영화관 ","영화계"],"sentences":[{"korean":"영화를 위한 소설의 각본","original":"adaptation d'un roman pour le ciném"},{"korean":"상영관이 여러개인 영화관","original":"cinéma à salles multiple"},{"korean":"대단히 우수한 영화이다","original":"C'est du très grand cinéma"},{"korean":"드라이브인 영화관","original":"cinéma de plein ai"},{"korean":"영화계에 몸담다","original":"être dans le ciném"}]},{"original":"marché","koreans":["매매, 거래,계약","장, 장터,시장"],"sentences":[{"korean":"생필품을 구입하러 시장에 가다","original":"aller au marché pour faire ses provision"},{"korean":"프랑스의 향수 시장을 장악하다","original":"conquérir le marché français des parfum"},{"korean":"시장에서 물건을 팔다","original":"vendre sur un march"},{"korean":"아르헨티나의 쇠고기 시장","original":"marché argentin de la viand"},{"korean":"신제품을 시장에 내놓다","original":"mettre[offrir, lancer] un produit nouveau sur un march"}]},{"original":"boulangerie","koreans":["제빵,빵 장사","빵 가게, 빵집"],"sentences":[{"korean":"빵을 사러 가다","original":"aller à la boulangeri"},{"korean":"제빵용 화덕[반죽통]","original":"four[pétrin] d'une boulangeri"},{"korean":"(빵도 파는) 제과점","original":"boulangerie-pâtisseri"},{"korean":"빵 사러 가다","original":"aller à la boulangeri"},{"korean":"빵집은 내일 다시 문을 연다","original":"La boulangerie rouvre demain"}]},{"original":"pharmacie","koreans":["약학,약학과","약국, 약방, (병원의) 약국, 조제실,(캐나다의) 드러그 스토어 (약·담배·화장품·간이음식 따위를 판매하는 상점)","가정 상비약품 일체,(집합적) 약품류,약 상자"],"sentences":[{"korean":"의사 처방전에 따라 약국에서 판매하는 약품","original":"médicament vendu en pharmacie sur ordonnanc"},{"korean":"약학과 2학년","original":"deuxième année de pharmaci"},{"korean":"약품을 사다","original":"acheter de la pharmaci"},{"korean":"(휴무일에 영업하는) 당번 약국","original":"pharmacie de gard"},{"korean":"약 단지","original":"pots à pharmaci"}]},{"original":"hôpital","koreans":["병원, 진료소([구어] <autoLink search=\"hosto\">hosto</autoLink>)","[역사] (19세기 이전의) 자선시설, 보호소 "],"sentences":[{"korean":"입원시키다","original":"envoyer[admettre] un malade dans[à] un hôpita"},{"korean":"주간병원(↔ hôpital de nuit)","original":"hôpital de jou"},{"korean":"야전병원","original":"hôpital de campagn"},{"korean":"육군[해군]병원","original":"hôpital militaire[maritime"},{"korean":"종합[전문]병원","original":"hôpital général[spécialisé"}]},{"original":"médecin","koreans":["의사,내과 의사","[비유] (고뇌 따위의) 치료사"],"sentences":[{"korean":"(목사·사제 따위의) 영혼의 치료사","original":"médecin de l'âme[des âmes"},{"korean":"해군 군의관","original":"médecin de la Marin"},{"korean":"병원에 가다","original":"aller chez le médeci"},{"korean":"의사의 진단[처방]","original":"diagnostic[ordonnance, prescriptions] du médeci"},{"korean":"(1968년 이후의) 통합 군의관","original":"médecin des armée"}]},{"original":"dentiste","koreans":["치과 의사 "],"sentences":[{"korean":"치과에 가다","original":"aller chez le dentist"},{"korean":"치과 병원[진료실]","original":"cabinet de dentist"},{"korean":"치과 기공사","original":"(동격) mécanicien-dentist"},{"korean":"치과 치료실병원","original":"cabinet de dentist"},{"korean":"구강외과 의사","original":"chirurgien dentist"}]},{"original":"coiffeur","koreans":["이발사, 미용사"],"sentences":[{"korean":"미용사","original":"coiffeu"},{"korean":"이발소에 가다","original":"aller chez le coiffeu"},{"korean":"이발사미용사는 내 두피를 마사지해 주었다","original":"Le coiffeur m'a massé le cuir chevelu"},{"korean":"그 부인이 미용실에서 돌아온다","original":"La dame revient de chez son coiffeur"},{"korean":"미용사","original":"coiffeur pour dame"}]},{"original":"boucherie","koreans":["[옛] 도살장","푸줏간, 정육점","[지방어:스위스·캐나다] (돼지 따위를) 도살하여 해체하고 가공하는 행위"],"sentences":[{"korean":"병사들을 살육[학살]의 장(場)으로 이끌다[보내다]","original":"conduire[envoyer] des soldats à la boucheri"},{"korean":"슈퍼마켓의 정육 코너","original":"rayon boucherie d'un supermarch"},{"korean":"말고기 전문점","original":"boucherie chevaline[hippophagique"},{"korean":"돼지를 잡다","original":"faire boucheri"},{"korean":"돼지고기 판매점","original":"boucherie charcuteri"}]},{"original":"pâtisserie","koreans":["과자 제조(법)","(밀가루로 만든) 과자, 케이크","과자 제조[판매]업,제과점"],"sentences":[{"korean":"과자를 만들다","original":"faire de la pâtisseri"},{"korean":"제과용 화덕","original":"four à pâtisseri"},{"korean":"그는 제과점을 경영하고 있다","original":"Il tient une pâtisserie"},{"korean":"이 오븐은 빵이 잘 구워진다","original":"Ce four cuit bien la pâtisserie"},{"korean":"그는 과자를 특히 좋아한다","original":"[friand de] Il est friand de pâtisserie"}]},{"original":"bijouterie","koreans":["보석 가게,보석 제조[세공, 매매]업","(집합적) 보석"],"sentences":[{"korean":"보석 세공","original":"bijouterie"},{"korean":"시계·보석 가게","original":"horlogerie-bijouteri"},{"korean":"보석세공의 진정한 걸작","original":"un vrai chef-d'œuvre de bijouteri"},{"korean":"그는 보석판매업에 뛰어들었다","original":"Il s'est mis dans la bijouterie"},{"korean":"은도금한 장신구","original":"bijouterie en argent"}]},{"original":"poissonnerie","koreans":["어시장","해산물 판매업,어물전, 생선가게"],"sentences":[{"korean":"생선 가게","original":"poissonnerie"},{"korean":"어물전에서 홍합을 사다","original":"acheter des moules à la poissonneri"},{"korean":"어물전에서 홍합을 사다","original":"acheter des moules à la poissonneri"},{"korean":"어물 가게","original":"poissonnerie, boutique de poissons séchés"}]},{"original":"banque","koreans":["은행(의 업무)","(노름판의) 물주(의 돈)","[구어] (약장수 따위의) 과장 선전"],"sentences":[{"korean":"(자기 상품을) 과대 선전하다","original":"faire de la banqu"},{"korean":"물주를 쓰러뜨리다, 판돈을 다 쓸어버리다","original":"faire sauter la banqu"},{"korean":"은행에 구좌가 있다[구좌를 개설하다]","original":"avoir[ouvrir] un compte en banqu"},{"korean":"은행에 돈을 찾으러 가다","original":"passer à la banque retirer de l'argen"},{"korean":"…와 은행 거래가 있다","original":"avoir un compte de banque chez q"}]},{"original":"poste","koreans":["직, 직위,부서, 임지","(경비원·감시원 따위의) 근무소,(특히) 경찰 지서, 파출소 ","(기구·기계 따위의) 설치 장소,설치 기구"],"sentences":[{"korean":"…을 파출소로 끌고 가다","original":"conduire qn au post"},{"korean":"국유치 우편으로 편지를 부치다","original":"adresser une lettre poste restant"},{"korean":"유치장에서 밤을 보내다","original":"passer la nuit au post"},{"korean":"편지를 우체통에 넣다","original":"mettre une lettre à la post"},{"korean":"…을 우편으로 보내다","original":"envoyer[expédier] qc par la post"}]},{"original":"bureau","koreans":["(사무용) 책상","집무실, 사무실 ","(관청·회사의) 부서, 국, 원, 과"],"sentences":[{"korean":"사무용 책상","original":"bureau"},{"korean":"영업소","original":"burea"},{"korean":"국제 노동 사무국 ([약] B.I.T.)","original":"Bureau international du travai"},{"korean":"접개식 뚜껑 달린 책상","original":"bureau américain[à cylindre, à rideau"},{"korean":"파리는 진기한 것들이 모이는 곳이다","original":"Paris est le grand bureau des merveilles"}]},{"original":"bibliothèque","koreans":["도서관, 도서[열람]실,서재","책장, 서가 ","장서,총서 "],"sentences":[{"korean":"도서관에서 책을 대출하다","original":"emprunter un livre à la bibliothèqu"},{"korean":"풍부한 장서를 갖추다","original":"se constituer une riche bibliothèqu"},{"korean":"장미총서 (Hachette 출판사의 소년[소녀]를 위한 책)","original":"bibliothèque ros"},{"korean":"(파리의) 국립도서관 ([구어] la Nationale, la B.N.[beεn])","original":"Bibliothèque national"},{"korean":"마호가니 책꽂이","original":"bibliothèque en acajo"}]},{"original":"musée","koreans":["박물관,(특히) 미술관 ","박물관[미술관] 같은 곳,진귀한 물건들의 집합","(문학자의) 서재"],"sentences":[{"korean":"그의 아파트는 진귀한 것으로 가득차 있다","original":"Son appartement est un véritable musée"},{"korean":"해양박물관","original":"musée de la Marin"},{"korean":"공예박물관","original":"musée des Arts et Métier"},{"korean":"박물관[미술관]에나 있을 만한 물건, 진귀한 물건","original":"objet[pièce] de musé"},{"korean":"[구어] 추물의 집합","original":"musée des horreur"}]},{"original":"théâtre","koreans":["연극(예술),극작품","극장,무대 ","공연, 상연 "],"sentences":[{"korean":"국립 파리 오페라 극단","original":"théâtre national de l'Opéra de Pari"},{"korean":"수많은 전투의 무대[현장]","original":"théâtre de nombreux combat"},{"korean":"단원들과 순회공연을 떠나다","original":"partir en tournée avec un théâtr"},{"korean":"코르네이유의 극작품들","original":"le théâtre de Corneill"},{"korean":"중세 연극","original":"théâtre du Moyen Âg"}]},{"original":"stade","koreans":["스타디움, 경기장","(le <strong><autoLink search=\"stade\">stade</autoLink></strong>) 스포츠, 운동","(발달의) 단계,정도, 수준"],"sentences":[{"korean":"그의 학업은 어느 정도 수준이냐?","original":"À quel stade en est-il dans ses études"},{"korean":"전염병의 발진기","original":"stade éruptif d'une maladie infectieus"},{"korean":"위대한 운동선수들","original":"dieux du stad"},{"korean":"거울상 단계","original":"stade du miroi"},{"korean":"성기기","original":"stade génita"}]},{"original":"aéroport","koreans":["공항(空港)"],"sentences":[{"korean":"공항","original":"aéropor"},{"korean":"국제공항","original":"aéroport internationa"},{"korean":"공항에서 면세품을 사다","original":"acheter des produits détaxés dans un aéropor"},{"korean":"공항의 관제탑","original":"tour de contrôle d'un aéropor"},{"korean":"항공기를 관제하다","original":"contrôler les mouvements des avions pour assurer une sécurité au niveau d'un aéroport, contrôler les trajectoires et les horaires des divers avions pour éviter les accidents"}]},{"original":"gare routière","koreans":["버스 터미널"],"sentences":[{"korean":"버스 터미널","original":"(시내) (gare) terminus d'autobus, (시외) (gare) terminus d'autocars [de cars], gare routière"},{"korean":"버스·트럭 터미널","original":"gare routièr"},{"korean":"터미널까지 요로마다 경찰이 배치되었다","original":"Des agents de police ont été placés dans toutes les artères de la ville, et jusqu'aux gares routières"}]}]
+[
+  {
+    "original": "vélo",
+    "koreans": ["자전거 "],
+    "sentences": [
+      { "korean": "자전거 타기를 하다", "original": "faire du vél" },
+      {
+        "korean": "자전거를 타고 가다",
+        "original": "aller à[en, sur son] vél"
+      },
+      { "korean": "경주용 자전거", "original": "vélo de cours" },
+      {
+        "korean": "(우체국까지) 자전거를 타고 가다",
+        "original": "aller à véloen vélo, sur son vélo (jusqu’à la poste"
+      },
+      {
+        "korean": "페달 1회전에 7미터 전진하는 자전거",
+        "original": "vélo qui développe 7 mètre"
+      }
+    ]
+  },
+  {
+    "original": "voiture",
+    "koreans": ["수레,마차 ", "자동차 ", "(열차·지하철의) 객차, 차량"],
+    "sentences": [
+      {
+        "korean": "자동차로[…의 자동차를 타고] 이동하다",
+        "original": "se déplacer en voiture[dans la voiture de qn"
+      },
+      {
+        "korean": "차로 오셨습니까[차가 있으세요]?",
+        "original": "Vous êtes en voiture"
+      },
+      {
+        "korean": "투[포] 도어 카",
+        "original": "voiture à deux[quatre] porte"
+      },
+      { "korean": "운전교습용 차", "original": "voiture-écol" },
+      { "korean": "드라이브하다(= rouler)", "original": "faire de la voitur" }
+    ]
+  },
+  {
+    "original": "train",
+    "koreans": ["기차, 열차", "철도 ", "대열, 행렬,[옛] 짐바리 짐승의 대열"],
+    "sentences": [
+      {
+        "korean": "고속열차 ([약] T.G.V.)",
+        "original": "Train à grande vitess"
+      },
+      {
+        "korean": "기차가 플랫폼에 정차 중이다",
+        "original": "Le train est à quai"
+      },
+      {
+        "korean": "(스키어 따위를 운송하는) 겨울 휴양지행 열차",
+        "original": "train de neig"
+      },
+      {
+        "korean": "한 재산이 있다, 재산이 많다",
+        "original": "avoir un grand trai"
+      },
+      {
+        "korean": "이것이 바로 세상 돌아가는 형편이다",
+        "original": "Voilà le train du monde"
+      }
+    ]
+  },
+  {
+    "original": "bus",
+    "koreans": ["[구어] 버스, 시내버스,미니[마이크로] 버스 "],
+    "sentences": [
+      { "korean": "버스 정류장", "original": "arrêt du bu" },
+      { "korean": "버스 승차권", "original": "ticket de bu" },
+      { "korean": "버스를 타다", "original": "prendre le bu" },
+      {
+        "korean": "이 버스는 뇌이이에 갑니까?",
+        "original": "Ce bus va-t-il à Neuilly"
+      },
+      {
+        "korean": "버스가 정류장을 그냥 지나갔다",
+        "original": "Le bus a manqué un arrêt"
+      }
+    ]
+  },
+  {
+    "original": "gare",
+    "koreans": [
+      "[옛] 기차가 비켜 갈 수 있도록 되어 있는 곳",
+      "(기차의) 정거장, 역",
+      "선착장, 부두,(하천의 배가 비켜 갈 수 있게 되어 있는) 대피소"
+    ],
+    "sentences": [
+      { "korean": "그 친구 조심해야 돼", "original": "Gare à ce type" },
+      {
+        "korean": "역으로 …을 맞이하러 가다",
+        "original": "aller chercher qn à la gar"
+      },
+      {
+        "korean": "말을 듣지 않으면 혼날 줄 알아",
+        "original": "Gare à toi si tu désobéis"
+      },
+      {
+        "korean": "…하지 않을까 주의해야 한다",
+        "original": "[옛·문어] [gare que+(ne) sub."
+      },
+      { "korean": "넘어지지 않도록 조심해", "original": "Gare à ne pas tomber" }
+    ]
+  },
+  {
+    "original": "hôtel",
+    "koreans": [
+      "호텔, 여관",
+      "(대영주의) 관저,(개인의) 대저택, 사저 ",
+      "공공 건축물"
+    ],
+    "sentences": [
+      { "korean": "조폐국", "original": "Hôtel de la Monnai" },
+      {
+        "korean": "앵발리드 기념관 (나폴레옹의 묘 소재),[옛] 파리의 상이군인 병원",
+        "original": "Hôtel des Invalide"
+      },
+      { "korean": "별 3개짜리 호텔", "original": "hôtel trois étoile" },
+      { "korean": "왕실 시종부", "original": "hôtel du ro" },
+      { "korean": "중앙우체국", "original": "Hôtel des Poste" }
+    ]
+  },
+  {
+    "original": "restaurant",
+    "koreans": ["음식점, 식당, 레스토랑", "[옛] 영양식,보약, 강장제"],
+    "sentences": [
+      {
+        "korean": "기운을 차리는 데는 술이 제일 좋다",
+        "original": "C'est un restaurant que le vin"
+      },
+      {
+        "korean": "식권 (구내 식당이 없는 회사 따위에서 종업원들에게 점심 외식용으로 주는 티켓)",
+        "original": "ticket restaurant,titre restaurant ,chèque restauran"
+      },
+      {
+        "korean": "패스트 푸드 식당",
+        "original": "restaurant à service rapid"
+      },
+      {
+        "korean": "대중[싸구려] 음식점",
+        "original": "restaurant populaire[à bon marché"
+      },
+      {
+        "korean": "카페 레스토랑 (음료와 식사를 같이 파는 곳)",
+        "original": "café-restauran"
+      }
+    ]
+  },
+  {
+    "original": "repas",
+    "koreans": ["식사,식사시간", "(동물의) 먹이,식사", "[의학]"],
+    "sentences": [
+      {
+        "korean": "하루에 세 끼 식사를 하다",
+        "original": "faire trois repas par jou"
+      },
+      {
+        "korean": "나는 식사 시간에는 집에 있다",
+        "original": "Je suis chez moi à l'heure des repas"
+      },
+      {
+        "korean": "육식동물의 먹이 먹는 모습을 구경하다",
+        "original": "assister au repas des fauve"
+      },
+      {
+        "korean": "식사와 함께 복용해야 하는 약",
+        "original": "médicament à prendre pendant les repa"
+      },
+      {
+        "korean": "예수와 제자들 간의 최후의 만찬",
+        "original": "dernier repas des apôtres et de Jésu"
+      }
+    ]
+  },
+  {
+    "original": "déjeuner",
+    "koreans": [
+      "[옛] [지방어:북프랑스·벨기에·캐나다] 아침식사 ",
+      "점심",
+      "(집합적) 점심 식사 (요리)"
+    ],
+    "sentences": [
+      { "korean": "점심을 먹다", "original": "déjeune" },
+      { "korean": "아침 식사를 게걸스럽게 먹어치우다", "original": "déjeune" },
+      {
+        "korean": "고급 포도주를 곁들인 훌륭한 점심 식사",
+        "original": "bon déjeuner, arrosé de vins fin"
+      },
+      {
+        "korean": "그는 아침 식사도 하지 않고 일하러 떠났다",
+        "original": "Il est parti travailler sans déjeuner"
+      },
+      { "korean": "…을 점심에 초대하다", "original": "inviter qn à déjeune" }
+    ]
+  },
+  {
+    "original": "dîner",
+    "koreans": ["저녁 식사를 하다", "식사를 하다 "],
+    "sentences": [
+      { "korean": "저녁식사를 하다", "original": "dîne" },
+      { "korean": "저녁을 먹다", "original": "dîne" },
+      { "korean": "…을 저녁 식사에 초대하다", "original": "inviter qn à dîne" },
+      {
+        "korean": "…로 저녁 식사를 하다",
+        "original": "faire son dîner de[avec] q"
+      },
+      {
+        "korean": "저녁 식사를 준비하다",
+        "original": "préparer[[속어] faire] le dîne"
+      }
+    ]
+  },
+  {
+    "original": "chambre",
+    "koreans": [
+      "방, 침실,[역사] 왕의 침실,[옛] 거실",
+      "(특수 설비가 된) 방",
+      "[비유] 법정,(법원의) 부(部)"
+    ],
+    "sentences": [
+      {
+        "korean": "상공회의소([약] C.C.I.)",
+        "original": "chambre de commerce et d'industri"
+      },
+      {
+        "korean": "(프랑스) 의회 (1946년 이후로는 Assemblée nationale)",
+        "original": "la Chambre (des députés"
+      },
+      {
+        "korean": "(프랑스 최고재판소의) 형사및 경범죄[민사]부",
+        "original": "chambre criminelle [des requêtes"
+      },
+      {
+        "korean": "(토지 공유에 관한 조정을 담당하는) 회계법원",
+        "original": "chambre régionale des comptes (1982"
+      },
+      {
+        "korean": "의회의 다수[소수, 우, 좌]파",
+        "original": "majorité[minorité, droite, gauche] de la Chambr"
+      }
+    ]
+  },
+  {
+    "original": "travail",
+    "koreans": [
+      "일, 작업, 노동 ",
+      "직업,직책, 직무 ",
+      "노동,노동자, 노동 인구"
+    ],
+    "sentences": [
+      {
+        "korean": "나는 오늘 저녁에 일이 있다",
+        "original": "J'ai du travail ce soir"
+      },
+      {
+        "korean": "신체장애자부조센터 ([약] C.A.T.)",
+        "original": "centre d'aide par le travai"
+      },
+      {
+        "korean": "생산의 한 요소인 노동",
+        "original": "le travail, facteur de productio"
+      },
+      {
+        "korean": "노동자총연맹 ([약] C.G.T.)",
+        "original": "Confédération générale du travai"
+      },
+      {
+        "korean": "평등 근로에 평등임금 (여권신장론자들의 주장)",
+        "original": "à travail égal, salaire éga"
+      }
+    ]
+  },
+  {
+    "original": "médecin",
+    "koreans": ["의사,내과 의사", "[비유] (고뇌 따위의) 치료사"],
+    "sentences": [
+      {
+        "korean": "(목사·사제 따위의) 영혼의 치료사",
+        "original": "médecin de l'âme[des âmes"
+      },
+      { "korean": "해군 군의관", "original": "médecin de la Marin" },
+      { "korean": "병원에 가다", "original": "aller chez le médeci" },
+      {
+        "korean": "의사의 진단[처방]",
+        "original": "diagnostic[ordonnance, prescriptions] du médeci"
+      },
+      {
+        "korean": "(1968년 이후의) 통합 군의관",
+        "original": "médecin des armée"
+      }
+    ]
+  },
+  {
+    "original": "hôpital",
+    "koreans": [
+      "병원, 진료소([구어] <autoLink search=\"hosto\">hosto</autoLink>)",
+      "[역사] (19세기 이전의) 자선시설, 보호소 "
+    ],
+    "sentences": [
+      {
+        "korean": "입원시키다",
+        "original": "envoyer[admettre] un malade dans[à] un hôpita"
+      },
+      { "korean": "주간병원(↔ hôpital de nuit)", "original": "hôpital de jou" },
+      { "korean": "야전병원", "original": "hôpital de campagn" },
+      { "korean": "육군[해군]병원", "original": "hôpital militaire[maritime" },
+      { "korean": "종합[전문]병원", "original": "hôpital général[spécialisé" }
+    ]
+  },
+  {
+    "original": "commerçant",
+    "koreans": [
+      "상업의, 상업에 종사하는",
+      "상업이 발달한[번창한], 상점이 많은"
+    ],
+    "sentences": [
+      {
+        "korean": "언제나 같은 상점에서 물건을 구입하다",
+        "original": "se fournir toujours chez le même commerçan"
+      },
+      {
+        "korean": "도매[소매]상인",
+        "original": "commerçant qui vend en gros[en détail"
+      },
+      { "korean": "단골이 많은 상인", "original": "commerçant bien achaland" },
+      { "korean": "상업지구", "original": "quartier commerçan" },
+      { "korean": "소상인", "original": "petit commerçan" }
+    ]
+  },
+  {
+    "original": "acheteur",
+    "koreans": [
+      "사는 사람, 구매자 , (↔<span class=\"related_word\" lang=\"fr\"><autoLink search=\"vendeur\">vendeur</autoLink></span>)",
+      "[상업] 구매계원"
+    ],
+    "sentences": [
+      {
+        "korean": "모든 구매자에게 경품 증정 (판촉 문구)",
+        "original": "Prime à tout acheteur"
+      },
+      {
+        "korean": "구매자의 지불 능력을 확인하다",
+        "original": "s'assurer de la solvabilité d'un acheteu"
+      },
+      {
+        "korean": "드디어 그 집을 살 사람이 나섰다",
+        "original": "Enfin un acheteur s'est présenté pour la maison"
+      },
+      {
+        "korean": "모든 구매객에게 무료로 선물이 증정될 것이다",
+        "original": "Un cadeau sera remis gracieusement à tout acheteur"
+      },
+      {
+        "korean": "이 집은 아직 작자가 나서지 않고 있다",
+        "original": "On n'a toujours pas d'acheteur pour cette maison / Il n'y aucun acheteur pour cette maison"
+      }
+    ]
+  },
+  {
+    "original": "vendeur",
+    "koreans": ["파는 사람, 판매인, 상인", "판매원, 점원"],
+    "sentences": [
+      {
+        "korean": "그는 상술에 아주 능하다",
+        "original": "C'est un excellent vendeur"
+      },
+      {
+        "korean": "그는 이 땅을 사고자 하는데 나는 팔 생각이 없다",
+        "original": "Il veut acheter ce terrain, mais je ne suis pas vendeur"
+      },
+      { "korean": "무허가 노점상", "original": "vendeur à la sauvett" },
+      { "korean": "매도인과 매수인", "original": "le vendeur et l'acheteu" },
+      { "korean": "생선 장수", "original": "vendeur de poisson" }
+    ]
+  },
+  {
+    "original": "magasin",
+    "koreans": [
+      "상점, 가게 ",
+      "창고, 저장고, 보관소,(집합적) 저장품 ",
+      "[비유] 많이 있는 곳, 보고(寶庫)"
+    ],
+    "sentences": [
+      { "korean": "…의 재고가 있다", "original": "avoir qc en magasi" },
+      { "korean": "…을 창고에 넣다", "original": "mettre qc en magasi" },
+      {
+        "korean": "[옛] …을 저장하다",
+        "original": "faire[tenir] un magasin de q"
+      },
+      {
+        "korean": "연쇄점, 체인스토어",
+        "original": "magasin à succursales multiple"
+      },
+      {
+        "korean": "도매점[소매점]",
+        "original": "magasin de vente en gros[au détail"
+      }
+    ]
+  },
+  {
+    "original": "supermarché",
+    "koreans": ["슈퍼마켓"],
+    "sentences": [
+      { "korean": "슈퍼마켓", "original": "supermarch" },
+      {
+        "korean": "우리집 아주 가까이에 슈퍼마켓이 있다. 그래서 매우 편리하다",
+        "original": "Il y a un supermarché tout près de chez moi, alors c'est très pratique"
+      },
+      {
+        "korean": "이 슈퍼마켓에서는 도난 사건이 잦다",
+        "original": "Il y a de la fauche dans ce supermarché"
+      },
+      {
+        "korean": "이 길을 조금만 내려가면 슈퍼마켓이 나와요",
+        "original": "Si vous descendez un petit peu ce chemin, vous trouverez [verrez] le supermarché"
+      },
+      {
+        "korean": "슈퍼마켓의 정육 코너",
+        "original": "rayon boucherie d'un supermarch"
+      }
+    ]
+  },
+  {
+    "original": "cinéma",
+    "koreans": ["영화", "영화관 ", "영화계"],
+    "sentences": [
+      {
+        "korean": "영화를 위한 소설의 각본",
+        "original": "adaptation d'un roman pour le ciném"
+      },
+      {
+        "korean": "상영관이 여러개인 영화관",
+        "original": "cinéma à salles multiple"
+      },
+      {
+        "korean": "대단히 우수한 영화이다",
+        "original": "C'est du très grand cinéma"
+      },
+      { "korean": "드라이브인 영화관", "original": "cinéma de plein ai" },
+      { "korean": "영화계에 몸담다", "original": "être dans le ciném" }
+    ]
+  },
+  {
+    "original": "marché",
+    "koreans": ["매매, 거래,계약", "장, 장터,시장"],
+    "sentences": [
+      {
+        "korean": "생필품을 구입하러 시장에 가다",
+        "original": "aller au marché pour faire ses provision"
+      },
+      {
+        "korean": "프랑스의 향수 시장을 장악하다",
+        "original": "conquérir le marché français des parfum"
+      },
+      { "korean": "시장에서 물건을 팔다", "original": "vendre sur un march" },
+      {
+        "korean": "아르헨티나의 쇠고기 시장",
+        "original": "marché argentin de la viand"
+      },
+      {
+        "korean": "신제품을 시장에 내놓다",
+        "original": "mettre[offrir, lancer] un produit nouveau sur un march"
+      }
+    ]
+  },
+  {
+    "original": "boulangerie",
+    "koreans": ["제빵,빵 장사", "빵 가게, 빵집"],
+    "sentences": [
+      { "korean": "빵을 사러 가다", "original": "aller à la boulangeri" },
+      {
+        "korean": "제빵용 화덕[반죽통]",
+        "original": "four[pétrin] d'une boulangeri"
+      },
+      { "korean": "(빵도 파는) 제과점", "original": "boulangerie-pâtisseri" },
+      { "korean": "빵 사러 가다", "original": "aller à la boulangeri" },
+      {
+        "korean": "빵집은 내일 다시 문을 연다",
+        "original": "La boulangerie rouvre demain"
+      }
+    ]
+  },
+  {
+    "original": "pharmacie",
+    "koreans": [
+      "약학,약학과",
+      "약국, 약방, (병원의) 약국, 조제실,(캐나다의) 드러그 스토어 (약·담배·화장품·간이음식 따위를 판매하는 상점)",
+      "가정 상비약품 일체,(집합적) 약품류,약 상자"
+    ],
+    "sentences": [
+      {
+        "korean": "의사 처방전에 따라 약국에서 판매하는 약품",
+        "original": "médicament vendu en pharmacie sur ordonnanc"
+      },
+      { "korean": "약학과 2학년", "original": "deuxième année de pharmaci" },
+      { "korean": "약품을 사다", "original": "acheter de la pharmaci" },
+      {
+        "korean": "(휴무일에 영업하는) 당번 약국",
+        "original": "pharmacie de gard"
+      },
+      { "korean": "약 단지", "original": "pots à pharmaci" }
+    ]
+  },
+  {
+    "original": "hôpital",
+    "koreans": [
+      "병원, 진료소([구어] <autoLink search=\"hosto\">hosto</autoLink>)",
+      "[역사] (19세기 이전의) 자선시설, 보호소 "
+    ],
+    "sentences": [
+      {
+        "korean": "입원시키다",
+        "original": "envoyer[admettre] un malade dans[à] un hôpita"
+      },
+      { "korean": "주간병원(↔ hôpital de nuit)", "original": "hôpital de jou" },
+      { "korean": "야전병원", "original": "hôpital de campagn" },
+      { "korean": "육군[해군]병원", "original": "hôpital militaire[maritime" },
+      { "korean": "종합[전문]병원", "original": "hôpital général[spécialisé" }
+    ]
+  },
+  {
+    "original": "médecin",
+    "koreans": ["의사,내과 의사", "[비유] (고뇌 따위의) 치료사"],
+    "sentences": [
+      {
+        "korean": "(목사·사제 따위의) 영혼의 치료사",
+        "original": "médecin de l'âme[des âmes"
+      },
+      { "korean": "해군 군의관", "original": "médecin de la Marin" },
+      { "korean": "병원에 가다", "original": "aller chez le médeci" },
+      {
+        "korean": "의사의 진단[처방]",
+        "original": "diagnostic[ordonnance, prescriptions] du médeci"
+      },
+      {
+        "korean": "(1968년 이후의) 통합 군의관",
+        "original": "médecin des armée"
+      }
+    ]
+  },
+  {
+    "original": "dentiste",
+    "koreans": ["치과 의사 "],
+    "sentences": [
+      { "korean": "치과에 가다", "original": "aller chez le dentist" },
+      { "korean": "치과 병원[진료실]", "original": "cabinet de dentist" },
+      { "korean": "치과 기공사", "original": "(동격) mécanicien-dentist" },
+      { "korean": "치과 치료실병원", "original": "cabinet de dentist" },
+      { "korean": "구강외과 의사", "original": "chirurgien dentist" }
+    ]
+  },
+  {
+    "original": "coiffeur",
+    "koreans": ["이발사, 미용사"],
+    "sentences": [
+      { "korean": "미용사", "original": "coiffeu" },
+      { "korean": "이발소에 가다", "original": "aller chez le coiffeu" },
+      {
+        "korean": "이발사미용사는 내 두피를 마사지해 주었다",
+        "original": "Le coiffeur m'a massé le cuir chevelu"
+      },
+      {
+        "korean": "그 부인이 미용실에서 돌아온다",
+        "original": "La dame revient de chez son coiffeur"
+      },
+      { "korean": "미용사", "original": "coiffeur pour dame" }
+    ]
+  },
+  {
+    "original": "boucherie",
+    "koreans": [
+      "[옛] 도살장",
+      "푸줏간, 정육점",
+      "[지방어:스위스·캐나다] (돼지 따위를) 도살하여 해체하고 가공하는 행위"
+    ],
+    "sentences": [
+      {
+        "korean": "병사들을 살육[학살]의 장(場)으로 이끌다[보내다]",
+        "original": "conduire[envoyer] des soldats à la boucheri"
+      },
+      {
+        "korean": "슈퍼마켓의 정육 코너",
+        "original": "rayon boucherie d'un supermarch"
+      },
+      {
+        "korean": "말고기 전문점",
+        "original": "boucherie chevaline[hippophagique"
+      },
+      { "korean": "돼지를 잡다", "original": "faire boucheri" },
+      { "korean": "돼지고기 판매점", "original": "boucherie charcuteri" }
+    ]
+  },
+  {
+    "original": "pâtisserie",
+    "koreans": [
+      "과자 제조(법)",
+      "(밀가루로 만든) 과자, 케이크",
+      "과자 제조[판매]업,제과점"
+    ],
+    "sentences": [
+      { "korean": "과자를 만들다", "original": "faire de la pâtisseri" },
+      { "korean": "제과용 화덕", "original": "four à pâtisseri" },
+      {
+        "korean": "그는 제과점을 경영하고 있다",
+        "original": "Il tient une pâtisserie"
+      },
+      {
+        "korean": "이 오븐은 빵이 잘 구워진다",
+        "original": "Ce four cuit bien la pâtisserie"
+      },
+      {
+        "korean": "그는 과자를 특히 좋아한다",
+        "original": "[friand de] Il est friand de pâtisserie"
+      }
+    ]
+  },
+  {
+    "original": "bijouterie",
+    "koreans": ["보석 가게,보석 제조[세공, 매매]업", "(집합적) 보석"],
+    "sentences": [
+      { "korean": "보석 세공", "original": "bijouterie" },
+      { "korean": "시계·보석 가게", "original": "horlogerie-bijouteri" },
+      {
+        "korean": "보석세공의 진정한 걸작",
+        "original": "un vrai chef-d'œuvre de bijouteri"
+      },
+      {
+        "korean": "그는 보석판매업에 뛰어들었다",
+        "original": "Il s'est mis dans la bijouterie"
+      },
+      { "korean": "은도금한 장신구", "original": "bijouterie en argent" }
+    ]
+  },
+  {
+    "original": "poissonnerie",
+    "koreans": ["어시장", "해산물 판매업,어물전, 생선가게"],
+    "sentences": [
+      { "korean": "생선 가게", "original": "poissonnerie" },
+      {
+        "korean": "어물전에서 홍합을 사다",
+        "original": "acheter des moules à la poissonneri"
+      },
+      {
+        "korean": "어물전에서 홍합을 사다",
+        "original": "acheter des moules à la poissonneri"
+      },
+      {
+        "korean": "어물 가게",
+        "original": "poissonnerie, boutique de poissons séchés"
+      }
+    ]
+  },
+  {
+    "original": "banque",
+    "koreans": [
+      "은행(의 업무)",
+      "(노름판의) 물주(의 돈)",
+      "[구어] (약장수 따위의) 과장 선전"
+    ],
+    "sentences": [
+      {
+        "korean": "(자기 상품을) 과대 선전하다",
+        "original": "faire de la banqu"
+      },
+      {
+        "korean": "물주를 쓰러뜨리다, 판돈을 다 쓸어버리다",
+        "original": "faire sauter la banqu"
+      },
+      {
+        "korean": "은행에 구좌가 있다[구좌를 개설하다]",
+        "original": "avoir[ouvrir] un compte en banqu"
+      },
+      {
+        "korean": "은행에 돈을 찾으러 가다",
+        "original": "passer à la banque retirer de l'argen"
+      },
+      {
+        "korean": "…와 은행 거래가 있다",
+        "original": "avoir un compte de banque chez q"
+      }
+    ]
+  },
+  {
+    "original": "poste",
+    "koreans": [
+      "직, 직위,부서, 임지",
+      "(경비원·감시원 따위의) 근무소,(특히) 경찰 지서, 파출소 ",
+      "(기구·기계 따위의) 설치 장소,설치 기구"
+    ],
+    "sentences": [
+      { "korean": "…을 파출소로 끌고 가다", "original": "conduire qn au post" },
+      {
+        "korean": "국유치 우편으로 편지를 부치다",
+        "original": "adresser une lettre poste restant"
+      },
+      {
+        "korean": "유치장에서 밤을 보내다",
+        "original": "passer la nuit au post"
+      },
+      {
+        "korean": "편지를 우체통에 넣다",
+        "original": "mettre une lettre à la post"
+      },
+      {
+        "korean": "…을 우편으로 보내다",
+        "original": "envoyer[expédier] qc par la post"
+      }
+    ]
+  },
+  {
+    "original": "bureau",
+    "koreans": [
+      "(사무용) 책상",
+      "집무실, 사무실 ",
+      "(관청·회사의) 부서, 국, 원, 과"
+    ],
+    "sentences": [
+      { "korean": "사무용 책상", "original": "bureau" },
+      { "korean": "영업소", "original": "burea" },
+      {
+        "korean": "국제 노동 사무국 ([약] B.I.T.)",
+        "original": "Bureau international du travai"
+      },
+      {
+        "korean": "접개식 뚜껑 달린 책상",
+        "original": "bureau américain[à cylindre, à rideau"
+      },
+      {
+        "korean": "파리는 진기한 것들이 모이는 곳이다",
+        "original": "Paris est le grand bureau des merveilles"
+      }
+    ]
+  },
+  {
+    "original": "bibliothèque",
+    "koreans": ["도서관, 도서[열람]실,서재", "책장, 서가 ", "장서,총서 "],
+    "sentences": [
+      {
+        "korean": "도서관에서 책을 대출하다",
+        "original": "emprunter un livre à la bibliothèqu"
+      },
+      {
+        "korean": "풍부한 장서를 갖추다",
+        "original": "se constituer une riche bibliothèqu"
+      },
+      {
+        "korean": "장미총서 (Hachette 출판사의 소년[소녀]를 위한 책)",
+        "original": "bibliothèque ros"
+      },
+      {
+        "korean": "(파리의) 국립도서관 ([구어] la Nationale, la B.N.[beεn])",
+        "original": "Bibliothèque national"
+      },
+      { "korean": "마호가니 책꽂이", "original": "bibliothèque en acajo" }
+    ]
+  },
+  {
+    "original": "musée",
+    "koreans": [
+      "박물관,(특히) 미술관 ",
+      "박물관[미술관] 같은 곳,진귀한 물건들의 집합",
+      "(문학자의) 서재"
+    ],
+    "sentences": [
+      {
+        "korean": "그의 아파트는 진귀한 것으로 가득차 있다",
+        "original": "Son appartement est un véritable musée"
+      },
+      { "korean": "해양박물관", "original": "musée de la Marin" },
+      { "korean": "공예박물관", "original": "musée des Arts et Métier" },
+      {
+        "korean": "박물관[미술관]에나 있을 만한 물건, 진귀한 물건",
+        "original": "objet[pièce] de musé"
+      },
+      { "korean": "[구어] 추물의 집합", "original": "musée des horreur" }
+    ]
+  },
+  {
+    "original": "théâtre",
+    "koreans": ["연극(예술),극작품", "극장,무대 ", "공연, 상연 "],
+    "sentences": [
+      {
+        "korean": "국립 파리 오페라 극단",
+        "original": "théâtre national de l'Opéra de Pari"
+      },
+      {
+        "korean": "수많은 전투의 무대[현장]",
+        "original": "théâtre de nombreux combat"
+      },
+      {
+        "korean": "단원들과 순회공연을 떠나다",
+        "original": "partir en tournée avec un théâtr"
+      },
+      {
+        "korean": "코르네이유의 극작품들",
+        "original": "le théâtre de Corneill"
+      },
+      { "korean": "중세 연극", "original": "théâtre du Moyen Âg" }
+    ]
+  },
+  {
+    "original": "stade",
+    "koreans": [
+      "스타디움, 경기장",
+      "(le <strong><autoLink search=\"stade\">stade</autoLink></strong>) 스포츠, 운동",
+      "(발달의) 단계,정도, 수준"
+    ],
+    "sentences": [
+      {
+        "korean": "그의 학업은 어느 정도 수준이냐?",
+        "original": "À quel stade en est-il dans ses études"
+      },
+      {
+        "korean": "전염병의 발진기",
+        "original": "stade éruptif d'une maladie infectieus"
+      },
+      { "korean": "위대한 운동선수들", "original": "dieux du stad" },
+      { "korean": "거울상 단계", "original": "stade du miroi" },
+      { "korean": "성기기", "original": "stade génita" }
+    ]
+  },
+  {
+    "original": "aéroport",
+    "koreans": ["공항(空港)"],
+    "sentences": [
+      { "korean": "공항", "original": "aéropor" },
+      { "korean": "국제공항", "original": "aéroport internationa" },
+      {
+        "korean": "공항에서 면세품을 사다",
+        "original": "acheter des produits détaxés dans un aéropor"
+      },
+      {
+        "korean": "공항의 관제탑",
+        "original": "tour de contrôle d'un aéropor"
+      },
+      {
+        "korean": "항공기를 관제하다",
+        "original": "contrôler les mouvements des avions pour assurer une sécurité au niveau d'un aéroport, contrôler les trajectoires et les horaires des divers avions pour éviter les accidents"
+      }
+    ]
+  },
+  {
+    "original": "gare routière",
+    "koreans": ["버스 터미널"],
+    "sentences": [
+      {
+        "korean": "버스 터미널",
+        "original": "(시내) (gare) terminus d'autobus, (시외) (gare) terminus d'autocars [de cars], gare routière"
+      },
+      { "korean": "버스·트럭 터미널", "original": "gare routièr" },
+      {
+        "korean": "터미널까지 요로마다 경찰이 배치되었다",
+        "original": "Des agents de police ont été placés dans toutes les artères de la ville, et jusqu'aux gares routières"
+      }
+    ]
+  }
+]
