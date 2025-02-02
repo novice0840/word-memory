@@ -11,6 +11,16 @@ export default {
   },
   theme: {
     extend: {
+      fontFamily: {
+        japanese: [
+          "Noto Sans JP",
+          "Hiragino Kaku Gothic Pro",
+          "Hiragino Sans",
+          "Meiryo",
+          "MS PGothic",
+          "sans-serif",
+        ],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

@@ -41,7 +41,7 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
   return (
     <div
       aria-label="wordList"
-      className={`absolute top-0 left-0 h-full w-full transition-transform duration-300 p-4  ${
+      className={`font-japanese absolute top-0 left-0 h-full w-full transition-transform duration-300 p-4  ${
         isWordListOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
