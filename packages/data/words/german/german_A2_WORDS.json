@@ -1,0 +1,218 @@
+[
+  { "original": "Fahrrad", "sentences": [] },
+  {
+    "original": "Auto",
+    "koreans": [
+      "스스로·자발적으로, 자기 혼자서·자기 힘으로의 뜻(예:<autoLink search=\"autodétermination\">autodétermination</autoLink>, <autoLink search=\"autodidacte\">autodidacte</autoLink>, <autoLink search=\"autarcie\">autarcie</autoLink>), "
+    ],
+    "sentences": [
+      { "korean": "자동차로 여행하다", "original": "faire le voyage en aut" },
+      { "korean": "자동차 유지비", "original": "frais-aut" },
+      { "korean": "자동차 고장", "original": "panne d'aut" },
+      { "korean": "자동차 보험", "original": "assurance-aut" },
+      { "korean": "차고", "original": "garage-aut" }
+    ]
+  },
+  { "original": "Zug", "koreans": ["스위스, 추크 주 처녀"], "sentences": [] },
+  {
+    "original": "Bus",
+    "koreans": ["[구어] 버스, 시내버스,미니[마이크로] 버스 "],
+    "sentences": [
+      { "korean": "버스 정류장", "original": "arrêt du bu" },
+      { "korean": "버스 승차권", "original": "ticket de bu" },
+      { "korean": "버스를 타다", "original": "prendre le bu" },
+      {
+        "korean": "이 버스는 뇌이이에 갑니까?",
+        "original": "Ce bus va-t-il à Neuilly"
+      },
+      {
+        "korean": "버스가 정류장을 그냥 지나갔다",
+        "original": "Le bus a manqué un arrêt"
+      }
+    ]
+  },
+  { "original": "Bahnhof", "sentences": [] },
+  {
+    "original": "Hotel",
+    "koreans": [
+      "호텔, 여관",
+      "(대영주의) 관저,(개인의) 대저택, 사저 ",
+      "공공 건축물"
+    ],
+    "sentences": [
+      {
+        "korean": "별 4개 등급의 호텔",
+        "original": "un (hôtel) quatre étoile"
+      },
+      {
+        "korean": "현대식 시설을 완비한 호텔",
+        "original": "(동격) hôtel tout confor"
+      },
+      {
+        "korean": "고급은 아니지만 깨끗한 호텔",
+        "original": "hôtel modeste mais propr"
+      },
+      {
+        "korean": "이 호텔은 일박에 5만 원이다",
+        "original": "C'est 50 000 wons la nuit dans cet hôtel"
+      },
+      {
+        "korean": "특급 호텔의 스위트룸을 예약하다",
+        "original": "réserver une suite dans un hôtel de lux"
+      }
+    ]
+  },
+  {
+    "original": "Restaurant",
+    "koreans": ["음식점, 식당, 레스토랑", "[옛] 영양식,보약, 강장제"],
+    "sentences": [
+      {
+        "korean": "기운을 차리는 데는 술이 제일 좋다",
+        "original": "C'est un restaurant que le vin"
+      },
+      {
+        "korean": "식권 (구내 식당이 없는 회사 따위에서 종업원들에게 점심 외식용으로 주는 티켓)",
+        "original": "ticket restaurant,titre restaurant ,chèque restauran"
+      },
+      {
+        "korean": "패스트 푸드 식당",
+        "original": "restaurant à service rapid"
+      },
+      {
+        "korean": "대중[싸구려] 음식점",
+        "original": "restaurant populaire[à bon marché"
+      },
+      {
+        "korean": "카페 레스토랑 (음료와 식사를 같이 파는 곳)",
+        "original": "café-restauran"
+      }
+    ]
+  },
+  { "original": "Mahlzeit", "sentences": [] },
+  { "original": "Frühstück", "sentences": [] },
+  { "original": "Abendessen", "sentences": [] },
+  {
+    "original": "Zimmer",
+    "koreans": [
+      "<autoLink search=\"dix\">Dix</autoLink> <autoLink search=\"paire\">paires</autoLink> <autoLink search=\"peau\">de peaux</autoLink>."
+    ],
+    "sentences": []
+  },
+  {
+    "original": "Arbeit",
+    "koreans": [
+      "<autoLink search=\"travail\">travail</autoLink> <autoLink search=\"temporaire\">temporaire</autoLink>, <autoLink search=\"travail\">travail</autoLink> à <autoLink search=\"temps\">temps</autoLink> <autoLink search=\"partiel\">partiel</autoLink>"
+    ],
+    "sentences": []
+  },
+  { "original": "Arzt", "sentences": [] },
+  { "original": "Krankenhaus", "sentences": [] },
+  {
+    "original": "Kaufmann",
+    "koreans": ["여자 두상 : 크니드의 아프로디테 두상, 일명 \"코프만 두상\""],
+    "sentences": []
+  },
+  { "original": "Käufer", "sentences": [] },
+  { "original": "Verkäufer", "sentences": [] },
+  { "original": "Laden", "koreans": ["[인명] 오사마 빈라덴"], "sentences": [] },
+  { "original": "Supermarkt", "sentences": [] },
+  { "original": "Kino", "koreans": ["[약학] 키노"], "sentences": [] },
+  { "original": "Markt", "sentences": [] },
+  { "original": "Bäckerei", "sentences": [] },
+  { "original": "Apotheke", "sentences": [] },
+  { "original": "Krankenhaus", "sentences": [] },
+  { "original": "Zahnarzt", "sentences": [] },
+  {
+    "original": "Friseur",
+    "koreans": [
+      "<autoLink search=\"dire\">Se disait</autoLink> <autoLink search=\"autrefois\">autrefois</autoLink> <autoLink search=\"pour\">pour</autoLink> <autoLink search=\"coiffeur\">coiffeur</autoLink>."
+    ],
+    "sentences": []
+  },
+  { "original": "Metzgerei", "sentences": [] },
+  { "original": "Konditorei", "sentences": [] },
+  { "original": "Juwelier", "sentences": [] },
+  { "original": "Fischmarkt", "sentences": [] },
+  {
+    "original": "Bank",
+    "koreans": [
+      "<autoLink search=\"qualifier\">Qualifie</autoLink> <autoLink search=\"papier\">le papier</autoLink> <autoLink search=\"parchemin\">parchemin</autoLink> <autoLink search=\"pour\">pour</autoLink> <autoLink search=\"action\">actions</autoLink>, <autoLink search=\"obligation\">obligations</autoLink>, <autoLink search=\"mandat\">mandats</autoLink>, <autoLink search=\"facture\">factures</autoLink>, etc."
+    ],
+    "sentences": []
+  },
+  {
+    "original": "Post",
+    "koreans": ["후에·다음에의 뜻"],
+    "sentences": [
+      {
+        "korean": "고흐는 후기 인상파의 화가이다",
+        "original": "Van Gogh est un peintre post-impressionniste"
+      },
+      {
+        "korean": "편지 하단의 추신",
+        "original": "post-scriptum au bas d'une lettr"
+      },
+      {
+        "korean": "요직에 발탁되다",
+        "original": "être nommé(e) à un post clé [à un poste important]"
+      },
+      {
+        "korean": "작가의 원고가 그의 죽음 이후에 발견되었다",
+        "original": "Des manuscrits originaux de l'auteur ont été découverts post mortem"
+      },
+      {
+        "korean": "대학 졸업 후의 전문 교육",
+        "original": "enseignement post-universitair"
+      }
+    ]
+  },
+  { "original": "Büro", "sentences": [] },
+  { "original": "Bibliothek", "sentences": [] },
+  {
+    "original": "Museum",
+    "koreans": [
+      "(자연과학) 박물관,(<autoLink search=\"muséum\">le Muséum</autoLink>) (파리의) 자연사 박물관"
+    ],
+    "sentences": [
+      { "korean": "박물관 소장품", "original": "galeries du muséu" }
+    ]
+  },
+  { "original": "Theater", "koreans": ["[지명] 아폴로 극장"], "sentences": [] },
+  {
+    "original": "Stadion",
+    "koreans": [
+      "(<autoLink search=\"écologie\">écologie</autoLink>) <autoLink search=\"phylum\">Phylum</autoLink> <autoLink search=\"là\">de la</autoLink> <autoLink search=\"végétation\">végétation</autoLink> <autoLink search=\"macroscopique\">macroscopique</autoLink> <autoLink search=\"fixer\">fixée</autoLink> <autoLink search=\"au\">au</autoLink> <autoLink search=\"fond\">fond</autoLink> <autoLink search=\"de\">de</autoLink> <autoLink search=\"eau\">l'eau</autoLink>."
+    ],
+    "sentences": []
+  },
+  { "original": "Flughafen", "sentences": [] },
+  { "original": "Busbahnhof", "sentences": [] },
+  {
+    "original": "Park",
+    "koreans": [
+      "<autoLink search=\"nom\">Nom</autoLink> <autoLink search=\"famille\">de famille</autoLink> <autoLink search=\"coréen\">coréen</autoLink>."
+    ],
+    "sentences": [
+      {
+        "korean": "나의 친구 박 씨를 소개해 드리겠습니다",
+        "original": "Je vous présente un ami M. Park"
+      },
+      {
+        "korean": "나는 박 선생님께 물을 가져다주었다",
+        "original": "J'ai apporté de l'eau à M. Park"
+      },
+      {
+        "korean": "박씨 집안과 두터운 연분을 쌓다",
+        "original": "nouer des liens très étroits avec la famille Park"
+      },
+      {
+        "korean": "병원장이 닥터 박을 불렀다",
+        "original": "Le directeur de l'hôpital a convoqué le Docteur Park"
+      },
+      {
+        "korean": "박 씨 딸과의 약혼",
+        "original": "les fiançailles [la promesse de mariage] avec la fille de monsieur Park"
+      }
+    ]
+  }
+]

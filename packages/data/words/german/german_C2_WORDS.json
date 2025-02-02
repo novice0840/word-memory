@@ -1,0 +1,192 @@
+[
+  {
+    "original": "Debatte",
+    "koreans": [
+      "<autoLink search=\"premier-né\">Première</autoLink> <autoLink search=\"personne\">personne</autoLink> <autoLink search=\"du\">du</autoLink> <autoLink search=\"singulier\">singulier</autoLink> <autoLink search=\"du\">du</autoLink> <autoLink search=\"présent\">présent</autoLink> <autoLink search=\"du\">du</autoLink> <autoLink search=\"subjonctif\">subjonctif</autoLink> <autoLink search=\"débattre\">de débattre</autoLink>.",
+      "<autoLink search=\"troisième\">Troisième</autoLink> <autoLink search=\"personne\">personne</autoLink> <autoLink search=\"du\">du</autoLink> <autoLink search=\"singulier\">singulier</autoLink> <autoLink search=\"du\">du</autoLink> <autoLink search=\"présent\">présent</autoLink> <autoLink search=\"du\">du</autoLink> <autoLink search=\"subjonctif\">subjonctif</autoLink> <autoLink search=\"débattre\">de débattre</autoLink>."
+    ],
+    "sentences": []
+  },
+  { "original": "Rhetorik", "sentences": [] },
+  { "original": "Überzeugung", "sentences": [] },
+  { "original": "Dialektik", "sentences": [] },
+  { "original": "Abhandlung", "sentences": [] },
+  {
+    "original": "Reflexion",
+    "koreans": [
+      "숙고, 성찰,사고력, 성찰력 ",
+      "(흔히 복수) (숙고 후의) 생각, 견해 ",
+      "[구어] 잔소리, 주의,(불쾌한) 지적"
+    ],
+    "sentences": [
+      {
+        "korean": "음, 생각을 좀 해 봐야겠네",
+        "original": "Heu! Ça demande réflexion"
+      },
+      {
+        "korean": "깊이 생각하여 처리된 일",
+        "original": "affaire menée avec réflexio"
+      },
+      {
+        "korean": "그 문제는 일고를 요한다",
+        "original": "Cette affaire demande réflexion"
+      },
+      {
+        "korean": "이런 생각이 들자 그는 당황했다",
+        "original": "Cette réflexion l'a interloqué"
+      },
+      {
+        "korean": "수첩에 생각나는 것을 적다",
+        "original": "noter une réflexion sur un carne"
+      }
+    ]
+  },
+  { "original": "Abstraktion", "sentences": [] },
+  {
+    "original": "Intuition",
+    "koreans": ["[철학] 직관(直觀)", "직감,예감, 예각(豫覺)"],
+    "sentences": [
+      {
+        "korean": "그녀의 사업적인 예측력은 뛰어나다",
+        "original": "Elle a beaucoup d'intuition en affaires"
+      },
+      {
+        "korean": "다가올 위험[일]을 직감하다",
+        "original": "avoir l'intuition d'un danger[de ce qui va se passer"
+      },
+      {
+        "korean": "경험적[합리적, 형이상학적] 직관",
+        "original": "intuition empirique[rationnelle, métaphysique"
+      },
+      { "korean": "자신의 직감에 따르다", "original": "suivre son intuitio" },
+      { "korean": "예감을 느끼다", "original": "avoir de l'intuitio" }
+    ]
+  },
+  { "original": "Konzeptualisierung", "sentences": [] },
+  { "original": "Wahrnehmung", "sentences": [] },
+  {
+    "original": "Idee",
+    "koreans": ["생각, 사고,상념", "착상, 아이디어, 구상", "견해,소신"],
+    "sentences": [
+      {
+        "korean": "내게 좋은 생각이 하나 있다",
+        "original": "J'ai une bonne idée"
+      },
+      { "korean": "좋은 안을 내 봐라", "original": "Donne-moi une bonne idée" },
+      {
+        "korean": "그거야 그저 공연한 상상일 뿐이지!",
+        "original": "En voilà, une idée"
+      },
+      {
+        "korean": "[구어] 아주 훌륭한 생각이다",
+        "original": "C'est une idée lumineuse"
+      },
+      {
+        "korean": "내게 좋은 생각이 하나 떠올랐다",
+        "original": "J'ai eu une bonne idée"
+      }
+    ]
+  },
+  {
+    "original": "Phantasie",
+    "koreans": [
+      "[Verb] first-person singular present subjunctive of phantasier",
+      "[Verb] third-person singular present subjunctive of phantasier",
+      "[Verb] first-person singular present subjunctive of phantasier"
+    ],
+    "sentences": []
+  },
+  { "original": "Kreativität", "sentences": [] },
+  { "original": "Erfindung", "sentences": [] },
+  { "original": "Originalität", "sentences": [] },
+  {
+    "original": "Innovation",
+    "koreans": ["혁신, 쇄신,혁신적인 것, 신기술"],
+    "sentences": [
+      { "korean": "혁신을 일으키다", "original": "introduire une innovatio" },
+      {
+        "korean": "자금 조달이 안 되는 것은 혁신에 걸림돌이 된다",
+        "original": "Le manque de financement est un frein pour l'innovation"
+      },
+      { "korean": "혁신에 대한 필요", "original": "besoin en innovatio" },
+      { "korean": "연극의 개혁", "original": "innovation au théâtr" },
+      { "korean": "혁신을 부추기다", "original": "stimuler l'innovatio" }
+    ]
+  },
+  { "original": "Paradoxon", "sentences": [] },
+  { "original": "Widerspruch", "sentences": [] },
+  { "original": "Zweideutigkeit", "sentences": [] },
+  {
+    "original": "Nuance",
+    "koreans": [
+      "(동일계 색들 사이의) 명암 차이, 색조, 농담",
+      "(음색·맛·감정 따위의) 미묘한 차이[변화], (말 따위의) 섬세한 의미 (차이), (표현의) 독특한 맛 ",
+      "희미한 흔적, 낌새,섬세한 수정"
+    ],
+    "sentences": [
+      {
+        "korean": "(점점 강하게·점점 약하게와 같은) 음조의 변화",
+        "original": "modification de la nuanc"
+      },
+      {
+        "korean": "그의 연설에는 인종차별의 기미가 있다",
+        "original": "Il y a dans son discours une nuance de racisme"
+      },
+      {
+        "korean": "융통성 없는[비타협적인] 사람",
+        "original": "homme sans nuanc"
+      },
+      {
+        "korean": "이 두 단어에는 미묘한의 의미의 차이가 있다",
+        "original": "Entre ces deux mots, il y a une nuance de sens"
+      },
+      {
+        "korean": "이 두 견해 사이에는 크나큰 차이가 있다",
+        "original": "Il y a plus qu’une nuance entre ces deux points de vue"
+      }
+    ]
+  },
+  { "original": "Phänomenologie", "sentences": [] },
+  { "original": "Hermeneutik", "sentences": [] },
+  { "original": "Strukturalismus", "sentences": [] },
+  {
+    "original": "Postmoderne",
+    "koreans": ["포스트모더니즘의"],
+    "sentences": [
+      { "korean": "포스트모던의", "original": "post-modern" },
+      {
+        "korean": "포스트모던 철학의 근본 사상은 어떤 것인가 ?",
+        "original": "Quelle est l’idée mère de la philosophie postmoderne "
+      }
+    ]
+  },
+  { "original": "Dekonstruktion", "sentences": [] },
+  { "original": "Existentialismus", "sentences": [] },
+  { "original": "Erkenntnistheorie", "sentences": [] },
+  {
+    "original": "Ontologie",
+    "koreans": ["[철학] 존재론, 본체론,(하이데거의) 존재론"],
+    "sentences": []
+  },
+  { "original": "Metaphysik", "sentences": [] },
+  { "original": "Transzendenz", "sentences": [] },
+  { "original": "Dialektik", "sentences": [] },
+  { "original": "Heuristik", "sentences": [] },
+  { "original": "Prolegomena", "sentences": [] },
+  {
+    "original": "Teleologie",
+    "koreans": ["[철학] 목적론"],
+    "sentences": [
+      {
+        "korean": "인간 존재의 목적",
+        "original": "la finalité de l'existence humaine; la téléologi"
+      }
+    ]
+  },
+  { "original": "Semiotik", "sentences": [] },
+  { "original": "Hermeneutik", "sentences": [] },
+  { "original": "Deduktiv", "sentences": [] },
+  { "original": "Induktiv", "sentences": [] },
+  { "original": "Substantiv", "sentences": [] },
+  { "original": "Akkulturation", "sentences": [] }
+]

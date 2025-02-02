@@ -1,0 +1,168 @@
+[
+  { "original": "Hallo", "sentences": [] },
+  { "original": "Tschüss", "sentences": [] },
+  {
+    "original": "Bitte",
+    "koreans": ["[속어] 자지", "[은어] (학교·군대의) 벌"],
+    "sentences": [
+      {
+        "korean": "무슨 소리인지 하나도 모르겠다",
+        "original": "Je n'y bitte rien"
+      },
+      {
+        "korean": "배를 기둥에 묶어 정박시키다",
+        "original": "attacher le bateau à une bitte d'amarrag"
+      },
+      { "korean": "계주(繫柱)에 꽂는 핀", "original": "paille de bitt" },
+      { "korean": "계주(繫柱)", "original": "bitte d'amarrag" }
+    ]
+  },
+  { "original": "Danke", "sentences": [] },
+  {
+    "original": "Ja",
+    "koreans": ["[옛] 벌써, 이미 "],
+    "sentences": [
+      {
+        "korean": "이 병의 맥주를 좀 마셨다 (→ du)",
+        "original": "J'a bu de la bière de cette bouteille"
+      }
+    ]
+  },
+  { "original": "Nein", "sentences": [] },
+  { "original": "Entschuldigung", "sentences": [] },
+  { "original": "Familie", "sentences": [] },
+  {
+    "original": "Freund",
+    "koreans": ["[인명] 슈테펜 프로인트 (1970년생, 축구선수)"],
+    "sentences": []
+  },
+  { "original": "Schule", "sentences": [] },
+  { "original": "essen", "koreans": ["[지명] 에센"], "sentences": [] },
+  { "original": "trinken", "sentences": [] },
+  { "original": "sprechen", "sentences": [] },
+  { "original": "hören", "sentences": [] },
+  { "original": "sehen", "sentences": [] },
+  { "original": "gehen", "sentences": [] },
+  { "original": "haben", "sentences": [] },
+  {
+    "original": "sein",
+    "koreans": [
+      "(여성의) 젖가슴, 유방 ",
+      "[문어] 가슴, 품,[비유] 마음 ",
+      "[기독교]"
+    ],
+    "sentences": [
+      {
+        "korean": "…에게 비밀을 털어 놓다",
+        "original": "déposer un secret dans le sein de q"
+      },
+      {
+        "korean": "…을 품안에 꼭 껴안다",
+        "original": "serrer[presser] qn contre[sur] son sei"
+      },
+      {
+        "korean": "친구의 가슴에 얼굴을 파묻고 울다",
+        "original": "pleurer dans[sur] le sein d'un am"
+      },
+      {
+        "korean": "마음 속에 야심찬 계획을 품다",
+        "original": "nourrir dans son sein des projets ambitieu"
+      },
+      { "korean": "같은 태의 쌍둥이", "original": "jumeaux du même sei" }
+    ]
+  },
+  { "original": "machen", "koreans": ["[지리] 아니마칭 산"], "sentences": [] },
+  { "original": "sagen", "sentences": [] },
+  {
+    "original": "Tag",
+    "koreans": ["(1981) (벽이나 지하철 따위의) 낙서 (낙서가의 서명이 있음)"],
+    "sentences": [
+      {
+        "korean": "이 태그는 링크가 시작되는 지점을 말해준다",
+        "original": "Le tag  indique où le lien doit commencer"
+      }
+    ]
+  },
+  { "original": "Nacht", "sentences": [] },
+  {
+    "original": "Morgen",
+    "koreans": [
+      "<autoLink search=\"nom\">Nom</autoLink> <autoLink search=\"allemand\">allemand</autoLink> <autoLink search=\"un\">d’une</autoLink> <autoLink search=\"mesure\">mesure</autoLink> <autoLink search=\"terre\">de terre</autoLink>, <autoLink search=\"valoir\">valant</autoLink> <autoLink search=\"vingt\">vingt</autoLink> <autoLink search=\"are\">ares</autoLink> <autoLink search=\"un\">un</autoLink> <autoLink search=\"quart\">quart</autoLink>."
+    ],
+    "sentences": []
+  },
+  {
+    "original": "Abend",
+    "koreans": [
+      "(<autoLink search=\"info\">info</autoLink>) (<autoLink search=\"vieilli\">vieilli</autoLink>) <autoLink search=\"terminaison\">Terminaison</autoLink> <autoLink search=\"anormal\">anormale</autoLink> <autoLink search=\"un\">d’un</autoLink> <autoLink search=\"programme\">programme</autoLink>."
+    ],
+    "sentences": []
+  },
+  { "original": "Woche", "sentences": [] },
+  { "original": "Monat", "sentences": [] },
+  { "original": "Jahr", "koreans": ["그 해의 기념, 1870년"], "sentences": [] },
+  { "original": "Stunde", "sentences": [] },
+  {
+    "original": "Minute",
+    "koreans": [
+      "분(기호는 <strong><autoLink search=\"min\">min</autoLink></strong> 혹은 <strong><autoLink search=\"Mn\">mn</autoLink></strong>)",
+      "잠시, 잠깐, 순간 "
+    ],
+    "sentences": [
+      {
+        "korean": "〖구어〗 잠깐만! ⸨Minute, papillon ! 이라고도 함⸩",
+        "original": "Minute"
+      },
+      {
+        "korean": "잠시 후에 돌아오겠다",
+        "original": "Je reviens dans une minute"
+      },
+      { "korean": "최후의 순간까지", "original": "jusqu'à la dernière minut" },
+      {
+        "korean": "일분간 묵념하다",
+        "original": "observer une minute de silenc"
+      },
+      { "korean": "진실이 드러나는 순간", "original": "minute de vérit" }
+    ]
+  },
+  { "original": "Sekunde", "sentences": [] },
+  {
+    "original": "Montag",
+    "koreans": ["[인명] 하이디 몬태그"],
+    "sentences": []
+  },
+  { "original": "Dienstag", "sentences": [] },
+  { "original": "Mittwoch", "sentences": [] },
+  { "original": "Donnerstag", "sentences": [] },
+  { "original": "Freitag", "sentences": [] },
+  { "original": "Samstag", "sentences": [] },
+  { "original": "Sonntag", "sentences": [] },
+  {
+    "original": "Sommer",
+    "koreans": ["[법] 촉구[독촉]하다,[문어] 명령하다"],
+    "sentences": [
+      {
+        "korean": "…에게 출두할 것을 명하다",
+        "original": "[sommer qn de[à]+inf.] sommer qn de comparaîtr"
+      },
+      {
+        "korean": "채무자에게 돈을 갚을 것을 독촉하다",
+        "original": "sommer un débiteur de paye"
+      },
+      {
+        "korean": "채무자에게 빚을 갚을 것을 독촉하다",
+        "original": "mettre un débiteur en demeure de payer, sommer un débiteur de payer"
+      },
+      {
+        "korean": "빚을 갚으라고 재촉하다",
+        "original": "sommer un débiteur de payer ses dettes"
+      },
+      {
+        "korean": "성화같이 재촉하다[독촉하다]",
+        "original": "presser [sommer] qn de+inf"
+      }
+    ]
+  },
+  { "original": "Winter", "koreans": ["[인명] 에릭 윈터"], "sentences": [] },
+  { "original": "Frühling", "sentences": [] }
+]
