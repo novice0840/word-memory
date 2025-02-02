@@ -17,10 +17,10 @@ describe("WordsPage Test", () => {
       initialEntries: ["/words/N1"],
     });
     render(<RouterProvider router={router} />);
-    const homeIconButton = screen.getByRole("link", { name: "homeIcon" });
+    const houseIconButton = screen.getByRole("link", { name: "houseIcon" });
 
     // When
-    await userEvent.click(homeIconButton);
+    await userEvent.click(houseIconButton);
 
     // Then
     expect(router.state.location.pathname).toBe("/");
@@ -38,11 +38,13 @@ describe("WordsPage Test", () => {
   describe("Header Icons Test", () => {
     it("설정 아이콘 클릭 시 설정 UI 표시", async () => {
       // Given
-      const cogIconButton = screen.getByRole("button", { name: "cogIcon" });
+      const settingsIconButton = screen.getByRole("button", {
+        name: "settingsIcon",
+      });
       const setting = screen.getByLabelText("setting");
 
       // When
-      await userEvent.click(cogIconButton);
+      await userEvent.click(settingsIconButton);
 
       // Then
       expect(setting).toHaveClass("opacity-100");
@@ -50,15 +52,17 @@ describe("WordsPage Test", () => {
 
     it("설정 UI가 표시된 상태에서 설정 아이콘 클릭 시 설정 UI 닫기", async () => {
       // Given
-      const cogIconButton = screen.getByRole("button", { name: "cogIcon" });
+      const settingsIconButton = screen.getByRole("button", {
+        name: "settingsIcon",
+      });
       const setting = screen.getByLabelText("setting");
 
       // When
-      await userEvent.click(cogIconButton);
+      await userEvent.click(settingsIconButton);
 
       // Then
       expect(setting).toHaveClass("opacity-100");
-      await userEvent.click(cogIconButton);
+      await userEvent.click(settingsIconButton);
       expect(setting).toHaveClass("opacity-0");
     });
 

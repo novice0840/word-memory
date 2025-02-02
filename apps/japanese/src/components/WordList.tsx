@@ -1,10 +1,9 @@
+import { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { ArrowLeft, CheckCircle } from "@mynaui/icons-react";
 import { Level } from "@/types/word";
 import { getJLPTWords, isValidJLPTLevel } from "@/utils/japanese";
-import { setLocalStorage } from "shared/hooks";
-import { useEffect, useRef } from "react";
-import { useGetMemoryList } from "shared/hooks";
+import { setLocalStorage, useGetMemoryList } from "shared/hooks";
 
 interface WordListProps {
   isWordListOpen: boolean;
@@ -13,7 +12,7 @@ interface WordListProps {
 
 const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
   const { level = "N1" } = useParams();
-  const { memoryList, curIndex } = useGetMemoryList(level as Level);
+  const { memoryList, curIndex } = useGetMemoryList(level);
   const itemRefs = useRef<(HTMLLIElement | null)[]>([]);
 
   const words = getJLPTWords(level as Level);
