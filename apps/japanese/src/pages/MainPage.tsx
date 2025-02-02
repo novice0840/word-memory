@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "shared/ui";
 
 import { LEVELS } from "@/constants/word";
 import { getJLPTWords } from "@/utils/japanese";
-import { useGetMemoryList } from "@/hooks/useGetMemoryList";
+import { useGetMemoryList } from "shared/hooks";
 
 const MainPage = () => {
   const JLPT_WORDS_LENGTH = {

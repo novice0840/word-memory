@@ -2,9 +2,9 @@ import { useParams } from "react-router-dom";
 import { ArrowLeft, CheckCircle } from "@mynaui/icons-react";
 import { Level } from "@/types/word";
 import { getJLPTWords, isValidJLPTLevel } from "@/utils/japanese";
-import { setLocalStorage } from "@/hooks/useLocalStorage";
+import { setLocalStorage } from "shared/hooks";
 import { useEffect, useRef } from "react";
-import { useGetMemoryList } from "@/hooks/useGetMemoryList";
+import { useGetMemoryList } from "shared/hooks";
 
 interface WordListProps {
   isWordListOpen: boolean;

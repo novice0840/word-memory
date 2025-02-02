@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "shared/ui";
 import { getJLPTWords } from "@/utils/japanese";
 import { useParams } from "react-router-dom";
-import { useGetMemoryList } from "@/hooks/useGetMemoryList";
+import { useGetMemoryList } from "shared/hooks";
 
 interface StudyActionProps {
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;

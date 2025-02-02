@@ -1,11 +1,11 @@
 import { Navigate, useParams } from "react-router-dom";
-import { setLocalStorage } from "@/hooks/useLocalStorage";
+import { setLocalStorage } from "shared/hooks";
 import { HSK_LEVELS } from "@/constants/word";
 import { StudyAction, StudyProgress, Sentences, Word } from "@/components";
 import { getNextIndex, getPrevIndex } from "shared/utils";
 import type { HSKLevel } from "@/types/word";
 import { useStudyAction } from "@/hooks/useStudyAction";
-import { useGetMemoryList } from "@/hooks/useGetMemoryList";
+import { useGetMemoryList } from "shared/hooks";
 import { getHSKWords } from "@/utils/chinese";
 
 const WordsPage = () => {

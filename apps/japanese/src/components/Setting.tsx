@@ -2,7 +2,7 @@ import { LEVELS } from "@/constants/word";
 import { useDialog } from "shared/context";
 
 import { Button } from "shared/ui";
-import { setLocalStorage } from "@/hooks/useLocalStorage";
+import { setLocalStorage } from "shared/hooks";
 interface SettingProps {
   isSettingOpen: boolean;
 }

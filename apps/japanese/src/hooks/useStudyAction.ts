@@ -2,10 +2,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import { MouseEvent } from "react";
 import { getJLPTWords } from "@/utils/japanese";
 import { getNextUnmemorizedIndex } from "shared/utils";
-import { setLocalStorage } from "./useLocalStorage";
 import { Level, Word } from "@/types/word";
 import { useWord } from "./useWord";
-import { useGetMemoryList } from "./useGetMemoryList";
+import { useGetMemoryList, setLocalStorage } from "shared/hooks";
 import { useDialog } from "shared/context";
 
 const useStudyAction = () => {

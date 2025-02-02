@@ -2,9 +2,9 @@ import { useParams } from "react-router-dom";
 import { ArrowLeft, CheckCircle } from "@mynaui/icons-react";
 import { HSKLevel } from "@/types/word";
 import { isValidHSKLevel } from "@/utils/chinese";
-import { setLocalStorage } from "@/hooks/useLocalStorage";
+import { setLocalStorage } from "shared/hooks";
 import { useEffect, useRef } from "react";
-import { useGetMemoryList } from "@/hooks/useGetMemoryList";
+import { useGetMemoryList } from "shared/hooks";
 import { getHSKWords } from "@/utils/chinese";
 
 interface WordListProps {

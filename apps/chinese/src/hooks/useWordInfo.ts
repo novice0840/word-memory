@@ -1,5 +1,5 @@
 import { getHSKWords } from "@/utils/chinese";
-import { useGetMemoryList } from "./useGetMemoryList";
+import { useGetMemoryList } from "shared/hooks";
 
 export const useWordInfo = () => {
   const hskLength = {
