@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import { WordList } from "@/components";
 import Header from "@/components/Header";
-import { DialogProvider } from "@shared/ui/context";
+import { DialogProvider } from "shared/context";
 
 const AppLayout = () => {
   const [isWordListOpen, setIsWordListOpen] = useState(false);

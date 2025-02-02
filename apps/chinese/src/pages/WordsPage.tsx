@@ -2,7 +2,7 @@ import { Navigate, useParams } from "react-router-dom";
 import { setLocalStorage } from "@/hooks/useLocalStorage";
 import { HSK_LEVELS } from "@/constants/word";
 import { StudyAction, StudyProgress, Sentences, Word } from "@/components";
-import { getNextIndex, getPrevIndex } from "@shared/ui/utils";
+import { getNextIndex, getPrevIndex } from "shared/utils";
 import type { HSKLevel } from "@/types/word";
 import { useStudyAction } from "@/hooks/useStudyAction";
 import { useGetMemoryList } from "@/hooks/useGetMemoryList";

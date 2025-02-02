@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@shared/ui/button";
+import { Button } from "shared/ui";
 import { getJLPTWords } from "@/utils/word";
 import { useParams } from "react-router-dom";
 import { useGetMemoryList } from "@/hooks/useGetMemoryList";

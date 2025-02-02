@@ -1,12 +1,12 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { MouseEvent } from "react";
 import { getJLPTWords } from "@/utils/japanese";
-import { getNextUnmemorizedIndex } from "@shared/ui/utils";
+import { getNextUnmemorizedIndex } from "shared/utils";
 import { setLocalStorage } from "./useLocalStorage";
 import { Level, Word } from "@/types/word";
 import { useWord } from "./useWord";
 import { useGetMemoryList } from "./useGetMemoryList";
-import { useDialog } from "@shared/ui/context";
+import { useDialog } from "shared/context";
 
 const useStudyAction = () => {
   const { level = "" } = useParams();

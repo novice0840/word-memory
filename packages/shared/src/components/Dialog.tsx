@@ -1,4 +1,4 @@
-import { Button } from "@shared/ui/button";
+import { Button } from "shared/ui";
 import {
   Dialog as DialogPrimitive,
   DialogClose,
@@ -7,7 +7,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@shared/ui/dialog";
+} from "shared/ui";
 
 interface DialogProps {
   title: string;

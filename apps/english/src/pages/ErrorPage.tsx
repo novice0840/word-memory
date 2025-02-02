@@ -1,4 +1,4 @@
-import { Button } from "@shared/ui/button";
+import { Button } from "shared/ui";
 import { Link } from "react-router-dom";
 import { ERROR_PAGE_TITLE, ERROR_PAGE_BUTTON_TEXT } from "@/constants/message";
 import { DangerCircle } from "@mynaui/icons-react";

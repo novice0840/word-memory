@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Card, CardContent, CardHeader, CardTitle } from "@shared/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "shared/ui";
 
 import { LEVELS } from "@/constants/word";
 import { getJLPTWords } from "@/utils/japanese";

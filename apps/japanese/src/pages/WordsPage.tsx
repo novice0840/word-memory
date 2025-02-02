@@ -3,7 +3,7 @@ import { setLocalStorage } from "@/hooks/useLocalStorage";
 import { LEVELS } from "@/constants/word";
 import { StudyAction, StudyProgress, Sentences, Word } from "@/components";
 import { getJLPTWords } from "@/utils/japanese";
-import { getNextIndex, getPrevIndex } from "@shared/ui/utils";
+import { getNextIndex, getPrevIndex } from "shared/utils";
 import type { Level } from "@/types/word";
 import { useStudyAction } from "@/hooks/useStudyAction";
 import { useGetMemoryList } from "@/hooks/useGetMemoryList";
