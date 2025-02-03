@@ -10,7 +10,7 @@ interface StudyActionProps {
 
 const StudyAction = ({ onClick }: StudyActionProps) => {
   const { level = "" } = useParams();
-  const words = getWords(level, "english");
+  const words = getWords(level, "french");
   const totalLength = words.length;
   const { memoryList } = useGetMemoryList(level);
 
