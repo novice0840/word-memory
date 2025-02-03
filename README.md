@@ -1,15 +1,16 @@
 # 단어 암기 서비스
 
 - React, TypeScript, PWA 기반
-- monorepo (서비스 4개, 공통 패키지 2개)
-- 약 7000개의 일본어 단어 수록됨
+- turbo 기반 monorepo (서비스 4개, 공통 패키지 2개)
 - 일본어, 중국어, 영어, 프랑스어 제공
+- 일본어 9221개, 중국어 6312개, 영어 5811개, 프랑스어 250개
 
 ## 배포링크
 
-- [일본어](japanese-word-memory.vercel.app)
-- [중국어](chinese-word-memory.vercel.app)
-- [영어](english-word-memory.vercel.app)
+- [일본어](https://japanese-word-memory.vercel.app)
+- [중국어](https://chinese-word-memory.vercel.app)
+- [영어](https://english-word-memory.vercel.app)
+- [프랑스어](https://french-word-memory.vercel.app/)
 
 ## 단어 형태
 
