@@ -12,6 +12,12 @@ import {
   JLPT_N5_WORDS,
   TOEIC_WORDS,
   TOEFL_WORDS,
+  FRENCH_A1_WORDS,
+  FRENCH_A2_WORDS,
+  FRENCH_B1_WORDS,
+  FRENCH_B2_WORDS,
+  FRENCH_C1_WORDS,
+  FRENCH_C2_WORDS,
 } from "data";
 
 export const getNextIndex = (curIndex: number, totalLength: number) => {
@@ -97,10 +103,12 @@ const CHINESE_LEVELS = [
 ] as const;
 const JAPANESE_LEVELS = ["N1", "N2", "N3", "N4", "N5"] as const;
 const ENGLISH_LEVELS = ["TOEIC", "TOEFL"] as const;
+const FRENCH_LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
 
 type ChineseLevel = (typeof CHINESE_LEVELS)[number];
 type JAPANESELevel = (typeof JAPANESE_LEVELS)[number];
 type ENGLISHLevel = (typeof ENGLISH_LEVELS)[number];
+type FRENCHLevel = (typeof FRENCH_LEVELS)[number];
 
 type Word = {
   koreans: string[];
@@ -121,6 +129,8 @@ export const isValidLevel = (level: string, language: string): boolean => {
     return JAPANESE_LEVELS.some((l) => l === level);
   } else if (language === "english") {
     return ENGLISH_LEVELS.some((l) => l === level);
+  } else if (language === "french") {
+    return FRENCH_LEVELS.some((l) => l === level);
   }
   throw new Error("지원하지 않는 언어입니다.");
 };
@@ -166,6 +176,21 @@ export const getWords = (level: string, language: string) => {
     }
 
     return WORDS_MAP[level as ENGLISHLevel];
+  } else if (language === "french") {
+    const WORDS_MAP = {
+      A1: FRENCH_A1_WORDS,
+      A2: FRENCH_A2_WORDS,
+      B1: FRENCH_B1_WORDS,
+      B2: FRENCH_B2_WORDS,
+      C1: FRENCH_C1_WORDS,
+      C2: FRENCH_C2_WORDS,
+    } as Record<FRENCHLevel, Word[]>;
+
+    if (!isValidLevel(level, "french")) {
+      return [];
+    }
+
+    return WORDS_MAP[level as FRENCHLevel];
   }
 
   throw new Error("지원하지 않는 언어입니다.");
