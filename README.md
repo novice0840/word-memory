@@ -1,5 +1,11 @@
 # 단어 암기 서비스
 
+<img src="docs/mainPage.png" width="200">
+<img src="docs/wordsPage.png" width="200">
+<br>
+<br>
+<br>
+
 - React, TypeScript, PWA 기반
 - turbo 기반 monorepo (서비스 4개, 공통 패키지 2개)
 - 일본어, 중국어, 영어, 프랑스어 제공
