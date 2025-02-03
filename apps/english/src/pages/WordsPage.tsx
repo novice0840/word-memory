@@ -1,10 +1,13 @@
 import { Navigate, useParams } from "react-router-dom";
 import { setLocalStorage, useGetMemoryList } from "shared/hooks";
-import { LEVELS } from "@/constants/word";
 import { StudyAction, Sentences, Word } from "@/components";
 import { StudyProgress } from "shared/components";
-import { getNextIndex, getPrevIndex, getWords } from "shared/utils";
-import type { Level } from "@/types/word";
+import {
+  getNextIndex,
+  getPrevIndex,
+  getWords,
+  isValidLevel,
+} from "shared/utils";
 import { useStudyAction } from "@/hooks/useStudyAction";
 
 const WordsPage = () => {
@@ -33,7 +36,7 @@ const WordsPage = () => {
     setLocalStorage(level, { memoryList, curIndex: nextIndex });
   };
 
-  if (!LEVELS.includes(level as Level)) {
+  if (!isValidLevel(level, "english")) {
     return <Navigate to="/" />;
   }
 
