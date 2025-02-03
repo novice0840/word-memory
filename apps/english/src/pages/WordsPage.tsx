@@ -3,14 +3,13 @@ import { setLocalStorage, useGetMemoryList } from "shared/hooks";
 import { LEVELS } from "@/constants/word";
 import { StudyAction, Sentences, Word } from "@/components";
 import { StudyProgress } from "shared/components";
-import { getNextIndex, getPrevIndex } from "shared/utils";
+import { getNextIndex, getPrevIndex, getWords } from "shared/utils";
 import type { Level } from "@/types/word";
 import { useStudyAction } from "@/hooks/useStudyAction";
-import { getWords } from "@/utils/word";
 
 const WordsPage = () => {
   const { level = "" } = useParams();
-  const words = getWords(level);
+  const words = getWords(level, "english");
   const totalLength = words.length;
   const { memoryList, curIndex } = useGetMemoryList(level);
   const {
