@@ -2,16 +2,16 @@ import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "shared/ui";
 
 import { LEVELS } from "@/constants/word";
-import { getWords } from "@/utils/word";
+import { getWords } from "shared/utils";
 import { useGetMemoryList } from "shared/hooks";
 
 const MainPage = () => {
   const JLPT_WORDS_LENGTH = {
-    N1: getWords("N1").length,
-    N2: getWords("N2").length,
-    N3: getWords("N3").length,
-    N4: getWords("N4").length,
-    N5: getWords("N5").length,
+    N1: getWords("N1", "japanese").length,
+    N2: getWords("N2", "japanese").length,
+    N3: getWords("N3", "japanese").length,
+    N4: getWords("N4", "japanese").length,
+    N5: getWords("N5", "japanese").length,
   };
 
   const memoryListLength = {

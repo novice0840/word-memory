@@ -5,6 +5,11 @@ import {
   HSK_4_WORDS,
   HSK_5_WORDS,
   HSK_6_WORDS,
+  JLPT_N1_WORDS,
+  JLPT_N2_WORDS,
+  JLPT_N3_WORDS,
+  JLPT_N4_WORDS,
+  JLPT_N5_WORDS,
 } from "data";
 
 export const getNextIndex = (curIndex: number, totalLength: number) => {
@@ -80,14 +85,24 @@ export const readSentence = (
   }
 };
 
-const LEVELS = ["HSK1", "HSK2", "HSK3", "HSK4", "HSK5", "HSK6"] as const;
-type Level = (typeof LEVELS)[number];
+const CHINESE_LEVELS = [
+  "HSK1",
+  "HSK2",
+  "HSK3",
+  "HSK4",
+  "HSK5",
+  "HSK6",
+] as const;
+const JAPANESE_LEVELS = ["N1", "N2", "N3", "N4", "N5"] as const;
+
+type ChineseLevel = (typeof CHINESE_LEVELS)[number];
+type JAPANESELevel = (typeof JAPANESE_LEVELS)[number];
 
 type Word = {
   koreans: string[];
   pronunciation: string;
   original: string | null;
-  level: Level;
+  level: string;
   sentences: {
     korean: string;
     original: string;
@@ -97,7 +112,9 @@ type Word = {
 
 export const isValidLevel = (level: string, language: string): boolean => {
   if (language === "chinese") {
-    return LEVELS.some((l) => l === level);
+    return CHINESE_LEVELS.some((l) => l === level);
+  } else if (language === "japanese") {
+    return JAPANESE_LEVELS.some((l) => l === level);
   }
   throw new Error("지원하지 않는 언어입니다.");
 };
@@ -111,13 +128,27 @@ export const getWords = (level: string, language: string) => {
       HSK4: HSK_4_WORDS,
       HSK5: HSK_5_WORDS,
       HSK6: HSK_6_WORDS,
-    } as Record<Level, Word[]>;
+    } as Record<ChineseLevel, Word[]>;
 
     if (!isValidLevel(level, "chinese")) {
       return [];
     }
 
-    return HSK_WORDS_MAP[level as Level];
+    return HSK_WORDS_MAP[level as ChineseLevel];
+  } else if (language === "japanese") {
+    const levelWords = {
+      N1: JLPT_N1_WORDS,
+      N2: JLPT_N2_WORDS,
+      N3: JLPT_N3_WORDS,
+      N4: JLPT_N4_WORDS,
+      N5: JLPT_N5_WORDS,
+    } as Record<JAPANESELevel, Word[]>;
+
+    if (!isValidLevel(level, "japanese")) {
+      return [];
+    }
+
+    return levelWords[level as JAPANESELevel];
   }
 
   throw new Error("지원하지 않는 언어입니다.");
