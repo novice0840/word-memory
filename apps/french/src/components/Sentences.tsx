@@ -18,7 +18,7 @@ const Sentences = ({ sentences, showMeaning }: SentencesProps) => {
             <div>
               <div>{item.original}</div>
             </div>
-            <button onClick={() => readSentence(item.original, "english")}>
+            <button onClick={() => readSentence(item.original, "french")}>
               <Volume2 />
             </button>
           </div>

@@ -12,7 +12,7 @@ import { useStudyAction } from "@/hooks/useStudyAction";
 
 const WordsPage = () => {
   const { level = "" } = useParams();
-  const words = getWords(level, "english");
+  const words = getWords(level, "french");
   const totalLength = words.length;
   const { memoryList, curIndex } = useGetMemoryList(level);
   const {
@@ -36,7 +36,7 @@ const WordsPage = () => {
     setLocalStorage(level, { memoryList, curIndex: nextIndex });
   };
 
-  if (!isValidLevel(level, "english")) {
+  if (!isValidLevel(level, "french")) {
     return <Navigate to="/" />;
   }
 
