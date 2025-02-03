@@ -24,9 +24,12 @@ const MainPage = () => {
               <CardTitle className="text-lg">{level}</CardTitle>
             </CardHeader>
             <CardContent className="p-0">
-              {`달성율 ${roundToDecimal(
-                memoryListLength[level] / languageLength[level]
-              )}% ${memoryListLength[level]} / ${languageLength[level]}`}
+              {`달성율 ${
+                roundToDecimal(
+                  memoryListLength[level] / languageLength[level],
+                  3
+                ) * 100
+              }% ${memoryListLength[level]} / ${languageLength[level]}`}
             </CardContent>
           </Card>
         ))}

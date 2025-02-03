@@ -1,32 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "shared/ui";
+import { roundToDecimal } from "shared/utils";
 
 import { LEVELS } from "@/constants/word";
-import { getWords } from "shared/utils";
-import { useGetMemoryList } from "shared/hooks";
+import { useWordInfo } from "@/hooks/useWordInfo";
 
 const MainPage = () => {
-  const JLPT_WORDS_LENGTH = {
-    N1: getWords("N1", "japanese").length,
-    N2: getWords("N2", "japanese").length,
-    N3: getWords("N3", "japanese").length,
-    N4: getWords("N4", "japanese").length,
-    N5: getWords("N5", "japanese").length,
-  };
-
-  const memoryListLength = {
-    N1: useGetMemoryList("N1").memoryList.length,
-    N2: useGetMemoryList("N2").memoryList.length,
-    N3: useGetMemoryList("N3").memoryList.length,
-    N4: useGetMemoryList("N4").memoryList.length,
-    N5: useGetMemoryList("N5").memoryList.length,
-  };
+  const { languageLength, memoryListLength } = useWordInfo();
   const navigate = useNavigate();
-
-  const roundToDecimal = (num: number, decimalPlaces = 1) => {
-    const factor = Math.pow(10, decimalPlaces);
-    return Math.round(num * factor) / factor;
-  };
 
   return (
     <div className="flex flex-col items-center gap-6 pt-4">
@@ -41,10 +22,12 @@ const MainPage = () => {
             <CardTitle className="text-lg">{level}</CardTitle>
           </CardHeader>
           <CardContent className="p-0">
-            {`달성율 ${roundToDecimal(
-              memoryListLength[level] / JLPT_WORDS_LENGTH[level],
-              3
-            )}% ${memoryListLength[level]} / ${JLPT_WORDS_LENGTH[level]}`}
+            {`달성율 ${
+              roundToDecimal(
+                memoryListLength[level] / languageLength[level],
+                3
+              ) * 100
+            }% ${memoryListLength[level]} / ${languageLength[level]}`}
           </CardContent>
         </Card>
       ))}
