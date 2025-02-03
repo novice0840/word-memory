@@ -2,7 +2,7 @@ import { getWords } from "shared/utils";
 import { useGetMemoryList } from "shared/hooks";
 
 export const useWordInfo = () => {
-  const languageLength = {
+  const wordLength = {
     A1: getWords("A1", "french").length,
     A2: getWords("A2", "french").length,
     B1: getWords("B1", "french").length,
@@ -19,5 +19,5 @@ export const useWordInfo = () => {
     C1: useGetMemoryList("C1").memoryList.length,
     C2: useGetMemoryList("C2").memoryList.length,
   };
-  return { languageLength, memoryListLength };
+  return { wordLength, memoryListLength };
 };

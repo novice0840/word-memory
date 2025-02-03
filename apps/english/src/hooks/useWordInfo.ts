@@ -2,7 +2,7 @@ import { getWords } from "shared/utils";
 import { useGetMemoryList } from "shared/hooks";
 
 export const useWordInfo = () => {
-  const englishLength = {
+  const wordLength = {
     TOEIC: getWords("TOEIC", "english").length,
     TOEFL: getWords("TOEFL", "english").length,
   };
@@ -11,5 +11,5 @@ export const useWordInfo = () => {
     TOEIC: useGetMemoryList("TOEIC").memoryList.length,
     TOEFL: useGetMemoryList("TOEFL").memoryList.length,
   };
-  return { englishLength, memoryListLength };
+  return { wordLength, memoryListLength };
 };

@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "shared/ui";
-import { roundToDecimal } from "shared/utils";
 import { useWordInfo } from "@/hooks/useWordInfo";
 import { LEVELS } from "@/constants/word";
 
@@ -26,10 +25,10 @@ const MainPage = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="p-0">
-              {`달성율 ${
-                roundToDecimal(memoryListLength[level] / wordLength[level], 3) *
+              {`달성율 ${(
+                (memoryListLength[level] / wordLength[level]) *
                 100
-              }% ${memoryListLength[level]} / ${wordLength[level]}`}
+              ).toFixed(2)}% ${memoryListLength[level]} / ${wordLength[level]}`}
             </CardContent>
           </Card>
         ))}
