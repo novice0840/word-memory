@@ -47,7 +47,7 @@ export const getNextUnmemorizedIndex = (
 export const readSentence = (
   text: string,
   language: "japanese" | "chinese" | "english" | "french"
-) => {
+): Promise<void> => {
   const langToTag = {
     japanese: "ja-JP",
     chinese: "zh-CN",
@@ -57,42 +57,57 @@ export const readSentence = (
 
   if (!window.speechSynthesis) {
     console.error("음성 합성이 지원되지 않는 브라우저입니다.");
-    return;
+    return Promise.reject("음성 합성이 지원되지 않습니다.");
   }
 
-  const speakText = () => {
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = langToTag[language];
+  return new Promise((resolve, reject) => {
+    const speakText = () => {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = langToTag[language];
 
-    const voices = window.speechSynthesis.getVoices();
-    const preferredVoices: Record<string, string> = {
-      "ja-JP": "Microsoft Haruka - Japanese (Japan)",
-      "zh-CN": "Google 普通话（中国大陆）",
-      "en-US": "Google US English",
-      "fr-FR": "Google français",
+      // 이벤트 리스너 추가
+      utterance.onend = () => {
+        console.log("Speech synthesis finished");
+        resolve();
+      };
+      
+      utterance.onerror = (event) => {
+        console.error("Speech synthesis error", event);
+        reject(event);
+      };
+
+      const voices = window.speechSynthesis.getVoices();
+      const preferredVoices: Record<string, string> = {
+        "ja-JP": "Microsoft Haruka - Japanese (Japan)",
+        "zh-CN": "Google 普通话（中国大陆）",
+        "en-US": "Google US English",
+        "fr-FR": "Google français",
+      };
+
+      const selectedVoice = voices.find(
+        (voice) =>
+          voice.name.normalize().replace(/\s+/g, "") ===
+          preferredVoices[langToTag[language]].normalize().replace(/\s+/g, "")
+      );
+
+      if (selectedVoice) {
+        utterance.voice = selectedVoice;
+      } else {
+        console.warn(
+          `선택한 언어(${language})에 대한 특정 보이스를 찾지 못했습니다. 기본 보이스 사용.`
+        );
+      }
+      console.log("Before Speak");
+      speechSynthesis.speak(utterance);
+      console.log("After Speak");
     };
 
-    const selectedVoice = voices.find(
-      (voice) =>
-        voice.name.normalize().replace(/\s+/g, "") ===
-        preferredVoices[langToTag[language]].normalize().replace(/\s+/g, "")
-    );
-
-    if (selectedVoice) {
-      utterance.voice = selectedVoice;
+    if (window.speechSynthesis.getVoices().length === 0) {
+      window.speechSynthesis.onvoiceschanged = speakText;
     } else {
-      console.warn(
-        `선택한 언어(${language})에 대한 특정 보이스를 찾지 못했습니다. 기본 보이스 사용.`
-      );
+      speakText();
     }
-    speechSynthesis.speak(utterance);
-  };
-
-  if (window.speechSynthesis.getVoices().length === 0) {
-    window.speechSynthesis.onvoiceschanged = speakText;
-  } else {
-    speakText();
-  }
+  });
 };
 
 const CHINESE_LEVELS = [
