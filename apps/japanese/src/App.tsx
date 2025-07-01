@@ -30,5 +30,4 @@ function App() {
   );
 }
 
-export { routes };
 export default App;
