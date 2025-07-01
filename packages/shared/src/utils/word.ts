@@ -65,12 +65,10 @@ export const readSentence = (
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = langToTag[language];
 
-      // 이벤트 리스너 추가
       utterance.onend = () => {
-        console.log("Speech synthesis finished");
         resolve();
       };
-      
+
       utterance.onerror = (event) => {
         console.error("Speech synthesis error", event);
         reject(event);
@@ -97,9 +95,7 @@ export const readSentence = (
           `선택한 언어(${language})에 대한 특정 보이스를 찾지 못했습니다. 기본 보이스 사용.`
         );
       }
-      console.log("Before Speak");
       speechSynthesis.speak(utterance);
-      console.log("After Speak");
     };
 
     if (window.speechSynthesis.getVoices().length === 0) {

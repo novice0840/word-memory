@@ -17,7 +17,6 @@ const Sentences = ({ sentences, showMeaning }: SentencesProps) => {
     setReadingIndex(index);
     readSentence(text, "japanese")
       .then(() => {
-        // 음성 읽기가 완료된 후 실행됨
         setReadingIndex(null);
       })
       .catch((error) => {
