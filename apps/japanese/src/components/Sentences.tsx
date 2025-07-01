@@ -1,5 +1,6 @@
 import { Volume2 } from "lucide-react";
 import { readSentence } from "shared/utils";
+import { useState } from "react";
 
 interface SentencesProps {
   sentences: {
@@ -10,6 +11,20 @@ interface SentencesProps {
 }
 
 const Sentences = ({ sentences, showMeaning }: SentencesProps) => {
+  const [readingIndex, setReadingIndex] = useState<number | null>(null);
+
+  const handleReadSentence = (text: string, index: number) => {
+    setReadingIndex(index);
+    readSentence(text, "japanese")
+      .then(() => {
+        setReadingIndex(null);
+      })
+      .catch((error) => {
+        console.error("음성 읽기 오류:", error);
+        setReadingIndex(null);
+      });
+  };
+
   return (
     <div className="h-64 overflow-auto w-full text-xl rounded-md border p-x-4 space-y-4">
       {sentences.map((item, index) => (
@@ -25,15 +40,19 @@ const Sentences = ({ sentences, showMeaning }: SentencesProps) => {
             />
             <button
               onClick={() =>
-                readSentence(
+                handleReadSentence(
                   item.original
                     .replace(/<rt>(.*?)<\/rt>/g, "")
                     .replace(/<[^>]+>/g, ""),
-                  "japanese"
+                  index
                 )
               }
             >
-              <Volume2 />
+              <Volume2
+                className={
+                  readingIndex === index ? "font-bold stroke-2" : "stroke-1"
+                }
+              />
             </button>
           </div>
 
