@@ -4,10 +4,9 @@ interface WordProps {
   original: string | null;
   pronunciation: string;
   koreans: string[];
-  showMeaning: boolean;
 }
 
-const Word = ({ original, pronunciation, koreans, showMeaning }: WordProps) => {
+const Word = ({ original, pronunciation, koreans }: WordProps) => {
   const [searchParams] = useSearchParams();
   const isWordMeaningVisible =
     searchParams.get("isWordMeaningVisible") === "true";
