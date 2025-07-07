@@ -4,6 +4,10 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "dev:japanese": "turbo dev --filter=japanese",
+    "dev:chinese": "turbo dev --filter=chinese",
+    "dev:french": "turbo dev --filter=french",
+    "dev:english": "turbo dev --filter=english",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
