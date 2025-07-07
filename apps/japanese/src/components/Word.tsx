@@ -8,16 +8,14 @@ interface WordProps {
 const Word = ({ original, pronunciation, koreans, showMeaning }: WordProps) => {
   return (
     <div className="text-center h-32">
-      <div className="text-4xl font-japanese">
+      <div className="text-4xl font-japanese mb-2">
         {original?.split("·").join(", ") || pronunciation}
       </div>
-      {showMeaning ? (
+      {showMeaning && (
         <div>
           <div>{original && pronunciation}</div>
           <div>{koreans?.join(", ")}</div>
         </div>
-      ) : (
-        <div>뜻 보기</div>
       )}
     </div>
   );
