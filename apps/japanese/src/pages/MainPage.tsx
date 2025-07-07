@@ -35,13 +35,9 @@ const MainPage = () => {
 
     // speech synthesis의 speak 기능은 첫 호출 시 1~2초 딜레이가 걸리므로
     // 미리 해당 기능을 초기화하여 cold start를 방지
-    readSentence("", "japanese")
-      .then(() => {
-        console.log("Speech synthesis initialized");
-      })
-      .catch((err) => {
-        console.warn("Speech synthesis initialization failed:", err);
-      });
+    readSentence("", "japanese").catch((err) => {
+      console.warn("Speech synthesis initialization failed:", err);
+    });
   };
 
   return (
