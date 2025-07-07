@@ -22,32 +22,38 @@ const StudyAction = ({ onClick }: StudyActionProps) => {
     memoryList.includes(i)
   );
 
-  const handleClickMeaning = () => {
+  const handleClickMeaningButton = () => {
     const newParams = new URLSearchParams(searchParams);
-    if (isWordMeaningVisible) {
-      newParams.set("isWordMeaningVisible", "false");
-    } else {
-      newParams.set("isWordMeaningVisible", "true");
-    }
+    newParams.set(
+      "isWordMeaningVisible",
+      isWordMeaningVisible ? "false" : "true"
+    );
     setSearchParams(newParams);
   };
 
-  const handleClickSentence = () => {
+  const handleClickSentenceButton = () => {
     const newParams = new URLSearchParams(searchParams);
-    if (isSentenceMeaningVisible) {
-      newParams.set("isSentenceMeaningVisible", "false");
-    } else {
-      newParams.set("isSentenceMeaningVisible", "true");
-    }
+    newParams.set(
+      "isSentenceMeaningVisible",
+      isSentenceMeaningVisible ? "false" : "true"
+    );
     setSearchParams(newParams);
   };
 
   return (
     <div className="w-full h-32 grid grid-cols-2 grid-rows-2 gap-8">
-      <Button id="meaning" onClick={handleClickMeaning} className="h-full">
+      <Button
+        id="meaning"
+        onClick={handleClickMeaningButton}
+        className="h-full"
+      >
         {isWordMeaningVisible ? "뜻 숨기기" : "뜻 보기"}
       </Button>
-      <Button id="sentence" onClick={handleClickSentence} className="h-full">
+      <Button
+        id="sentence"
+        onClick={handleClickSentenceButton}
+        className="h-full"
+      >
         {isSentenceMeaningVisible ? "예문 해석 숨기기" : "예문 해석 보기"}
       </Button>
       <Button
