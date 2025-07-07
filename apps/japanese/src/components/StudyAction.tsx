@@ -35,7 +35,7 @@ const StudyAction = ({ onClick }: StudyActionProps) => {
   };
 
   return (
-    <div className="w-full h-32 grid grid-cols-2 grid-rows-2 gap-12">
+    <div className="w-full h-32 grid grid-cols-2 grid-rows-2 gap-8">
       <Button id="meaning" onClick={handleClickMeaning} className="h-full">
         {isWordMeaningVisible ? "뜻 숨기기" : "뜻 보기"}
       </Button>
