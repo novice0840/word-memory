@@ -19,7 +19,7 @@ const StudyAction = ({ onClick }: StudyActionProps) => {
   );
 
   return (
-    <div className="w-full h-24 grid grid-cols-2 grid-rows-2 gap-4">
+    <div className="w-full h-32 grid grid-cols-2 grid-rows-2 gap-12">
       <Button id="meaning" onClick={onClick} className="h-full">
         뜻 보기
       </Button>
