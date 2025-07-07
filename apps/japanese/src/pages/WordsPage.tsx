@@ -15,12 +15,7 @@ const WordsPage = () => {
   const words = getWords(level, "japanese");
   const totalLength = words.length;
   const { memoryList, curIndex } = useGetMemoryList(level);
-  const {
-    handleStudyActionClick,
-    showWordMeaning,
-    showSentencesMeaning,
-    initWord,
-  } = useStudyAction();
+  const { handleStudyActionClick, initWord } = useStudyAction();
   const navigate = useNavigate();
 
   const { original, pronunciation, koreans, sentences } = words[curIndex];
@@ -58,9 +53,8 @@ const WordsPage = () => {
             original={original}
             pronunciation={pronunciation}
             koreans={koreans}
-            showMeaning={showWordMeaning}
           />
-          <Sentences sentences={sentences} showMeaning={showSentencesMeaning} />
+          <Sentences sentences={sentences} />
         </section>
       </section>
 

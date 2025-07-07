@@ -1,17 +1,20 @@
 import { Volume2 } from "lucide-react";
 import { readSentence } from "shared/utils";
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 interface SentencesProps {
   sentences: {
     korean: string;
     original: string;
   }[];
-  showMeaning: boolean;
 }
 
-const Sentences = ({ sentences, showMeaning }: SentencesProps) => {
+const Sentences = ({ sentences }: SentencesProps) => {
   const [readingIndex, setReadingIndex] = useState<number | null>(null);
+  const [searchParams] = useSearchParams();
+  const isSentenceMeaningVisible =
+    searchParams.get("isSentenceMeaningVisible") === "true";
 
   const handleReadSentence = (text: string, index: number) => {
     setReadingIndex(index);
@@ -32,7 +35,7 @@ const Sentences = ({ sentences, showMeaning }: SentencesProps) => {
             <div
               className="font-japanese"
               dangerouslySetInnerHTML={{
-                __html: showMeaning
+                __html: isSentenceMeaningVisible
                   ? item.original
                   : item.original.replace(/<rt>(.*?)<\/rt>/g, ""),
               }}
@@ -55,7 +58,7 @@ const Sentences = ({ sentences, showMeaning }: SentencesProps) => {
             </button>
           </div>
 
-          <div>{showMeaning && item.korean}</div>
+          <div>{isSentenceMeaningVisible && item.korean}</div>
         </div>
       ))}
     </div>
