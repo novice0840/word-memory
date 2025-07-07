@@ -11,7 +11,7 @@ const routes = [
     errorElement: <ErrorPage />,
     children: [
       { path: "/", element: <MainPage /> },
-      { path: "/words/:level", element: <WordsPage /> },
+      { path: "/words/:level/:wordIndex", element: <WordsPage /> },
     ],
   },
 ];

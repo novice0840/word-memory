@@ -1,4 +1,4 @@
-import { Navigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Navigate } from "react-router-dom";
 import { setLocalStorage, useGetMemoryList } from "shared/hooks";
 import { StudyAction, Sentences, Word } from "@/components";
 import { StudyProgress } from "shared/components";
@@ -21,6 +21,7 @@ const WordsPage = () => {
     showSentencesMeaning,
     initWord,
   } = useStudyAction();
+  const navigate = useNavigate();
 
   const { original, pronunciation, koreans, sentences } = words[curIndex];
 
@@ -28,12 +29,14 @@ const WordsPage = () => {
     const prevIndex = getPrevIndex(curIndex, totalLength);
     initWord();
     setLocalStorage(level, { memoryList, curIndex: prevIndex });
+    navigate(`/words/${level}/${prevIndex}`);
   };
 
   const handleGoNextWord = () => {
     const nextIndex = getNextIndex(curIndex, totalLength);
     initWord();
     setLocalStorage(level, { memoryList, curIndex: nextIndex });
+    navigate(`/words/${level}/${nextIndex}`);
   };
 
   if (!isValidLevel(level, "japanese")) {
