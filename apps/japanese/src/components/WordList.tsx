@@ -28,8 +28,8 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
   useEffect(() => {
     if (isWordListOpen && curIndex >= 0 && itemRefs.current[curIndex]) {
       itemRefs.current[curIndex]?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
+        behavior: "auto",
+        block: "center",
       });
     }
   }, [isWordListOpen, curIndex]);
@@ -57,7 +57,7 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
             key={i}
             ref={(el) => (itemRefs.current[i] = el)}
             onClick={() => handleWordClick(i)}
-            className="flex justify-between border rounded text-xl"
+            className="flex justify-between border rounded text-xl hover:bg-gray-100 cursor-pointer p-2"
           >
             <span>{word.original || word.pronunciation}</span>
             {memoryList.includes(i) && <CircleCheckBig />}
