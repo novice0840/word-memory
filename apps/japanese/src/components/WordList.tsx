@@ -57,7 +57,9 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
             key={i}
             ref={(el) => (itemRefs.current[i] = el)}
             onClick={() => handleWordClick(i)}
-            className="flex justify-between border rounded text-xl hover:bg-gray-100 cursor-pointer p-2"
+            className={`flex justify-between border rounded text-xl hover:bg-gray-100 cursor-pointer p-2 ${
+              i === curIndex ? "bg-blue-100" : ""
+            }`}
           >
             <span>{word.original || word.pronunciation}</span>
             {memoryList.includes(i) && <CircleCheckBig />}
