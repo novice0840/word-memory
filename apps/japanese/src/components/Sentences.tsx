@@ -16,11 +16,10 @@ const Sentences = ({ sentences, showMeaning }: SentencesProps) => {
   const handleReadSentence = (text: string, index: number) => {
     setReadingIndex(index);
     readSentence(text, "japanese")
-      .then(() => {
-        setReadingIndex(null);
-      })
       .catch((error) => {
         console.error("음성 읽기 오류:", error);
+      })
+      .finally(() => {
         setReadingIndex(null);
       });
   };
