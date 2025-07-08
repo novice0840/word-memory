@@ -16,7 +16,7 @@ const StudyProgress = ({
   onGoNextWord,
 }: StudyProgressProps) => {
   return (
-    <div className="flex justify-between items-center w-full  ">
+    <div className="flex justify-between items-center w-full">
       <button onClick={onGoPrevWord}>
         <ArrowLeft />
       </button>
