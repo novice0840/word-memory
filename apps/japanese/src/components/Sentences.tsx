@@ -15,6 +15,7 @@ const Sentences = ({ sentences }: SentencesProps) => {
   const [searchParams] = useSearchParams();
   const isSentenceMeaningVisible =
     searchParams.get("isSentenceMeaningVisible") === "true";
+  const isReadingSentence = readingIndex !== null;
 
   const handleReadSentence = (text: string, index: number) => {
     setReadingIndex(index);
@@ -41,6 +42,8 @@ const Sentences = ({ sentences }: SentencesProps) => {
               }}
             />
             <button
+              disabled={isReadingSentence}
+              className="disabled:cursor-not-allowed"
               onClick={() =>
                 handleReadSentence(
                   item.original
