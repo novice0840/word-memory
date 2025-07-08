@@ -6,6 +6,6 @@ export const useGetMemoryList = (level: string) => {
     curIndex: number;
   }>(level, {
     memoryList: [],
-    curIndex: 0,
+    curIndex: 1,
   });
 };

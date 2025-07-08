@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, CircleCheckBig } from "lucide-react";
 
 import { getWords, isValidLevel } from "shared/utils";
@@ -13,23 +13,24 @@ interface WordListProps {
 const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
   const { level = "N1" } = useParams();
   const { memoryList, curIndex } = useGetMemoryList(level);
-  const itemRefs = useRef<(HTMLLIElement | null)[]>([]);
-
+  const wordRefs = useRef<(HTMLLIElement | null)[]>([]);
+  const navigate = useNavigate();
   const words = getWords(level, "japanese");
 
-  const handleWordClick = (wordIndex: number) => {
+  const handleClickWord = (wordIndex: number) => {
     setLocalStorage(level, {
       memoryList,
       curIndex: wordIndex,
     });
     onWordListClose();
+    navigate(`/words/${level}/${wordIndex}`);
   };
 
   useEffect(() => {
-    if (isWordListOpen && curIndex >= 0 && itemRefs.current[curIndex]) {
-      itemRefs.current[curIndex]?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
+    if (isWordListOpen && curIndex >= 0 && wordRefs.current[curIndex]) {
+      wordRefs.current[curIndex]?.scrollIntoView({
+        behavior: "auto",
+        block: "center",
       });
     }
   }, [isWordListOpen, curIndex]);
@@ -55,9 +56,11 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
         {words.map((word, i) => (
           <li
             key={i}
-            ref={(el) => (itemRefs.current[i] = el)}
-            onClick={() => handleWordClick(i)}
-            className="flex justify-between border rounded text-xl"
+            ref={(el) => (wordRefs.current[i] = el)}
+            onClick={() => handleClickWord(i)}
+            className={`flex justify-between border rounded text-xl hover:bg-gray-100 cursor-pointer p-2 ${
+              i === curIndex ? "bg-blue-100" : ""
+            }`}
           >
             <span>{word.original || word.pronunciation}</span>
             {memoryList.includes(i) && <CircleCheckBig />}

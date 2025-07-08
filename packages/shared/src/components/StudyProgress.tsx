@@ -17,16 +17,20 @@ const StudyProgress = ({
 }: StudyProgressProps) => {
   return (
     <div className="flex justify-between items-center w-full  ">
-      <ArrowLeft onClick={onGoPrevWord} />
+      <button onClick={onGoPrevWord}>
+        <ArrowLeft />
+      </button>
       <div>
         <div>
-          전체 단어 {curIndex + 1}/{totalLength}
+          전체 단어 {curIndex}/{totalLength}
         </div>
         <div>
           외운 단어 {memoryListLength}/{totalLength}
         </div>
       </div>
-      <ArrowRight onClick={onGoNextWord} />
+      <button onClick={onGoNextWord}>
+        <ArrowRight />
+      </button>
     </div>
   );
 };

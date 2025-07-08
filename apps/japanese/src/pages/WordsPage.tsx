@@ -1,4 +1,4 @@
-import { Navigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Navigate } from "react-router-dom";
 import { setLocalStorage, useGetMemoryList } from "shared/hooks";
 import { StudyAction, Sentences, Word } from "@/components";
 import { StudyProgress } from "shared/components";
@@ -8,32 +8,27 @@ import {
   getWords,
   isValidLevel,
 } from "shared/utils";
-import { useStudyAction } from "@/hooks/useStudyAction";
 
 const WordsPage = () => {
   const { level = "" } = useParams();
+  const navigate = useNavigate();
+  const { memoryList, curIndex } = useGetMemoryList(level);
   const words = getWords(level, "japanese");
   const totalLength = words.length;
-  const { memoryList, curIndex } = useGetMemoryList(level);
-  const {
-    handleStudyActionClick,
-    showWordMeaning,
-    showSentencesMeaning,
-    initWord,
-  } = useStudyAction();
 
-  const { original, pronunciation, koreans, sentences } = words[curIndex];
+  // curIndex는 UI에도 보여지기 때문에 0이 아닌 1부터 시작한다
+  const { original, pronunciation, koreans, sentences } = words[curIndex - 1];
 
   const handleGoPrevWord = () => {
     const prevIndex = getPrevIndex(curIndex, totalLength);
-    initWord();
     setLocalStorage(level, { memoryList, curIndex: prevIndex });
+    navigate(`/words/${level}/${prevIndex}`);
   };
 
   const handleGoNextWord = () => {
     const nextIndex = getNextIndex(curIndex, totalLength);
-    initWord();
     setLocalStorage(level, { memoryList, curIndex: nextIndex });
+    navigate(`/words/${level}/${nextIndex}`);
   };
 
   if (!isValidLevel(level, "japanese")) {
@@ -55,13 +50,12 @@ const WordsPage = () => {
             original={original}
             pronunciation={pronunciation}
             koreans={koreans}
-            showMeaning={showWordMeaning}
           />
-          <Sentences sentences={sentences} showMeaning={showSentencesMeaning} />
+          <Sentences sentences={sentences} />
         </section>
       </section>
 
-      <StudyAction onClick={handleStudyActionClick} />
+      <StudyAction />
     </main>
   );
 };
