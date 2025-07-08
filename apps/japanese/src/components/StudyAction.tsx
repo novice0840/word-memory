@@ -40,7 +40,6 @@ const StudyAction = () => {
   };
 
   const handleClickMemorizationButton = () => {
-    // initWord();
     setLocalStorage(level, {
       memoryList: memoryList.includes(curIndex)
         ? memoryList

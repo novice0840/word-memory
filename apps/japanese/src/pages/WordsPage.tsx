@@ -8,28 +8,24 @@ import {
   getWords,
   isValidLevel,
 } from "shared/utils";
-import { useStudyAction } from "@/hooks/useStudyAction";
 
 const WordsPage = () => {
   const { level = "" } = useParams();
   const words = getWords(level, "japanese");
   const totalLength = words.length;
   const { memoryList, curIndex } = useGetMemoryList(level);
-  const { handleStudyActionClick, initWord } = useStudyAction();
   const navigate = useNavigate();
 
   const { original, pronunciation, koreans, sentences } = words[curIndex];
 
   const handleGoPrevWord = () => {
     const prevIndex = getPrevIndex(curIndex, totalLength);
-    initWord();
     setLocalStorage(level, { memoryList, curIndex: prevIndex });
     navigate(`/words/${level}/${prevIndex}`);
   };
 
   const handleGoNextWord = () => {
     const nextIndex = getNextIndex(curIndex, totalLength);
-    initWord();
     setLocalStorage(level, { memoryList, curIndex: nextIndex });
     navigate(`/words/${level}/${nextIndex}`);
   };
@@ -58,7 +54,7 @@ const WordsPage = () => {
         </section>
       </section>
 
-      <StudyAction onClick={handleStudyActionClick} />
+      <StudyAction />
     </main>
   );
 };
