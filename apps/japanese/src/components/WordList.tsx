@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, CircleCheckBig } from "lucide-react";
 
 import { getWords, isValidLevel } from "shared/utils";
@@ -14,7 +14,7 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
   const { level = "N1" } = useParams();
   const { memoryList, curIndex } = useGetMemoryList(level);
   const wordRefs = useRef<(HTMLLIElement | null)[]>([]);
-
+  const navigate = useNavigate();
   const words = getWords(level, "japanese");
 
   const handleClickWord = (wordIndex: number) => {
@@ -23,6 +23,7 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
       curIndex: wordIndex,
     });
     onWordListClose();
+    navigate(`/words/${level}/${wordIndex}`);
   };
 
   useEffect(() => {
