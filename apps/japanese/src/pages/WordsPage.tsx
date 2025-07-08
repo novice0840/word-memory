@@ -11,11 +11,10 @@ import {
 
 const WordsPage = () => {
   const { level = "" } = useParams();
+  const navigate = useNavigate();
+  const { memoryList, curIndex } = useGetMemoryList(level);
   const words = getWords(level, "japanese");
   const totalLength = words.length;
-  const { memoryList, curIndex } = useGetMemoryList(level);
-  const navigate = useNavigate();
-
   const { original, pronunciation, koreans, sentences } = words[curIndex];
 
   const handleGoPrevWord = () => {
