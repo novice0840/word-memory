@@ -15,7 +15,9 @@ const WordsPage = () => {
   const { memoryList, curIndex } = useGetMemoryList(level);
   const words = getWords(level, "japanese");
   const totalLength = words.length;
-  const { original, pronunciation, koreans, sentences } = words[curIndex];
+
+  // curIndex는 UI에도 보여지기 때문에 0이 아닌 1부터 시작한다
+  const { original, pronunciation, koreans, sentences } = words[curIndex - 1];
 
   const handleGoPrevWord = () => {
     const prevIndex = getPrevIndex(curIndex, totalLength);

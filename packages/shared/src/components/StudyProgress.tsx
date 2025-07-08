@@ -22,7 +22,7 @@ const StudyProgress = ({
       </button>
       <div>
         <div>
-          전체 단어 {curIndex + 1}/{totalLength}
+          전체 단어 {curIndex}/{totalLength}
         </div>
         <div>
           외운 단어 {memoryListLength}/{totalLength}
