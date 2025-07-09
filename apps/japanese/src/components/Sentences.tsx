@@ -2,6 +2,7 @@ import { Volume2 } from "lucide-react";
 import { readSentence } from "shared/utils";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import { flushSync } from "react-dom";
 
 interface SentencesProps {
   sentences: {
@@ -18,6 +19,9 @@ const Sentences = ({ sentences }: SentencesProps) => {
   const isReadingSentence = readingIndex !== null;
 
   const handleReadSentence = (text: string, index: number) => {
+    // flushSync(() => {
+    //   setReadingIndex(index);
+    // });
     setReadingIndex(index);
     readSentence(text, "japanese")
       .catch((error) => {
