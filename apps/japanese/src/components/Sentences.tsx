@@ -28,6 +28,10 @@ const Sentences = ({ sentences }: SentencesProps) => {
       });
   };
 
+  const removeHurigana = (text: string) => {
+    return text.replace(/<rt>(.*?)<\/rt>/g, "").replace(/<[^>]+>/g, "");
+  };
+
   return (
     <div className="h-64 overflow-auto w-full text-xl rounded-md border p-x-4 space-y-4">
       {sentences.map((item, index) => (
@@ -38,19 +42,14 @@ const Sentences = ({ sentences }: SentencesProps) => {
               dangerouslySetInnerHTML={{
                 __html: isSentenceMeaningVisible
                   ? item.original
-                  : item.original.replace(/<rt>(.*?)<\/rt>/g, ""),
+                  : removeHurigana(item.original),
               }}
             />
             <button
               disabled={isReadingSentence}
               className="disabled:cursor-not-allowed"
               onClick={() =>
-                handleReadSentence(
-                  item.original
-                    .replace(/<rt>(.*?)<\/rt>/g, "")
-                    .replace(/<[^>]+>/g, ""),
-                  index
-                )
+                handleReadSentence(removeHurigana(item.original), index)
               }
             >
               <Volume2
