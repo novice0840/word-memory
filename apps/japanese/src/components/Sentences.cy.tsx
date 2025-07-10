@@ -1,4 +1,6 @@
 /// <reference types="cypress" />
+// eslint-disable-next-line @typescript-eslint/triple-slash-reference
+/// <reference path="../../cypress/support/component.tsx" />
 import Sentences from "./Sentences";
 
 describe("<Sentences />", () => {
