@@ -31,8 +31,12 @@ const Sentences = ({ sentences }: SentencesProps) => {
       });
   };
 
-  const removeHurigana = (text: string) => {
-    return text.replace(/<rt>(.*?)<\/rt>/g, "").replace(/<[^>]+>/g, "");
+  const removeHurigana = (japaneseText: string) => {
+    return japaneseText.replace(/<rt>(.*?)<\/rt>/g, "").replace(/<[^>]+>/g, "");
+  };
+
+  const extractPronunciation = (japaneseText: string) => {
+    return japaneseText.replace(/<rb>(.*?)<\/rb>/g, "").replace(/<[^>]+>/g, "");
   };
 
   return (
@@ -52,7 +56,7 @@ const Sentences = ({ sentences }: SentencesProps) => {
               disabled={isReadingSentence}
               className="disabled:cursor-not-allowed"
               onClick={() =>
-                handleReadSentence(removeHurigana(item.original), index)
+                handleReadSentence(extractPronunciation(item.original), index)
               }
             >
               <Volume2
