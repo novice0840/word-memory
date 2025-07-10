@@ -4,7 +4,7 @@
 import Sentences from "./Sentences";
 
 describe("<Sentences />", () => {
-  it("renders", () => {
+  it("예문 읽기 버튼을 더블클릭해도 한 번만 클릭되어야한다", () => {
     const sentences = [
       {
         korean: "안녕하세요",
@@ -12,10 +12,27 @@ describe("<Sentences />", () => {
       },
       {
         korean: "감사합니다",
-        original: "<ruby>ありがとう<rt></rt></ruby>",
+        original: "<ruby>ありが토う<rt></rt></ruby>",
       },
     ];
-    // see: https://on.cypress.io/mounting-react
+
     cy.mount(<Sentences sentences={sentences} />);
+
+    let clickCount = 0;
+
+    cy.get("button")
+      .first()
+      .then(($button) => {
+        $button.on("click", () => {
+          clickCount += 1;
+        });
+      });
+
+    cy.get("button")
+      .first()
+      .dblclick()
+      .then(() => {
+        expect(clickCount).to.eq(1);
+      });
   });
 });

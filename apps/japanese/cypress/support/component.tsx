@@ -50,6 +50,3 @@ Cypress.Commands.add("mount", (component, options = {}) => {
 
   return mount(wrapped, mountOptions);
 });
-
-// Example use:
-// cy.mount(<MyComponent />)
