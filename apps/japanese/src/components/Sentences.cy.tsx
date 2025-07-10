@@ -3,7 +3,7 @@
 /// <reference path="../../cypress/support/component.tsx" />
 import Sentences from "./Sentences";
 
-describe("<Sentences />", () => {
+describe("Sentences 컴포넌트 테스트", () => {
   it("예문 읽기 버튼을 더블클릭해도 한 번만 클릭되어야한다", () => {
     const sentences = [
       {
