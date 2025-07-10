@@ -22,7 +22,6 @@ const Sentences = ({ sentences }: SentencesProps) => {
     flushSync(() => {
       setReadingIndex(index);
     });
-    // setReadingIndex(index);
     readSentence(text, "japanese")
       .catch((error) => {
         console.error("음성 읽기 오류:", error);
