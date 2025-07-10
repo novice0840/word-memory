@@ -19,9 +19,9 @@ const Sentences = ({ sentences }: SentencesProps) => {
   const isReadingSentence = readingIndex !== null;
 
   const handleReadSentence = (text: string, index: number) => {
-    // flushSync(() => {
-    //   setReadingIndex(index);
-    // });
+    flushSync(() => {
+      setReadingIndex(index);
+    });
     // setReadingIndex(index);
     readSentence(text, "japanese")
       .catch((error) => {
