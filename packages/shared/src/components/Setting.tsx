@@ -1,7 +1,7 @@
 import { useDialog } from "shared/context";
 import { Button } from "shared/ui";
 import { setLocalStorage } from "shared/hooks";
-import { useNavigate } from "react-router-dom";
+
 interface SettingProps {
   isSettingOpen: boolean;
   levels: string[];
@@ -9,7 +9,6 @@ interface SettingProps {
 
 const Setting = ({ isSettingOpen, levels }: SettingProps) => {
   const { open } = useDialog();
-  const navigate = useNavigate();
 
   const handleResetClick = (level: string) => {
     open({
