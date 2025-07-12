@@ -1,6 +1,7 @@
 import { useDialog } from "shared/context";
 import { Button } from "shared/ui";
 import { setLocalStorage } from "shared/hooks";
+import { useNavigate } from "react-router-dom";
 interface SettingProps {
   isSettingOpen: boolean;
   levels: string[];
@@ -8,13 +9,15 @@ interface SettingProps {
 
 const Setting = ({ isSettingOpen, levels }: SettingProps) => {
   const { open } = useDialog();
+  const navigate = useNavigate();
 
   const handleResetClick = (level: string) => {
     open({
       title: `${level} 단어장 초기화`,
       description: "정말로 초기화하시겠습니까?",
       onConfirmClick: () => {
-        setLocalStorage(level, { memoryList: [], curIndex: 0 });
+        setLocalStorage(level, { memoryList: [], curIndex: 1 });
+        window.location.href = "/";
       },
     });
   };
