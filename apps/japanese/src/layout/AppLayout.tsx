@@ -1,12 +1,14 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { WordList } from "@/components";
+import { StudyAction, WordList } from "@/components";
 import { DialogProvider } from "shared/context";
 import { Header } from "shared/components";
 import { LEVELS } from "@/constants/word";
 
 const AppLayout = () => {
   const [isWordListOpen, setIsWordListOpen] = useState(false);
+  const location = useLocation();
+  const isWordsPage = location.pathname.startsWith("/words/");
 
   const handleMenuClick = () => {
     setIsWordListOpen((prev) => !prev);
@@ -18,7 +20,7 @@ const AppLayout = () => {
 
   return (
     <DialogProvider>
-      <div className="max-w-xl mx-auto relative overflow-hidden">
+      <div className="max-w-xl mx-auto relative h-screen overflow-hidden">
         <div
           className={`h-full flex flex-col duration-300 p-4 ${
             isWordListOpen ? "translate-x-full" : "translate-x-0"
@@ -36,7 +38,7 @@ const AppLayout = () => {
           onWordListClose={handleWordListClose}
         />
       </div>
-      <button className="fixed-bottom-button">버튼 텍스트</button>
+      {isWordsPage && !isWordListOpen && <StudyAction />}
     </DialogProvider>
   );
 };
