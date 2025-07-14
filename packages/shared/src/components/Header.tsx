@@ -17,6 +17,8 @@ const Header = ({ onMenuClick, levels }: HeaderProps) => {
 
   return (
     <header className="flex justify-between">
+      <div>{window.innerHeight}</div>
+      <div>{window.outerHeight}</div>
       {levels.includes(level) ? (
         <button className="w-6 h-6" aria-label="menuIcon" onClick={onMenuClick}>
           <Menu />
@@ -36,6 +38,24 @@ const Header = ({ onMenuClick, levels }: HeaderProps) => {
           <Settings />
         </button>
         <Setting isSettingOpen={isSettingOpen} levels={levels} />
+        <button
+          className="
+                  fixed
+                  bottom-0
+                  left-1/2
+                  transform
+                  -translate-x-1/2
+                  w-screen
+                  flex
+                  justify-center
+                  py-8
+                  border-none
+                  rounded-none
+                  bg-[#ffdd9a]
+                "
+        >
+          버튼 텍스트
+        </button>
       </div>
     </header>
   );
