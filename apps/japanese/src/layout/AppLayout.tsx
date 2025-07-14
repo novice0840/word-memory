@@ -18,9 +18,9 @@ const AppLayout = () => {
 
   return (
     <DialogProvider>
-      <div className="max-w-xl mx-auto relative h-screen overflow-hidden">
+      <div className="max-w-xl mx-auto relative overflow-hidden">
         <div
-          className={`h-full flex flex-col transition-transform duration-300 p-4 ${
+          className={`h-full flex flex-col duration-300 p-4 ${
             isWordListOpen ? "translate-x-full" : "translate-x-0"
           }`}
         >
@@ -36,6 +36,7 @@ const AppLayout = () => {
           onWordListClose={handleWordListClose}
         />
       </div>
+      <button className="fixed-bottom-button">버튼 텍스트</button>
     </DialogProvider>
   );
 };

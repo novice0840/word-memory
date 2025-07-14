@@ -3,6 +3,7 @@ import { getNextUnmemorizedIndex, getWords } from "shared/utils";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { setLocalStorage, useGetMemoryList } from "shared/hooks";
 import { useDialog } from "shared/context";
+import "./StudyAction.css"; // Assuming you have a CSS file for styles
 
 const StudyAction = () => {
   const { level = "" } = useParams();
@@ -96,6 +97,7 @@ const StudyAction = () => {
       >
         다시 외우기
       </Button>
+      <button className="fixed-bottom-button">버튼 텍스트</button>
     </div>
   );
 };
