@@ -1,6 +1,6 @@
 import { useNavigate, useParams, Navigate } from "react-router-dom";
 import { setLocalStorage, useGetMemoryList } from "shared/hooks";
-import { StudyAction, Sentences, Word } from "@/components";
+import { Sentences, Word } from "@/components";
 import { StudyProgress } from "shared/components";
 import {
   getNextIndex,
@@ -54,8 +54,6 @@ const WordsPage = () => {
           <Sentences sentences={sentences} />
         </section>
       </section>
-
-      <StudyAction />
     </main>
   );
 };

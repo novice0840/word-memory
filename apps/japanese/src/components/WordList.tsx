@@ -42,7 +42,7 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
   return (
     <div
       aria-label="wordList"
-      className={`font-japanese absolute top-0 left-0 h-full w-full transition-transform duration-300 p-4  ${
+      className={`font-japanese absolute top-0 left-0 h-full w-full transition-transform duration-300 p-4 flex flex-col ${
         isWordListOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
@@ -52,7 +52,7 @@ const WordList = ({ isWordListOpen, onWordListClose }: WordListProps) => {
         </button>
         <h2 className="text-3xl font-bold">{level}</h2>
       </div>
-      <ul className="space-y-2 h-5/6 overflow-scroll">
+      <ul className="space-y-2 flex-1 overflow-scroll">
         {words.map((word, i) => (
           <li
             key={i}

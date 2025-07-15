@@ -65,37 +65,39 @@ const StudyAction = () => {
   };
 
   return (
-    <div className="w-full h-32 grid grid-cols-2 grid-rows-2 gap-8">
-      <Button
-        id="meaning"
-        onClick={handleClickMeaningButton}
-        className="h-full"
-      >
-        {isWordMeaningVisible ? "뜻 숨기기" : "뜻 보기"}
-      </Button>
-      <Button
-        id="sentence"
-        onClick={handleClickSentenceButton}
-        className="h-full"
-      >
-        {isSentenceMeaningVisible ? "예문 해석 숨기기" : "예문 해석 보기"}
-      </Button>
-      <Button
-        disabled={isAllWordsMemorized}
-        id="memorization"
-        onClick={handleClickMemorizationButton}
-        className="h-full"
-      >
-        암기 완료
-      </Button>
-      <Button
-        disabled={isAllWordsMemorized}
-        id="again"
-        onClick={handleClickAgainButton}
-        className="h-full"
-      >
-        다시 외우기
-      </Button>
+    <div className="fixed bottom-0 left-0 right-0">
+      <div className="max-w-xl mx-auto p-2 h-32 grid grid-cols-2 grid-rows-2 gap-8">
+        <Button
+          id="meaning"
+          onClick={handleClickMeaningButton}
+          className="h-full"
+        >
+          {isWordMeaningVisible ? "뜻 숨기기" : "뜻 보기"}
+        </Button>
+        <Button
+          id="sentence"
+          onClick={handleClickSentenceButton}
+          className="h-full"
+        >
+          {isSentenceMeaningVisible ? "예문 해석 숨기기" : "예문 해석 보기"}
+        </Button>
+        <Button
+          disabled={isAllWordsMemorized}
+          id="memorization"
+          onClick={handleClickMemorizationButton}
+          className="h-full"
+        >
+          암기 완료
+        </Button>
+        <Button
+          disabled={isAllWordsMemorized}
+          id="again"
+          onClick={handleClickAgainButton}
+          className="h-full"
+        >
+          다시 외우기
+        </Button>
+      </div>
     </div>
   );
 };
