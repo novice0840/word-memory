@@ -57,16 +57,10 @@ const StudyAction = () => {
       });
       return;
     }
-    const newParams = new URLSearchParams(searchParams);
-    newParams.set("isWordMeaningVisible", "false");
-    newParams.set("isSentenceMeaningVisible", "false");
-    navigate(`/words/${level}/${nextIndex}?${newParams.toString()}`);
+    navigate(`/words/${level}/${nextIndex}`);
   };
   const handleClickAgainButton = () => {
-    const newParams = new URLSearchParams(searchParams);
-    newParams.set("isWordMeaningVisible", "false");
-    newParams.set("isSentenceMeaningVisible", "false");
-    navigate(`/words/${level}/${nextIndex}?${newParams.toString()}`);
+    navigate(`/words/${level}/${nextIndex}`);
     setLocalStorage(level, { memoryList, curIndex: nextIndex });
   };
 
