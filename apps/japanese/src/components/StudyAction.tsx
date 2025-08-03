@@ -1,19 +1,22 @@
 import { Button } from "shared/ui";
 import { getNextUnmemorizedIndex, getWords } from "shared/utils";
-import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { setLocalStorage, useGetMemoryList } from "shared/hooks";
 import { useDialog } from "shared/context";
+import { useWordStatusStore } from "../store/useWordStatusStore";
 
 const StudyAction = () => {
   const { level = "" } = useParams();
   const words = getWords(level, "japanese");
   const totalLength = words.length;
   const { memoryList, curIndex } = useGetMemoryList(level);
-  const [searchParams, setSearchParams] = useSearchParams();
-  const isWordMeaningVisible =
-    searchParams.get("isWordMeaningVisible") === "true";
-  const isSentenceMeaningVisible =
-    searchParams.get("isSentenceMeaningVisible") === "true";
+  const {
+    isWordMeaningVisible,
+    isSentenceMeaningVisible,
+    changeIsWordMeaningVisible,
+    changeIsSentenceMeaningVisible,
+    resetWordStatusStore,
+  } = useWordStatusStore();
   const isAllWordsMemorized = [...Array(totalLength).keys()].every((i) =>
     memoryList.includes(i)
   );
@@ -22,21 +25,11 @@ const StudyAction = () => {
   const nextIndex = getNextUnmemorizedIndex(curIndex, memoryList, totalLength);
 
   const handleClickMeaningButton = () => {
-    const newParams = new URLSearchParams(searchParams);
-    newParams.set(
-      "isWordMeaningVisible",
-      isWordMeaningVisible ? "false" : "true"
-    );
-    setSearchParams(newParams);
+    changeIsWordMeaningVisible(!isWordMeaningVisible);
   };
 
   const handleClickSentenceButton = () => {
-    const newParams = new URLSearchParams(searchParams);
-    newParams.set(
-      "isSentenceMeaningVisible",
-      isSentenceMeaningVisible ? "false" : "true"
-    );
-    setSearchParams(newParams);
+    changeIsSentenceMeaningVisible(!isSentenceMeaningVisible);
   };
 
   const handleClickMemorizationButton = () => {
@@ -57,33 +50,25 @@ const StudyAction = () => {
       });
       return;
     }
-    navigate(`/words/${level}/${nextIndex}`);
+    resetWordStatusStore();
   };
+
   const handleClickAgainButton = () => {
     setLocalStorage(level, { memoryList, curIndex: nextIndex });
-    navigate(`/words/${level}/${nextIndex}`);
+    resetWordStatusStore();
   };
 
   return (
     <div className="fixed bottom-0 left-0 right-0">
       <div className="max-w-xl mx-auto p-2 h-32 grid grid-cols-2 grid-rows-2 gap-8">
-        <Button
-          id="meaning"
-          onClick={handleClickMeaningButton}
-          className="h-full"
-        >
+        <Button onClick={handleClickMeaningButton} className="h-full">
           {isWordMeaningVisible ? "뜻 숨기기" : "뜻 보기"}
         </Button>
-        <Button
-          id="sentence"
-          onClick={handleClickSentenceButton}
-          className="h-full"
-        >
+        <Button onClick={handleClickSentenceButton} className="h-full">
           {isSentenceMeaningVisible ? "예문 해석 숨기기" : "예문 해석 보기"}
         </Button>
         <Button
           disabled={isAllWordsMemorized}
-          id="memorization"
           onClick={handleClickMemorizationButton}
           className="h-full"
         >
@@ -91,7 +76,6 @@ const StudyAction = () => {
         </Button>
         <Button
           disabled={isAllWordsMemorized}
-          id="again"
           onClick={handleClickAgainButton}
           className="h-full"
         >

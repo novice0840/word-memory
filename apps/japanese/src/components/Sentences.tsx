@@ -1,8 +1,8 @@
 import { Volume2 } from "lucide-react";
 import { readSentence } from "shared/utils";
 import { useState } from "react";
-import { useSearchParams } from "react-router-dom";
 import { flushSync } from "react-dom";
+import { useWordStatusStore } from "@/store/useWordStatusStore";
 
 interface SentencesProps {
   sentences: {
@@ -11,11 +11,19 @@ interface SentencesProps {
   }[];
 }
 
+const removeHurigana = (japaneseText: string) => {
+  return japaneseText.replace(/<rt>(.*?)<\/rt>/g, "").replace(/<[^>]+>/g, "");
+};
+
+const extractPronunciation = (japaneseText: string) => {
+  return japaneseText.replace(/<rb>(.*?)<\/rb>/g, "").replace(/<[^>]+>/g, "");
+};
+
 const Sentences = ({ sentences }: SentencesProps) => {
   const [readingIndex, setReadingIndex] = useState<number | null>(null);
-  const [searchParams] = useSearchParams();
-  const isSentenceMeaningVisible =
-    searchParams.get("isSentenceMeaningVisible") === "true";
+  const isSentenceMeaningVisible = useWordStatusStore(
+    (state) => state.isSentenceMeaningVisible
+  );
   const isReadingSentence = readingIndex !== null;
 
   const handleReadSentence = (text: string, index: number) => {
@@ -29,14 +37,6 @@ const Sentences = ({ sentences }: SentencesProps) => {
       .finally(() => {
         setReadingIndex(null);
       });
-  };
-
-  const removeHurigana = (japaneseText: string) => {
-    return japaneseText.replace(/<rt>(.*?)<\/rt>/g, "").replace(/<[^>]+>/g, "");
-  };
-
-  const extractPronunciation = (japaneseText: string) => {
-    return japaneseText.replace(/<rb>(.*?)<\/rb>/g, "").replace(/<[^>]+>/g, "");
   };
 
   return (
