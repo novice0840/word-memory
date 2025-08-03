@@ -1,19 +1,21 @@
 import { Button } from "shared/ui";
 import { getNextUnmemorizedIndex, getWords } from "shared/utils";
-import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { setLocalStorage, useGetMemoryList } from "shared/hooks";
 import { useDialog } from "shared/context";
+import { useWordStatusStore } from "../store/useWordStatusStore";
 
 const StudyAction = () => {
   const { level = "" } = useParams();
   const words = getWords(level, "japanese");
   const totalLength = words.length;
   const { memoryList, curIndex } = useGetMemoryList(level);
-  const [searchParams, setSearchParams] = useSearchParams();
-  const isWordMeaningVisible =
-    searchParams.get("isWordMeaningVisible") === "true";
-  const isSentenceMeaningVisible =
-    searchParams.get("isSentenceMeaningVisible") === "true";
+  const {
+    isWordMeaningVisible,
+    isSentenceMeaningVisible,
+    changeIsWordMeaningVisible,
+    changeIsSentenceMeaningVisible,
+  } = useWordStatusStore();
   const isAllWordsMemorized = [...Array(totalLength).keys()].every((i) =>
     memoryList.includes(i)
   );
@@ -22,21 +24,11 @@ const StudyAction = () => {
   const nextIndex = getNextUnmemorizedIndex(curIndex, memoryList, totalLength);
 
   const handleClickMeaningButton = () => {
-    const newParams = new URLSearchParams(searchParams);
-    newParams.set(
-      "isWordMeaningVisible",
-      isWordMeaningVisible ? "false" : "true"
-    );
-    setSearchParams(newParams);
+    changeIsWordMeaningVisible(!isWordMeaningVisible);
   };
 
   const handleClickSentenceButton = () => {
-    const newParams = new URLSearchParams(searchParams);
-    newParams.set(
-      "isSentenceMeaningVisible",
-      isSentenceMeaningVisible ? "false" : "true"
-    );
-    setSearchParams(newParams);
+    changeIsSentenceMeaningVisible(!isSentenceMeaningVisible);
   };
 
   const handleClickMemorizationButton = () => {
@@ -58,10 +50,15 @@ const StudyAction = () => {
       return;
     }
     navigate(`/words/${level}/${nextIndex}`);
+    changeIsWordMeaningVisible(false);
+    changeIsSentenceMeaningVisible(false);
   };
+
   const handleClickAgainButton = () => {
     navigate(`/words/${level}/${nextIndex}`);
     setLocalStorage(level, { memoryList, curIndex: nextIndex });
+    changeIsWordMeaningVisible(false);
+    changeIsSentenceMeaningVisible(false);
   };
 
   return (

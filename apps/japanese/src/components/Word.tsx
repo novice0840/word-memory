@@ -1,4 +1,4 @@
-import { useSearchParams } from "react-router-dom";
+import { useWordStatusStore } from "@/store/useWordStatusStore";
 
 interface WordProps {
   original: string | null;
@@ -7,9 +7,9 @@ interface WordProps {
 }
 
 const Word = ({ original, pronunciation, koreans }: WordProps) => {
-  const [searchParams] = useSearchParams();
-  const isWordMeaningVisible =
-    searchParams.get("isWordMeaningVisible") === "true";
+  const isWordMeaningVisible = useWordStatusStore(
+    (state) => state.isWordMeaningVisible
+  );
 
   return (
     <div className="text-center h-32">
