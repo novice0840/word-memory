@@ -50,12 +50,10 @@ const StudyAction = () => {
       });
       return;
     }
-    navigate(`/words/${level}`);
     resetWordStatusStore();
   };
 
   const handleClickAgainButton = () => {
-    navigate(`/words/${level}`);
     setLocalStorage(level, { memoryList, curIndex: nextIndex });
     resetWordStatusStore();
   };
