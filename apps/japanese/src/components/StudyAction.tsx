@@ -15,6 +15,7 @@ const StudyAction = () => {
     isSentenceMeaningVisible,
     changeIsWordMeaningVisible,
     changeIsSentenceMeaningVisible,
+    resetWordStatusStore,
   } = useWordStatusStore();
   const isAllWordsMemorized = [...Array(totalLength).keys()].every((i) =>
     memoryList.includes(i)
@@ -50,15 +51,13 @@ const StudyAction = () => {
       return;
     }
     navigate(`/words/${level}/${nextIndex}`);
-    changeIsWordMeaningVisible(false);
-    changeIsSentenceMeaningVisible(false);
+    resetWordStatusStore();
   };
 
   const handleClickAgainButton = () => {
     navigate(`/words/${level}/${nextIndex}`);
     setLocalStorage(level, { memoryList, curIndex: nextIndex });
-    changeIsWordMeaningVisible(false);
-    changeIsSentenceMeaningVisible(false);
+    resetWordStatusStore();
   };
 
   return (

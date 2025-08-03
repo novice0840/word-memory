@@ -5,6 +5,7 @@ interface WordStatusState {
   isSentenceMeaningVisible: boolean;
   changeIsWordMeaningVisible: (visible: boolean) => void;
   changeIsSentenceMeaningVisible: (visible: boolean) => void;
+  resetWordStatusStore: () => void;
 }
 
 export const useWordStatusStore = create<WordStatusState>((set) => ({
@@ -14,4 +15,10 @@ export const useWordStatusStore = create<WordStatusState>((set) => ({
     set({ isWordMeaningVisible: visible }),
   changeIsSentenceMeaningVisible: (visible: boolean) =>
     set({ isSentenceMeaningVisible: visible }),
+  resetWordStatusStore: () => {
+    set({
+      isWordMeaningVisible: false,
+      isSentenceMeaningVisible: false,
+    });
+  },
 }));
