@@ -13,7 +13,7 @@ const Word = ({ original, pronunciation, koreans }: WordProps) => {
 
   return (
     <div className="text-center h-32">
-      <div className="text-4xl font-japanese mb-2">
+      <div className="text-4xl mb-2">
         {original?.split("·").join(", ") || pronunciation}
       </div>
       {isWordMeaningVisible && (
