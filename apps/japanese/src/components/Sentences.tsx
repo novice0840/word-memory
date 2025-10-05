@@ -43,9 +43,8 @@ const Sentences = ({ sentences }: SentencesProps) => {
     <div className="h-64 overflow-auto w-full text-xl rounded-md border p-x-4 space-y-4">
       {sentences.map((item, index) => (
         <div key={index}>
-          <div className="flex items-center space-x-2  ">
+          <div className="flex items-center space-x-2">
             <div
-              className="font-japanese"
               dangerouslySetInnerHTML={{
                 __html: isSentenceMeaningVisible
                   ? item.original
