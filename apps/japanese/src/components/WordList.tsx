@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { ArrowLeft, CircleCheckBig } from "lucide-react";
 
 import { getWords, isValidLevel } from "shared/utils";
