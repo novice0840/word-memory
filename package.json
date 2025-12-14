@@ -23,7 +23,6 @@
     "clsx": "^2.1.1",
     "data": "*",
     "lucide-react": "^0.473.0",
-    "next": "^16.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.3",
@@ -57,7 +56,7 @@
     "vitest": "^3.0.3"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "packageManager": "npm@10.8.2",
   "workspaces": [
