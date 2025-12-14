@@ -6,9 +6,15 @@ async function modifyJson(filename) {
     const jsonData = JSON.parse(data);
 
     for (const word of jsonData) {
-      word.koreans = word.koreans.map((korean) =>
-        korean.replace(/\(=[^)]*\)/g, "")
-      );
+      const koreans = [];
+      word.sentences = word.sentences.filter((sentence) => {
+        if (koreans.includes(sentence.korean) || sentence.korean == "") {
+          console.log("중복 문장", word.original, sentence.korean);
+          return false;
+        }
+        koreans.push(sentence.korean);
+        return true;
+      });
     }
 
     fs.writeFileSync(`${filename}`, JSON.stringify(jsonData), "utf-8");
@@ -19,5 +25,4 @@ async function modifyJson(filename) {
   }
 }
 
-modifyJson("../words/english/TOEIC_WORDS.json");
-modifyJson("../words/english/TOEFL_WORDS.json");
+modifyJson("../words/japanese/JLPT_N1_WORDS.json");
