@@ -34,7 +34,7 @@ const WordsPage = () => {
 
   return (
     <main className="flex-1 flex flex-col items-center justify-between">
-      <section className="w-full">
+      <section className="w-full h-full">
         <StudyProgress
           curIndex={curIndex}
           memoryListLength={memoryList.length}
@@ -42,7 +42,7 @@ const WordsPage = () => {
           onGoPrevWord={handleGoPrevWord}
           onGoNextWord={handleGoNextWord}
         />
-        <section className="w-full max-h-96 overflow-auto">
+        <section className="w-full overflow-auto">
           <Word
             original={original}
             pronunciation={pronunciation}
