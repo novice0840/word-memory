@@ -3,6 +3,10 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
+    "build:chinese": "turbo build --filter=chinese",
+    "build:english": "turbo build --filter=english",
+    "build:french": "turbo build --filter=french",
+    "build:japanese": "turbo build --filter=japanese",
     "dev": "turbo dev",
     "dev:japanese": "turbo dev --filter=japanese",
     "dev:chinese": "turbo dev --filter=chinese",

@@ -45,7 +45,6 @@ const Sentences = ({ sentences }: SentencesProps) => {
         <div key={index}>
           <div className="flex items-center space-x-2">
             <div
-              className="font-japanese"
               dangerouslySetInnerHTML={{
                 __html: isSentenceMeaningVisible
                   ? item.original

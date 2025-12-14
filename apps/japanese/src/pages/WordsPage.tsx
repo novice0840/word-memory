@@ -1,4 +1,4 @@
-import { useNavigate, useParams, Navigate } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { setLocalStorage, useGetMemoryList } from "shared/hooks";
 import { Sentences, Word } from "@/components";
 import { StudyProgress } from "shared/components";
